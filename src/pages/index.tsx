@@ -1,11 +1,12 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
 import Layout from "../components/Layout";
+import { Text } from "./styles";
 
 const IndexPage = () => {
 	return (
 		<Layout>
-			<p>heyo!!</p>
+			<Text>heyo!!</Text>
 		</Layout>
 	);
 };

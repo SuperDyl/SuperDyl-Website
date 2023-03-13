@@ -1,6 +1,12 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
-import { FullViewContainer, BannerText } from "./styles";
+import {
+	FullViewContainer,
+	BannerText,
+	Banner,
+	PageContent,
+	MainContainer,
+} from "./styles";
 
 const darkGreen = "#11862c";
 const lightGreen = "#1aa63e";
@@ -13,28 +19,35 @@ const darkTheme = {
 	primary: darkGreen,
 	secondary: darkPurple,
 	base: darkGray,
+	text: lightGray,
 };
 
 const lightTheme = {
 	primary: lightGreen,
 	secondary: lightPurple,
 	base: lightGray,
+	text: darkGray,
 };
 
 interface LayoutProps {
 	children?: ReactNode;
+	className?: string;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, className }: LayoutProps) => {
 	return (
-		//TODO add split
+		//TODO override html with theme base color
+		//TODO add actual switching between themes
 		// eslint-disable-next-line no-constant-condition
 		<ThemeProvider theme={true ? darkTheme : lightTheme}>
 			<FullViewContainer>
-				<nav>
-					<BannerText>mc.SuperDyl.net</BannerText>
-				</nav>
-				<main>{children}</main>
+				<Banner>
+					<BannerText>SuperDyl.net</BannerText>
+					<nav></nav>
+				</Banner>
+				<MainContainer>
+					<PageContent className={className}>{children}</PageContent>
+				</MainContainer>
 			</FullViewContainer>
 		</ThemeProvider>
 	);

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Banner = styled.h1`
-	color: white;
-	background: white;
+export const Text = styled.p`
+	margin: 0;
+	color: ${(props) => props.theme.text};
 `;
