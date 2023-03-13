@@ -7,8 +7,9 @@ export const FullViewContainer = styled.div`
 	flex-direction: column;
 `;
 
+//TODO should I set a max and min for the banner/banner text?
 export const Banner = styled.div`
-	height: 80px;
+	height: 12vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,6 +17,7 @@ export const Banner = styled.div`
 `;
 
 export const BannerText = styled.h1`
+	font-size: min(8vh, 15vw);
 	margin: 0;
 	color: ${(props) => props.theme.secondary};
 	text-shadow: 1px 1px 0px ${(props) => props.theme.base};

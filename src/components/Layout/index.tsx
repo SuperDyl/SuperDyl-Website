@@ -43,8 +43,8 @@ const Layout = ({ children, className }: LayoutProps) => {
 			<FullViewContainer>
 				<Banner>
 					<BannerText>SuperDyl.net</BannerText>
-					<nav></nav>
 				</Banner>
+				<nav></nav>
 				<MainContainer>
 					<PageContent className={className}>{children}</PageContent>
 				</MainContainer>
