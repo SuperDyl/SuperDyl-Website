@@ -1,5 +1,6 @@
-import React, { ReactNode } from "react";
+import React, { FunctionComponent, memo, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
+import NavBar from "../NavBar";
 import {
 	FullViewContainer,
 	BannerText,
@@ -34,7 +35,7 @@ interface LayoutProps {
 	className?: string;
 }
 
-const Layout = ({ children, className }: LayoutProps) => {
+const Layout: FunctionComponent<LayoutProps> = ({ children, className }) => {
 	return (
 		//TODO override html with theme base color
 		//TODO add actual switching between themes
@@ -44,7 +45,7 @@ const Layout = ({ children, className }: LayoutProps) => {
 				<Banner>
 					<BannerText>SuperDyl.net</BannerText>
 				</Banner>
-				<nav></nav>
+				<NavBar></NavBar>
 				<MainContainer>
 					<PageContent className={className}>{children}</PageContent>
 				</MainContainer>
@@ -53,4 +54,4 @@ const Layout = ({ children, className }: LayoutProps) => {
 	);
 };
 
-export default Layout;
+export default memo(Layout);
