@@ -15,17 +15,29 @@ const darkPurple = "#75349e";
 const lightPurple = "#883297";
 const darkGray = "#252525";
 const lightGray = "#d9d9d9";
+const darkMagenta = "#d73996";
+const lightMagenta = "#e931f3";
 
-const darkTheme = {
+interface Theme {
+	primary: string;
+	secondary: string;
+	tertiary: string;
+	base: string;
+	text: string;
+}
+
+const darkTheme: Theme = {
 	primary: darkGreen,
 	secondary: darkPurple,
+	tertiary: darkMagenta,
 	base: darkGray,
 	text: lightGray,
 };
 
-const lightTheme = {
+const lightTheme: Theme = {
 	primary: lightGreen,
 	secondary: lightPurple,
+	tertiary: lightMagenta,
 	base: lightGray,
 	text: darkGray,
 };
