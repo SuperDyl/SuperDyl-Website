@@ -6,7 +6,7 @@ import { Text } from "./styles";
 const IndexPage = () => {
 	return (
 		<Layout>
-			<Text>heyo!!</Text>
+			<Text>{"Eh, I don't know what you were expecting"}</Text>
 		</Layout>
 	);
 };

@@ -18,6 +18,7 @@ export const Banner = styled.div`
 
 export const BannerText = styled.h1`
 	font-size: min(8vh, 15vw);
+	font-weight: bold;
 	margin: 0;
 	color: ${(props) => props.theme.secondary};
 	text-shadow: 1px 1px 0px ${(props) => props.theme.base};
