@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
 import Layout from "../components/Layout";
-import { Text } from "./styles";
+import { Text } from "../components/SharedStyles";
 
 const IndexPage = () => {
 	return (
