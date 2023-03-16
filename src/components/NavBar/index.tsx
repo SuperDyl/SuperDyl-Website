@@ -6,16 +6,18 @@ interface NavBarProps {
 	navItems: {
 		to: string;
 		text: string;
+		active?: boolean;
 	}[];
 }
 
 const NavBar: FunctionComponent<NavBarProps> = ({ className, navItems }) => {
 	return (
 		<NavBarContainer className={className}>
-			{navItems.map(({ to, text }) => (
+			{navItems.map(({ to, text, active = false }) => (
 				<NavItem
 					to={to}
 					key={to}
+					$active={active}
 				>
 					{text}
 				</NavItem>

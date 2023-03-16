@@ -8,8 +8,12 @@ export const NavBarContainer = styled.nav`
 	justify-content: space-evenly;
 `;
 
-export const NavItem = styled(Link)`
+interface NavItemProps {
+	$active: boolean;
+}
+
+export const NavItem = styled(Link)<NavItemProps>`
 	color: ${(props) => props.theme.text};
-	text-decoration: none;
+	text-decoration: ${({ $active }) => ($active ? "underline" : "none")};
 	padding: 0.2em;
 `;
