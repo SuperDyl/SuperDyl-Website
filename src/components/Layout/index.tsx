@@ -48,6 +48,12 @@ interface LayoutProps {
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({ children, className }) => {
+	const links = [
+		{ to: "/minecraft", text: "Minecraft" },
+		{ to: "/", text: "Blog" },
+		{ to: "/", text: "Archive" },
+	];
+
 	return (
 		//TODO override html with theme base color
 		//TODO add actual switching between themes
@@ -57,7 +63,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, className }) => {
 				<Banner>
 					<BannerText>SuperDyl.net</BannerText>
 				</Banner>
-				<NavBar></NavBar>
+				<NavBar navItems={links}></NavBar>
 				<MainContainer>
 					<PageContent className={className}>{children}</PageContent>
 				</MainContainer>

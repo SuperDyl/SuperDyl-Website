@@ -3,14 +3,23 @@ import { NavBarContainer, NavItem } from "./styles";
 
 interface NavBarProps {
 	className?: string;
+	navItems: {
+		to: string;
+		text: string;
+	}[];
 }
 
-const NavBar: FunctionComponent<NavBarProps> = ({ className }) => {
+const NavBar: FunctionComponent<NavBarProps> = ({ className, navItems }) => {
 	return (
 		<NavBarContainer className={className}>
-			<NavItem to="/">Minecraft</NavItem>
-			<NavItem to="/">Blog</NavItem>
-			<NavItem to="/">Archive</NavItem>
+			{navItems.map(({ to, text }) => (
+				<NavItem
+					to={to}
+					key={to}
+				>
+					{text}
+				</NavItem>
+			))}
 		</NavBarContainer>
 	);
 };
