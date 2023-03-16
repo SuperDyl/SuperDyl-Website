@@ -1,5 +1,6 @@
 import React, { FunctionComponent, memo, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
+import { Pages } from "../../constants";
 import NavBar from "../NavBar";
 import {
 	FullViewContainer,
@@ -45,13 +46,18 @@ const lightTheme: Theme = {
 interface LayoutProps {
 	children?: ReactNode;
 	className?: string;
+	activeLink?: Pages;
 }
 
-const Layout: FunctionComponent<LayoutProps> = ({ children, className }) => {
+const Layout: FunctionComponent<LayoutProps> = ({
+	children,
+	className,
+	activeLink,
+}) => {
 	const links = [
-		{ to: "/minecraft", text: "Minecraft" },
-		{ to: "/", text: "Blog" },
-		{ to: "/", text: "Archive" },
+		{ id: Pages.MINECRAFT, to: "/minecraft", text: "Minecraft" },
+		{ id: Pages.BLOG, to: "/", text: "Blog" },
+		{ id: Pages.ARCHIVE, to: "/", text: "Archive" },
 	];
 
 	return (
@@ -63,7 +69,13 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, className }) => {
 				<Banner>
 					<BannerText>SuperDyl.net</BannerText>
 				</Banner>
-				<NavBar navItems={links}></NavBar>
+				<NavBar
+					navItems={links.map(({ id, to, text }) => ({
+						to,
+						text,
+						active: activeLink === id,
+					}))}
+				></NavBar>
 				<MainContainer>
 					<PageContent className={className}>{children}</PageContent>
 				</MainContainer>
