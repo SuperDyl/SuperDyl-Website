@@ -8,6 +8,7 @@ const DefaultTextStyling = css`
 export const Text = styled.p`
 	${DefaultTextStyling}
 	margin: 0;
+	padding-bottom: 0.4em;
 `;
 
 export const Header1 = styled.h1`
@@ -16,7 +17,7 @@ export const Header1 = styled.h1`
 	font-size: 1.5em;
 	font-weight: bold;
 	text-decoration: underline;
-	margin-bottom: 0.3em;
+	margin-bottom: 0.4em;
 `;
 
 const SharedLinkStyling = css`
