@@ -20,6 +20,14 @@ export const Header1 = styled.h1`
 	margin-bottom: 0.4em;
 `;
 
+export const Header2 = styled.h2`
+	${DefaultTextStyling}
+	color: ${(props) => props.theme.primary};
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 0.4em;
+`;
+
 const SharedLinkStyling = css`
 	${DefaultTextStyling}
 	text-decoration: underline;

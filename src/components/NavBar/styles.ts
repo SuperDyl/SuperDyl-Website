@@ -15,6 +15,7 @@ interface NavItemProps {
 export const NavItem = styled(LocalLink)<NavItemProps>`
 	text-decoration: ${({ $active }) => ($active ? "underline" : "none")};
 	padding: 0.2em;
+	color: ${({ $active, theme }) => ($active ? theme.tertiary : theme.text)};
 
 	:hover {
 		color: ${(props) => props.theme.tertiary};
