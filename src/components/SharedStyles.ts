@@ -1,14 +1,41 @@
+import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 
 const DefaultTextStyling = css`
-	margin: 0;
 	color: ${(props) => props.theme.text};
 `;
 
 export const Text = styled.p`
 	${DefaultTextStyling}
+	margin: 0;
 `;
 
 export const Header1 = styled.h1`
 	${DefaultTextStyling}
+	color: ${(props) => props.theme.primary};
+	font-size: 1.5em;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-bottom: 0.3em;
+`;
+
+const SharedLinkStyling = css`
+	${DefaultTextStyling}
+	text-decoration: underline;
+	cursor: pointer;
+
+	:hover {
+		color: ${(props) => props.theme.secondary};
+	}
+	:active {
+		text-decoration: none;
+	}
+`;
+
+export const LocalLink = styled(Link)`
+	${SharedLinkStyling}
+`;
+
+export const ExternalLink = styled.a`
+	${SharedLinkStyling}
 `;

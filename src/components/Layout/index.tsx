@@ -18,12 +18,15 @@ const darkGray = "#252525";
 const lightGray = "#d9d9d9";
 const darkMagenta = "#d73996";
 const lightMagenta = "#e931f3";
+const darkishGray = "#353535";
+const lightishGray = "#c9c9c9";
 
 interface Theme {
 	primary: string;
 	secondary: string;
 	tertiary: string;
 	base: string;
+	baseAlt: string;
 	text: string;
 }
 
@@ -32,6 +35,7 @@ const darkTheme: Theme = {
 	secondary: darkPurple,
 	tertiary: darkMagenta,
 	base: darkGray,
+	baseAlt: darkishGray,
 	text: lightGray,
 };
 
@@ -40,6 +44,7 @@ const lightTheme: Theme = {
 	secondary: lightPurple,
 	tertiary: lightMagenta,
 	base: lightGray,
+	baseAlt: lightishGray,
 	text: darkGray,
 };
 
