@@ -46,6 +46,15 @@ const Minecraft = () => {
 		[]
 	);
 
+	const email = useMemo(
+		() => (
+			<ExternalLink href="mailto:SuperDylEnt@gmail.com">
+				SuperDylEnt@gmail.com
+			</ExternalLink>
+		),
+		[]
+	);
+
 	return (
 		<Layout activeLink={Pages.MINECRAFT}>
 			<TitledSection header={"Helpful Links"}>
@@ -101,12 +110,9 @@ const Minecraft = () => {
 				<TitledSubSection header="August 3">
 					<Text>
 						The server has been updated to 1.19.1. If there is any trouble
-						caused by the update, let me know at{" "}
-						<ExternalLink href="mailto:SuperDylEnt@gmail.com">
-							SuperDylEnt@gmail.com
-						</ExternalLink>
-						, by text, or by discord. This also means some of the mods have been
-						updated along with the vanilla tweaks more mob heads datapack.
+						caused by the update, let me know at {email}, by text, or by
+						discord. This also means some of the mods have been updated along
+						with the vanilla tweaks more mob heads datapack.
 					</Text>
 				</TitledSubSection>
 				<TitledSubSection header="July">
@@ -134,9 +140,7 @@ const Minecraft = () => {
 						{
 							"Let me know who you want added to the whitelist and I probably will add them to the server whitelist. Just give me their username (spelled correctly with capital/lowercase also correct) and how they're related to you (such as friend, relative, alternate account, etc.) You can email me directly at "
 						}
-						<ExternalLink href="mailto:SuperDylEnt@gmail.com">
-							SuperDylEnt@gmail.com
-						</ExternalLink>
+						{email}
 						{" or use this "}
 						<ExternalLink>whitelist form</ExternalLink>
 					</Text>
@@ -236,7 +240,7 @@ const Minecraft = () => {
 						{
 							"The game can give the player a notice if they're tool or armor is at 10% durability. "
 						}
-						{"Off by default, configure with `/trigger duraPing`"}
+						{"Off by default, configure with `/trigger duraping`"}
 					</DatapackListItem>
 					<DatapackListItem datapack="Vanilla Tweaks: player head drops">
 						{"A player's head drops if another player kills them"}
@@ -296,6 +300,58 @@ const Minecraft = () => {
 						Some mods
 					</DatapackListItem>
 				</UnorderedList>
+			</TitledSection>
+			<TitledSection header="Changes Under Review">
+				<Text>
+					To give feedback specific to this section, please use the form{" "}
+					{underReview} or email me at {email} and mention the title of the
+					change
+					{"you're"} giving feedback on. I will consider all feedback on these
+					potential changes before making a final decision.
+				</Text>
+				<TitledSubSection header="Vanilla Tweaks Custom Nether Portals">
+					<Text>
+						Decided: Default configuration forces nether portals to use at least
+						10 obsidian, giving no unfair advantage to using this datapack.
+						After the Ender Dragon fight, {"I'll"} consider allowing smaller
+						nether portals in the config settings. Allowing vanilla tweaks
+						custom nether portals before the ender dragon fight ({"I'm"}{" "}
+						thinking of not allowing custom shapes until after the ender dragon,
+						but allowing crying obsidian before).
+					</Text>
+				</TitledSubSection>
+			</TitledSection>
+			<TitledSection header="Rejected Changes">
+				<Text>
+					These are (unless otherwise specified) my current stance against
+					changes I have rejected:
+				</Text>
+				<TitledSubSection header="Hack Clients">
+					<Text>Hack clients are not allowed</Text>
+				</TitledSubSection>
+				<TitledSubSection header="Operators, Moderators, Administrators">
+					<Text>
+						Operator status is not being given to other players. This decision
+						may be reviewed if later there are lots of players often using the
+						server and there are good players to trust with operator powers
+					</Text>
+					<Text>
+						Further, ownership of the server will not be switching hands at any
+						time. Running a server is not just having access to the admin
+						console, it requires keeping the server up to date, managing
+						backups, reviewing changes, and keeping peace between players. It
+						also costs money to run.
+					</Text>
+				</TitledSubSection>
+				<TitledSubSection header="Large Phantoms (Vanilla Tweaks)">
+					<Text>
+						Large Phantoms from Vanilla Tweaks will not be added anytime soon.
+						The main problem with the pack is that phantoms spawn for all
+						players in the world if at least one player {"hasn't"} slept for a
+						while. I {"don't"} want players that sleep consistently to be
+						punished for other players choosing to not sleep.
+					</Text>
+				</TitledSubSection>
 			</TitledSection>
 		</Layout>
 	);

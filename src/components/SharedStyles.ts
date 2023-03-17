@@ -56,12 +56,12 @@ export const ExternalLink = styled.a`
 
 export const UnorderedList = styled.ul`
 	${DefaultTextStyling}
-	list-style: circle;
+	list-style: disc;
 	margin-left: 2em;
 	margin-bottom: 0.75em;
 `;
 
 export const ListItem = styled.li`
 	margin-bottom: 0.3em;
-	padding-left: 1em;
+	padding-left: 0.25em;
 `;
