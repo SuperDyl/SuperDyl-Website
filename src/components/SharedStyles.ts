@@ -11,6 +11,11 @@ export const Text = styled.p`
 	padding-bottom: 0.4em;
 `;
 
+export const WeakText = styled.em`
+	${DefaultTextStyling}
+	color: ${(props) => props.theme.textAlt};
+`;
+
 export const Header1 = styled.h1`
 	${DefaultTextStyling}
 	color: ${(props) => props.theme.primary};

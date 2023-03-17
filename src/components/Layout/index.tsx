@@ -19,7 +19,7 @@ const lightGray = "#d9d9d9";
 const darkMagenta = "#d73996";
 const lightMagenta = "#e931f3";
 const darkishGray = "#353535";
-const lightishGray = "#c9c9c9";
+const lightishGray = "#999999";
 
 interface Theme {
 	primary: string;
@@ -28,6 +28,7 @@ interface Theme {
 	base: string;
 	baseAlt: string;
 	text: string;
+	textAlt: string;
 }
 
 const darkTheme: Theme = {
@@ -37,6 +38,7 @@ const darkTheme: Theme = {
 	base: darkGray,
 	baseAlt: darkishGray,
 	text: lightGray,
+	textAlt: lightishGray,
 };
 
 const lightTheme: Theme = {
@@ -46,6 +48,7 @@ const lightTheme: Theme = {
 	base: lightGray,
 	baseAlt: lightishGray,
 	text: darkGray,
+	textAlt: darkishGray,
 };
 
 interface LayoutProps {
