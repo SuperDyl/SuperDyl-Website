@@ -72,7 +72,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
 		<ThemeProvider theme={true ? darkTheme : lightTheme}>
 			<FullViewContainer>
 				<Banner>
-					<BannerText>SuperDyl.net</BannerText>
+					<BannerText to={"/"}>SuperDyl.net</BannerText>
 				</Banner>
 				<NavBar
 					navItems={links.map(({ id, to, text }) => ({

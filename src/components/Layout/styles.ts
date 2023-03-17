@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 export const FullViewContainer = styled.div`
@@ -16,7 +17,8 @@ export const Banner = styled.div`
 	background-color: ${(props) => props.theme.primary};
 `;
 
-export const BannerText = styled.h1`
+export const BannerText = styled(Link)`
+	cursor: pointer;
 	font-size: min(8vh, 15vw);
 	font-weight: bold;
 	margin: 0;
