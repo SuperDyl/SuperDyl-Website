@@ -48,3 +48,15 @@ export const LocalLink = styled(Link)`
 export const ExternalLink = styled.a`
 	${SharedLinkStyling}
 `;
+
+export const UnorderedList = styled.ul`
+	${DefaultTextStyling}
+	list-style: circle;
+	margin-left: 2em;
+	margin-bottom: 0.75em;
+`;
+
+export const ListItem = styled.li`
+	margin-bottom: 0.3em;
+	padding-left: 1em;
+`;
