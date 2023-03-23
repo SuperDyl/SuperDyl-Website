@@ -1,6 +1,5 @@
 import React, { FunctionComponent, memo } from "react";
-import { Header2 } from "../SharedStyles";
-import { TitledSubSectionContainer } from "./styles";
+import { StickyHeader2, TitledSubSectionContainer } from "./styles";
 
 interface TitledSubSectionProps {
 	header: string;
@@ -15,7 +14,7 @@ const TitledSubSection: FunctionComponent<TitledSubSectionProps> = ({
 }) => {
 	return (
 		<TitledSubSectionContainer className={className}>
-			<Header2>{header}</Header2>
+			<StickyHeader2>{header}</StickyHeader2>
 			{children}
 		</TitledSubSectionContainer>
 	);
