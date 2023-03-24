@@ -1,5 +1,9 @@
 import React, { FunctionComponent, memo, ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
+import {
+	createGlobalStyle,
+	ThemeProps,
+	ThemeProvider,
+} from "styled-components";
 import { Pages } from "../../constants";
 import NavBar from "../NavBar";
 import {
@@ -51,6 +55,16 @@ const lightTheme: Theme = {
 	textAlt: darkishGray,
 };
 
+const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
+		* {
+  		font-family: sans-serif;
+		}
+		
+		html {
+			background-color: ${(props) => props.theme.base}
+		}
+	`;
+
 interface LayoutProps {
 	children?: ReactNode;
 	className?: string;
@@ -88,6 +102,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
 					<PageContent className={className}>{children}</PageContent>
 				</MainContainer>
 			</FullViewContainer>
+			<GlobalStyle />
 		</ThemeProvider>
 	);
 };
