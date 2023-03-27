@@ -65,3 +65,26 @@ export const ListItem = styled.li`
 	margin-bottom: 0.3em;
 	padding-left: 0.25em;
 `;
+
+export const Table = styled.table`
+	${DefaultTextStyling}
+	min-width: 100%;
+	overflow: scroll;
+	border: solid 0.2em ${(props) => props.theme.primary};
+`;
+
+export const TableHeader = styled.th`
+	border: solid 0.1em ${(props) => props.theme.primary};
+	padding: 0.25em;
+	font-weight: bold;
+`;
+
+export const TableRow = styled.tr`
+	/* padding: 0.2em;
+	border-bottom: solid 0.1em ${(props) => props.theme.primary}; */
+`;
+
+export const TableData = styled.td`
+	border: solid 0.1em ${(props) => props.theme.primary};
+	padding: 0.25em;
+`;
