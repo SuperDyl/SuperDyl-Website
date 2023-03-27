@@ -7,6 +7,9 @@ interface TitledSectionProps {
 	className?: string;
 }
 
+//TODO Allow exporting the header height via function on resize
+// the subsection can then use this for changing it's top
+
 const TitledSection: FunctionComponent<TitledSectionProps> = ({
 	children,
 	header,
