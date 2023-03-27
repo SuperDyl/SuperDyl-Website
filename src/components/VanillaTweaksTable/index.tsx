@@ -1,5 +1,5 @@
 import React, { FunctionComponent, memo } from "react";
-import { Text, Table, TableRow, TableData, TableHeader } from "../SharedStyles";
+import { Table, TableRow, TableData, TableHeader } from "../SharedStyles";
 
 interface TableProps {
 	className?: string;
