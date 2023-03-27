@@ -4,3 +4,11 @@ export enum Pages {
 	BLOG,
 	ARCHIVE,
 }
+
+export const Forms = {
+	datapacksHref: "/",
+	modsHref: "/",
+	whitelistHref: "/",
+	otherHref: "/",
+	underReviewHref: "/",
+};

@@ -1,7 +1,7 @@
 import { HeadFC } from "gatsby";
 import React, { FunctionComponent, memo, useMemo } from "react";
 import Layout from "../../components/Layout";
-import { Pages } from "../../constants";
+import { Forms, Pages } from "../../constants";
 import {
 	ExternalLink,
 	ListItem,
@@ -12,6 +12,7 @@ import {
 import TitledSection from "../../components/TitledSection";
 import TitledSubSection from "../../components/TitledSubSection";
 import VanillaTweaksTable from "../../components/VanillaTweaksTable";
+import HelpfulLinks from "../../sections/HelpfulLinks";
 
 interface DatapackListItemProps {
 	children?: JSX.Element | JSX.Element[] | string | string[];
@@ -57,20 +58,16 @@ const Minecraft = () => {
 	);
 
 	const columnHeaders = ["Pack", "Version", "Changes", "Reasoning"];
-	const columnCount = 4;
 
 	return (
 		<Layout activeLink={Pages.MINECRAFT}>
-			<TitledSection header={"Helpful Links"}>
-				<Text>Minecraft server ip: mc.superdyl.net</Text>
-				<Text>
-					Discord: <ExternalLink>discord.superdyl.net</ExternalLink>
-				</Text>
-				<Text>
-					Change suggestion forms: {whitelist} {datapacks} {mods} {underReview}{" "}
-					{other}
-				</Text>
-			</TitledSection>
+			<HelpfulLinks
+				datapacksHref={Forms.datapacksHref}
+				modsHref={Forms.modsHref}
+				whitelistHref={Forms.whitelistHref}
+				otherHref={Forms.otherHref}
+				underReviewHref={Forms.underReviewHref}
+			/>
 			<TitledSection header="News">
 				<TitledSubSection header="August 21">
 					<Text>
