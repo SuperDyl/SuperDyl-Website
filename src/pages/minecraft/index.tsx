@@ -10,6 +10,7 @@ import Changes from "../../sections/Changes";
 import UnderReview from "../../sections/UnderReview";
 import RejectedChanges from "../../sections/RejectedChanges";
 import Datapacks from "../../sections/Datapacks";
+import ServerMods from "../../sections/ServerMods";
 
 const Minecraft = () => {
 	const email = useMemo(
@@ -44,6 +45,7 @@ const Minecraft = () => {
 			/>
 			<RejectedChanges />
 			<Datapacks />
+			<ServerMods modsHref={Forms.modsHref} />
 		</Layout>
 	);
 };
