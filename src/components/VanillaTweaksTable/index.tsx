@@ -1,5 +1,5 @@
 import React, { FunctionComponent, memo } from "react";
-import { Table, TableRow, TableData, TableHeader } from "../SharedStyles";
+import BasicTable from "../BasicTable";
 
 interface TableProps {
 	className?: string;
@@ -16,32 +16,13 @@ const VanillaTweaksTable: FunctionComponent<TableProps> = ({
 	columnHeaders,
 	rows,
 }) => {
-	const columnCount = columnHeaders.length;
-
 	return (
-		<Table className={className}>
-			<thead>
-				<TableRow>
-					<TableHeader
-						colSpan={columnCount}
-					>{`${header}—${subheader}`}</TableHeader>
-				</TableRow>
-				<TableRow>
-					{columnHeaders.map((colHeader) => (
-						<TableHeader key={colHeader}>{colHeader}</TableHeader>
-					))}
-				</TableRow>
-			</thead>
-			<tbody>
-				{rows.map((row, i) => (
-					<TableRow key={`row-${i}`}>
-						{row.map((item) => (
-							<TableData key={item}>{item}</TableData>
-						))}
-					</TableRow>
-				))}
-			</tbody>
-		</Table>
+		<BasicTable
+			className={className}
+			header={`${header}—${subheader}`}
+			columnHeaders={columnHeaders}
+			rows={rows}
+		/>
 	);
 };
 
