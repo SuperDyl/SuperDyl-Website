@@ -3,6 +3,7 @@ import { ExternalLink, Text } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
 import TitledSubSection from "../components/TitledSubSection";
 import VanillaTweaksTable from "../components/VanillaTweaksTable";
+import BasicTable from "../components/BasicTable";
 
 const Datapacks = () => {
 	const columnHeaders = ["Pack", "Version", "Changes", "Reasoning"];
@@ -210,6 +211,112 @@ const Datapacks = () => {
 							"v1.19",
 							"Bundles can be crafted using rabbit hide, string, and sticks",
 							"Bundles sound fun, I'd like to try them out in their current state",
+						],
+					]}
+				/>
+			</TitledSubSection>
+			<TitledSubSection header="Other Datapacks">
+				<BasicTable
+					columnHeaders={[
+						"Datapack Name/version",
+						"Author",
+						"Changes",
+						"Reasoning",
+					]}
+					rows={[
+						[
+							<Text key="item-frame-color">
+								Item Frame Color v1.4 on{" "}
+								<ExternalLink href="https://www.planetminecraft.com/data-pack/item-frame-color/">
+									planetmc
+								</ExternalLink>
+								{" & "}
+								<ExternalLink href="https://github.com/kikipunk/Item-Frame-Color-DataPack">
+									github
+								</ExternalLink>
+							</Text>,
+							<Text key="kikpunk">
+								kikpunk:{" "}
+								<ExternalLink href="https://www.planetminecraft.com/member/kikipunk/">
+									planetmc
+								</ExternalLink>
+								,{" "}
+								<ExternalLink href="https://www.youtube.com/channel/UC0l_FnZ6USWl-obEocIlaoA">
+									youtube
+								</ExternalLink>
+								,{" "}
+								<ExternalLink href="https://github.com/kikipunk">
+									github
+								</ExternalLink>
+							</Text>,
+							"Item frames can be recolored by shift clicking them with dye. Undo the color by shift clicking with a water bucket or breaking the item frame",
+							"Seemed like a nice decoration choice and since it seems to work well, I added it",
+						],
+						[
+							<ExternalLink
+								key="quick-armor-swapper"
+								href="https://www.planetminecraft.com/data-pack/quick-armor-swapper-switcher/"
+							>
+								Quick Armor Swapper
+							</ExternalLink>,
+							"CVC0210: planetmc",
+							"Attempting to equip armor while armor is already equipped in that slot swaps the equipped armor with the held armor. Side effect: you cannot attack or mine while holding armor",
+							"Very good utility that exists in Bedrock Edition. I'm waiting for the parity fix for this feature",
+						],
+						[
+							<ExternalLink
+								key="take-a-seat"
+								href="https://www.planetminecraft.com/data-pack/take-a-seat/"
+							>
+								Take a Seat Datapack (Sit Anywhere)
+							</ExternalLink>,
+							"Unknown: perhaps 9minecraft.net?",
+							"The player can sit anywhere by using `/trigger sit` and then right clicking the block at their feet",
+							"It's a fun and simple emote. This seemed to me the most elegant way to ",
+						],
+						[
+							<ExternalLink
+								key="invisible-item-frames"
+								href="https://www.planetminecraft.com/data-pack/invisible-item-frames-5403610/"
+							>
+								Invisible item frames v2.2
+							</ExternalLink>,
+							<Text key="8BitMonkey">
+								The8BitMonkey:{" "}
+								<ExternalLink href="https://www.planetminecraft.com/member/the8bitmonkey/">
+									planetmc
+								</ExternalLink>
+								,{" "}
+								<ExternalLink href="https://www.youtube.com/channel/UC6N_YXUtiys1atyGZqNylKw">
+									youtube
+								</ExternalLink>
+								,{" "}
+								<ExternalLink href="https://www.twitch.tv/The8BitMonkey">
+									twitch
+								</ExternalLink>
+								,{" "}
+								<ExternalLink href="https://www.instagram.com/The8BitMonkey">
+									instagram
+								</ExternalLink>
+							</Text>,
+							"Item frames can be made invisible by shift clicking them with shears. Includes a set of hidden advancements. Items in invisible frames can only be rotated if the player is sneaking. Some of these settings don’t apply if the frames are made invisible using a `Statues` book. Undo by breaking the item frame",
+							"Very vanilla feeling way to allow invisible item frames",
+						],
+						[
+							<ExternalLink
+								key="wandering-cities"
+								href="https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/"
+							>
+								Wandering Cities
+							</ExternalLink>,
+							<ExternalLink
+								key="aceplante"
+								href="https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/"
+							>
+								Aceplante
+							</ExternalLink>,
+							"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an “Ancient City Map Crate”",
+							"Adds an easier way to find Ancient Cities",
 						],
 					]}
 				/>
