@@ -11,4 +11,14 @@ export const Forms = {
 	whitelistHref: "/",
 	otherHref: "/",
 	underReviewHref: "/",
-};
+} as const;
+
+export const DownloadSites = {
+	GitHub: "GitHub",
+	Modrinth: "Modrinth",
+	CurseForge: "CurseForge",
+	PlanetMC: "PlanetMC",
+	Twitch: "Twitch",
+	YouTube: "YouTube",
+	Instagram: "Instagram",
+} as const;
