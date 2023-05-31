@@ -1,7 +1,7 @@
 import React, { FunctionComponent, memo } from "react";
 import BasicTable from "../BasicTable";
 import { ExternalLink, Text } from "../SharedStyles";
-import { DownloadSites } from "../../constants";
+import { DownloadSites, ModUsages } from "../../constants";
 
 interface DownloadLink {
 	siteName: keyof typeof DownloadSites;
@@ -13,6 +13,7 @@ interface ModInfo {
 	version: string;
 	downloadLinks: DownloadLink[];
 	purpose: string;
+	usage: keyof typeof ModUsages;
 }
 
 interface ModTableProps {

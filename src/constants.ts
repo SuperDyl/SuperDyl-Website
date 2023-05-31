@@ -22,3 +22,10 @@ export const DownloadSites = {
 	YouTube: "YouTube",
 	Instagram: "Instagram",
 } as const;
+
+export const ModUsages = {
+	client: "client",
+	server: "server",
+	serverOnly: "serverOnly",
+	all: "all",
+} as const;
