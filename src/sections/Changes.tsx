@@ -4,9 +4,9 @@ import {
 	UnorderedList,
 	WeakText,
 	Text,
-	ExternalLink,
 } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
+import { ExternalTabLink } from "../components/ExternalTabLink";
 
 interface DatapackListItemProps {
 	children?: JSX.Element | JSX.Element[] | string | string[];
@@ -46,19 +46,19 @@ const Changes: FunctionComponent<ChangesProps> = ({
 	otherHref,
 }) => {
 	const datapacks = useMemo(
-		() => <ExternalLink href={datapacksHref}>datapacks</ExternalLink>,
+		() => <ExternalTabLink href={datapacksHref}>datapacks</ExternalTabLink>,
 		[]
 	);
 	const mods = useMemo(
-		() => <ExternalLink href={modsHref}>mods</ExternalLink>,
+		() => <ExternalTabLink href={modsHref}>mods</ExternalTabLink>,
 		[]
 	);
 	const whitelist = useMemo(
-		() => <ExternalLink href={whitelistHref}>whitelist</ExternalLink>,
+		() => <ExternalTabLink href={whitelistHref}>whitelist</ExternalTabLink>,
 		[]
 	);
 	const other = useMemo(
-		() => <ExternalLink href={otherHref}>other</ExternalLink>,
+		() => <ExternalTabLink href={otherHref}>other</ExternalTabLink>,
 		[]
 	);
 

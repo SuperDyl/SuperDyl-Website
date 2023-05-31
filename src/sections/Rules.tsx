@@ -1,13 +1,15 @@
 import React, { FunctionComponent, memo } from "react";
-import { ExternalLink, Text } from "../components/SharedStyles";
+import { Text } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
 import TitledSubSection from "../components/TitledSubSection";
+import ExternalTabLink from "../components/ExternalTabLink";
 
 interface RulesProps {
 	email: JSX.Element;
+	whitelistHref: string;
 }
 
-const Rules: FunctionComponent<RulesProps> = ({ email }) => {
+const Rules: FunctionComponent<RulesProps> = ({ email, whitelistHref }) => {
 	return (
 		<TitledSection header="Rules">
 			<Text>
@@ -28,7 +30,7 @@ const Rules: FunctionComponent<RulesProps> = ({ email }) => {
 					}
 					{email}
 					{" or use this "}
-					<ExternalLink>whitelist form</ExternalLink>
+					<ExternalTabLink href={whitelistHref}>whitelist form</ExternalTabLink>
 				</Text>
 			</TitledSubSection>
 			<TitledSubSection header="Client-side mods/resource packs">

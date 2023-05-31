@@ -1,8 +1,9 @@
 import React, { FunctionComponent, memo } from "react";
 import TitledSection from "../components/TitledSection";
-import { ExternalLink, Text } from "../components/SharedStyles";
+import { Text } from "../components/SharedStyles";
 import ModTable from "../components/ModTable";
 import { getServerMods } from "../mods";
+import ExternalTabLink from "../components/ExternalTabLink";
 
 interface ServerModsProps {
 	className?: string;
@@ -18,7 +19,7 @@ const ServerMods: FunctionComponent<ServerModsProps> = ({
 			className={className}
 			header="Server Mods"
 		>
-			<ExternalLink href={modsHref}>Suggest mod changes</ExternalLink>
+			<ExternalTabLink href={modsHref}>Suggest mod changes</ExternalTabLink>
 			<Text>
 				All mods either optimize the game, add server utilities, or fix vanilla
 				bugs. The server is supposed to feel vanilla, so mods {"shouldn't"}{" "}

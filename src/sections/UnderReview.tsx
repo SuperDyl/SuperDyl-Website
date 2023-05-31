@@ -1,7 +1,8 @@
 import React, { FunctionComponent, memo, useMemo } from "react";
 import TitledSection from "../components/TitledSection";
 import TitledSubSection from "../components/TitledSubSection";
-import { ExternalLink, Text } from "../components/SharedStyles";
+import { Text } from "../components/SharedStyles";
+import ExternalTabLink from "../components/ExternalTabLink";
 
 interface UnderReviewProps {
 	underReviewHref: string;
@@ -14,7 +15,9 @@ const UnderReview: FunctionComponent<UnderReviewProps> = ({
 }) => {
 	const underReview = useMemo(
 		() => (
-			<ExternalLink href={underReviewHref}>changes under review</ExternalLink>
+			<ExternalTabLink href={underReviewHref}>
+				changes under review
+			</ExternalTabLink>
 		),
 		[]
 	);

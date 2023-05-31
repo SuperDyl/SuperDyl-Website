@@ -1,7 +1,8 @@
 import React, { FunctionComponent, memo } from "react";
 import BasicTable from "../BasicTable";
-import { ExternalLink, Text } from "../SharedStyles";
+import { Text } from "../SharedStyles";
 import { DownloadSites, ModUsages } from "../../constants";
+import ExternalTabLink from "../ExternalTabLink";
 
 interface DownloadLink {
 	siteName: keyof typeof DownloadSites;
@@ -34,12 +35,12 @@ const CreateModLinks: FunctionComponent<CreateModLinksProps> = ({
 		<Text key={`${modName}-download-links-inside`}>
 			{downloadLinks.map((link, index) => (
 				<>
-					<ExternalLink
+					<ExternalTabLink
 						key={`${modName}-${link.siteName}-download`}
 						href={link.url}
 					>
 						{link.siteName}
-					</ExternalLink>
+					</ExternalTabLink>
 					{index !== downloadLinks.length - 1 && " "}
 				</>
 			))}

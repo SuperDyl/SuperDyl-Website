@@ -1,6 +1,7 @@
 import React, { FunctionComponent, memo, useMemo } from "react";
-import { ExternalLink, Text } from "../components/SharedStyles";
+import { Text } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
+import ExternalTabLink from "../components/ExternalTabLink";
 
 interface HelpfulLinksProps {
 	datapacksHref: string;
@@ -8,6 +9,7 @@ interface HelpfulLinksProps {
 	whitelistHref: string;
 	otherHref: string;
 	underReviewHref: string;
+	discordHref: string;
 }
 
 const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({
@@ -16,26 +18,29 @@ const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({
 	whitelistHref,
 	otherHref,
 	underReviewHref,
+	discordHref,
 }) => {
 	const datapacks = useMemo(
-		() => <ExternalLink href={datapacksHref}>datapacks</ExternalLink>,
+		() => <ExternalTabLink href={datapacksHref}>datapacks</ExternalTabLink>,
 		[]
 	);
 	const mods = useMemo(
-		() => <ExternalLink href={modsHref}>mods</ExternalLink>,
+		() => <ExternalTabLink href={modsHref}>mods</ExternalTabLink>,
 		[]
 	);
 	const whitelist = useMemo(
-		() => <ExternalLink href={whitelistHref}>whitelist</ExternalLink>,
+		() => <ExternalTabLink href={whitelistHref}>whitelist</ExternalTabLink>,
 		[]
 	);
 	const other = useMemo(
-		() => <ExternalLink href={otherHref}>other</ExternalLink>,
+		() => <ExternalTabLink href={otherHref}>other</ExternalTabLink>,
 		[]
 	);
 	const underReview = useMemo(
 		() => (
-			<ExternalLink href={underReviewHref}>changes under review</ExternalLink>
+			<ExternalTabLink href={underReviewHref}>
+				changes under review
+			</ExternalTabLink>
 		),
 		[]
 	);
@@ -44,7 +49,10 @@ const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({
 		<TitledSection header={"Helpful Links"}>
 			<Text>Minecraft server ip: mc.superdyl.net</Text>
 			<Text>
-				Discord: <ExternalLink>discord.superdyl.net</ExternalLink>
+				Discord:{" "}
+				<ExternalTabLink href={discordHref}>
+					discord.superdyl.net
+				</ExternalTabLink>
 			</Text>
 			<Text>
 				Change suggestion forms: {whitelist} {datapacks} {mods} {underReview}{" "}
