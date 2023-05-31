@@ -97,7 +97,6 @@ const ClientMods: FunctionComponent<ClientModsProps> = ({ className }) => {
 						purpose:
 							"Changes order of multithreading during game boot (speeds up boot)",
 					},
-
 					{
 						modName: "Sodium",
 						version: "0.4.2",
