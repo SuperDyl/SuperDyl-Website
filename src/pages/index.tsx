@@ -1,12 +1,17 @@
 import * as React from "react";
-import type { HeadFC } from "gatsby";
+import { HeadFC, navigate } from "gatsby";
 import Layout from "../components/Layout";
 import { Text } from "../components/SharedStyles";
+import { useEffect } from "react";
 
 const IndexPage = () => {
+	useEffect(() => {
+		navigate("/minecraft");
+	}, []);
+
 	return (
 		<Layout>
-			<Text>{"Eh, I don't know what you were expecting"}</Text>
+			<Text>{"Redirecting"}</Text>
 		</Layout>
 	);
 };

@@ -78,8 +78,8 @@ const Layout: FunctionComponent<LayoutProps> = ({
 }) => {
 	const links = [
 		{ id: Pages.MINECRAFT, to: "/minecraft", text: "Minecraft" },
-		{ id: Pages.BLOG, to: "/", text: "Blog" },
-		{ id: Pages.ARCHIVE, to: "/", text: "Archive" },
+		{ id: Pages.BLOG, to: "/minecraft", text: "Blog" },
+		{ id: Pages.ARCHIVE, to: "/minecraft", text: "Archive" },
 	];
 
 	return (
@@ -89,7 +89,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
 		<ThemeProvider theme={true ? darkTheme : lightTheme}>
 			<FullViewContainer>
 				<Banner>
-					<BannerText to={"/"}>SuperDyl.net</BannerText>
+					<BannerText to={"/minecraft"}>SuperDyl.net</BannerText>
 				</Banner>
 				<NavBar
 					navItems={links.map(({ id, to, text }) => ({
