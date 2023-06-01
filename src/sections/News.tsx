@@ -10,7 +10,7 @@ interface NewsProps {
 const News: FunctionComponent<NewsProps> = ({ email }) => {
 	return (
 		<TitledSection header="News">
-			<TitledSubSection header="May 31">
+			<TitledSubSection header="June 1">
 				<Text>
 					The original Google Docs page has been replaced with this website!
 					Feel free to offer suggestions on how I can improve this page.
@@ -38,7 +38,13 @@ const News: FunctionComponent<NewsProps> = ({ email }) => {
 					</UnorderedList>
 					And a list of datapack changes:
 					<UnorderedList>
-						<ListItem>ADD THE LIST HERE {/*TODO*/}</ListItem>
+						<ListItem>
+							Better Compass: Compasses show player coordinates and direction
+						</ListItem>
+						<ListItem>
+							Better Deepslate Stonecutting: Gives deepslate the stonecutter
+							recipes of cobbled deepslate
+						</ListItem>
 					</UnorderedList>
 				</Text>
 			</TitledSubSection>
