@@ -45,6 +45,10 @@ const News: FunctionComponent<NewsProps> = ({ email }) => {
 							Better Deepslate Stonecutting: Gives deepslate the stonecutter
 							recipes of cobbled deepslate
 						</ListItem>
+						<ListItem>
+							Vanilla Tweaks Double Shulker Shells: Shulkers always drop two
+							shells
+						</ListItem>
 					</UnorderedList>
 				</Text>
 			</TitledSubSection>
