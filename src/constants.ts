@@ -13,7 +13,7 @@ export const Forms = {
 	underReviewHref: "https://forms.gle/5iKmjReTPGDpCVed7",
 } as const;
 
-export const DownloadSites = {
+export const Websites = {
 	GitHub: "GitHub",
 	Modrinth: "Modrinth",
 	CurseForge: "CurseForge",

@@ -1,18 +1,14 @@
 import React, { FunctionComponent, memo } from "react";
 import BasicTable from "../BasicTable";
 import { Text } from "../SharedStyles";
-import { DownloadSites, ModUsages } from "../../constants";
+import { ModUsages } from "../../constants";
 import ExternalTabLink from "../ExternalTabLink";
-
-interface DownloadLink {
-	siteName: keyof typeof DownloadSites;
-	url: string;
-}
+import { ExternalLink } from "../ExternalLinkList";
 
 interface ModInfo {
 	modName: string;
 	version: string;
-	downloadLinks: DownloadLink[];
+	downloadLinks: ExternalLink[];
 	purpose: string;
 	usage: keyof typeof ModUsages;
 }
@@ -23,7 +19,7 @@ interface ModTableProps {
 }
 
 interface CreateModLinksProps {
-	downloadLinks: DownloadLink[];
+	downloadLinks: ExternalLink[];
 	modName: string;
 }
 

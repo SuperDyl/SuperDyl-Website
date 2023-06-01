@@ -5,7 +5,7 @@ import TitledSubSection from "../components/TitledSubSection";
 import VanillaTweaksTable from "../components/VanillaTweaksTable";
 import ExternalTabLink from "../components/ExternalTabLink";
 import DatapackTable from "../components/DatapackTable";
-import { DownloadSites } from "../constants";
+import { Websites } from "../constants";
 
 interface DatapacksProps {
 	vtDatapacksHref: string;
@@ -238,26 +238,26 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 							version: "1.4",
 							downloadLinks: [
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/data-pack/item-frame-color/",
 								},
 								{
-									siteName: DownloadSites.GitHub,
+									siteName: Websites.GitHub,
 									url: "https://github.com/kikipunk/Item-Frame-Color-DataPack",
 								},
 							],
 							author: "kikpunk",
 							authorLinks: [
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/member/kikipunk/",
 								},
 								{
-									siteName: DownloadSites.YouTube,
+									siteName: Websites.YouTube,
 									url: "https://www.youtube.com/channel/UC0l_FnZ6USWl-obEocIlaoA",
 								},
 								{
-									siteName: DownloadSites.GitHub,
+									siteName: Websites.GitHub,
 									url: "https://github.com/kikipunk",
 								},
 							],
@@ -270,22 +270,22 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 							datapackName: "Take a Seat",
 							downloadLinks: [
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/data-pack/take-a-seat/",
 								},
 								{
-									siteName: DownloadSites.GitHub,
+									siteName: Websites.GitHub,
 									url: "https://github.com/dragon3025/My-Datapacks",
 								},
 							],
 							author: "dragon3025",
 							authorLinks: [
 								{
-									siteName: DownloadSites.GitHub,
+									siteName: Websites.GitHub,
 									url: "https://github.com/dragon3025",
 								},
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/member/dragon3025/",
 								},
 							],
@@ -298,26 +298,26 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 							version: "2.2",
 							downloadLinks: [
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/data-pack/invisible-item-frames-5403610/",
 								},
 							],
 							author: "8BitMonkey",
 							authorLinks: [
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/member/the8bitmonkey/",
 								},
 								{
-									siteName: DownloadSites.YouTube,
+									siteName: Websites.YouTube,
 									url: "https://www.youtube.com/channel/UC6N_YXUtiys1atyGZqNylKw",
 								},
 								{
-									siteName: DownloadSites.Twitch,
+									siteName: Websites.Twitch,
 									url: "https://www.twitch.tv/The8BitMonkey",
 								},
 								{
-									siteName: DownloadSites.Instagram,
+									siteName: Websites.Instagram,
 									url: "https://www.instagram.com/The8BitMonkey",
 								},
 							],
@@ -330,14 +330,14 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 							datapackName: "Wandering Cities",
 							downloadLinks: [
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
 								},
 							],
 							author: "Aceplante",
 							authorLinks: [
 								{
-									siteName: DownloadSites.PlanetMC,
+									siteName: Websites.PlanetMC,
 									url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
 								},
 							],

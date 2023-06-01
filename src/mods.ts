@@ -1,4 +1,4 @@
-import { DownloadSites, ModUsages } from "./constants";
+import { Websites, ModUsages } from "./constants";
 
 const allMods = [
 	{
@@ -6,15 +6,15 @@ const allMods = [
 		version: "1.5.0",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/alternate-current/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/SpaceWalkerRS/alternate-current/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/alternate-current/files",
 			},
 		],
@@ -26,15 +26,15 @@ const allMods = [
 		version: "0.2.0+alpha.10.51",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/c2me-fabric/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/RelativityMC/C2ME-fabric/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/c2me-fabric/files",
 			},
 		],
@@ -46,15 +46,15 @@ const allMods = [
 		version: "0.81.1",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/fabric-api/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/FabricMC/fabric/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/fabric-api/files",
 			},
 		],
@@ -66,15 +66,15 @@ const allMods = [
 		version: "5.2.0",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/ferrite-core/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/malte0811/FerriteCore/tags",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/ferritecore/files",
 			},
 		],
@@ -86,11 +86,11 @@ const allMods = [
 		version: "0.11.1",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/lithium/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/CaffeineMC/lithium-fabric/releases",
 			},
 		],
@@ -102,27 +102,27 @@ const allMods = [
 		version: "1.3.51",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/servercore/versions",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/servercore/files",
 			},
 		],
 		purpose: "Reduces server lag spikes",
-		usage: ModUsages.server,
+		usage: ModUsages.serverOnly,
 	},
 	{
 		modName: "Sodium",
 		version: "0.4.10",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/sodium/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/CaffeineMC/sodium-fabric/releases",
 			},
 		],
@@ -134,15 +134,15 @@ const allMods = [
 		version: "1.7.0",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/smoothboot-fabric/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/UltimateBoomer/mc-smoothboot/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/smooth-boot/files",
 			},
 		],
@@ -154,11 +154,11 @@ const allMods = [
 		version: "1.1.1",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/starlight/versions",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/starlight/files",
 			},
 		],
@@ -170,35 +170,35 @@ const allMods = [
 		version: "0.2.0+beta.7.736.37 for 1.19.1",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/vmp-fabric/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/RelativityMC/VMP-fabric/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/vmp-fabric/files",
 			},
 		],
 		purpose: "Optimizes server networking and entity collisions",
-		usage: ModUsages.server,
+		usage: ModUsages.serverOnly,
 	},
 	{
 		modName: "Audaki Cart Engine",
 		version: "2.0.3",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/audaki-cart-engine/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/audaki/minecraft-cart-engine/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/audaki-cart-engine/files",
 			},
 		],
@@ -210,11 +210,11 @@ const allMods = [
 		version: "1.3.74",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/plugin/chunky/versions",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator",
 			},
 		],
@@ -227,15 +227,15 @@ const allMods = [
 		version: "1.4.10",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/invview/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/PotatoPresident/InvView/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/inv-view/files",
 			},
 		],
@@ -247,15 +247,15 @@ const allMods = [
 		version: "1.5.1",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/keepheadnames/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/Fourmisain/KeepHeadNames/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/keepheadnames/files",
 			},
 		],
@@ -268,15 +268,15 @@ const allMods = [
 		version: "1.2.7",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/ledger/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/QuiltServerTools/Ledger/releases",
 			},
 			{
-				siteName: DownloadSites.CurseForge,
+				siteName: Websites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/ledger/files",
 			},
 		],
@@ -288,11 +288,11 @@ const allMods = [
 		version: "1.1.2",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/mods-command/versions",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/jpenilla/mods-command/releases",
 			},
 		],
@@ -304,11 +304,11 @@ const allMods = [
 		version: "1.1.0",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.Modrinth,
+				siteName: Websites.Modrinth,
 				url: "https://modrinth.com/mod/mods-command",
 			},
 			{
-				siteName: DownloadSites.GitHub,
+				siteName: Websites.GitHub,
 				url: "https://github.com/jpenilla/mods-command/releases",
 			},
 		],
@@ -323,6 +323,9 @@ export const getServerMods = () => {
 
 export const getClientMods = () => {
 	return allMods.filter(
-		(mod) => ModUsages.client === mod.usage || ModUsages.all === mod.usage
+		(mod) =>
+			ModUsages.client === mod.usage ||
+			ModUsages.all === mod.usage ||
+			ModUsages.server === mod.usage
 	);
 };
