@@ -3,8 +3,9 @@ import { Text } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
 import TitledSubSection from "../components/TitledSubSection";
 import VanillaTweaksTable from "../components/VanillaTweaksTable";
-import BasicTable from "../components/BasicTable";
 import ExternalTabLink from "../components/ExternalTabLink";
+import DatapackTable from "../components/DatapackTable";
+import { DownloadSites } from "../constants";
 
 interface DatapacksProps {
 	vtDatapacksHref: string;
@@ -230,108 +231,120 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 				/>
 			</TitledSubSection>
 			<TitledSubSection header="Other Datapacks">
-				<BasicTable
-					columnHeaders={[
-						"Datapack Name/version",
-						"Author",
-						"Changes",
-						"Reasoning",
-					]}
-					rows={[
-						[
-							<Text key="item-frame-color">
-								Item Frame Color v1.4 on{" "}
-								<ExternalTabLink href="https://www.planetminecraft.com/data-pack/item-frame-color/">
-									planetmc
-								</ExternalTabLink>
-								{" & "}
-								<ExternalTabLink href="https://github.com/kikipunk/Item-Frame-Color-DataPack">
-									github
-								</ExternalTabLink>
-							</Text>,
-							<Text key="kikpunk">
-								kikpunk:{" "}
-								<ExternalTabLink href="https://www.planetminecraft.com/member/kikipunk/">
-									planetmc
-								</ExternalTabLink>
-								,{" "}
-								<ExternalTabLink href="https://www.youtube.com/channel/UC0l_FnZ6USWl-obEocIlaoA">
-									youtube
-								</ExternalTabLink>
-								,{" "}
-								<ExternalTabLink href="https://github.com/kikipunk">
-									github
-								</ExternalTabLink>
-							</Text>,
-							"Item frames can be recolored by shift clicking them with dye. Undo the color by shift clicking with a water bucket or breaking the item frame",
-							"Seemed like a nice decoration choice and since it seems to work well, I added it",
-						],
-						[
-							<ExternalTabLink
-								key="quick-armor-swapper"
-								href="https://www.planetminecraft.com/data-pack/quick-armor-swapper-switcher/"
-							>
-								Quick Armor Swapper
-							</ExternalTabLink>,
-							"CVC0210: planetmc",
-							"Attempting to equip armor while armor is already equipped in that slot swaps the equipped armor with the held armor. Side effect: you cannot attack or mine while holding armor",
-							"Very good utility that exists in Bedrock Edition. I'm waiting for the parity fix for this feature",
-						],
-						[
-							<ExternalTabLink
-								key="take-a-seat"
-								href="https://www.planetminecraft.com/data-pack/take-a-seat/"
-							>
-								Take a Seat Datapack (Sit Anywhere)
-							</ExternalTabLink>,
-							"Unknown: perhaps 9minecraft.net?",
-							"The player can sit anywhere by using `/trigger sit` and then right clicking the block at their feet",
-							"It's a fun and simple emote. This seemed to me the most elegant way to ",
-						],
-						[
-							<ExternalTabLink
-								key="invisible-item-frames"
-								href="https://www.planetminecraft.com/data-pack/invisible-item-frames-5403610/"
-							>
-								Invisible item frames v2.2
-							</ExternalTabLink>,
-							<Text key="8BitMonkey">
-								The8BitMonkey:{" "}
-								<ExternalTabLink href="https://www.planetminecraft.com/member/the8bitmonkey/">
-									planetmc
-								</ExternalTabLink>
-								,{" "}
-								<ExternalTabLink href="https://www.youtube.com/channel/UC6N_YXUtiys1atyGZqNylKw">
-									youtube
-								</ExternalTabLink>
-								,{" "}
-								<ExternalTabLink href="https://www.twitch.tv/The8BitMonkey">
-									twitch
-								</ExternalTabLink>
-								,{" "}
-								<ExternalTabLink href="https://www.instagram.com/The8BitMonkey">
-									instagram
-								</ExternalTabLink>
-							</Text>,
-							"Item frames can be made invisible by shift clicking them with shears. Includes a set of hidden advancements. Items in invisible frames can only be rotated if the player is sneaking. Some of these settings don’t apply if the frames are made invisible using a `Statues` book. Undo by breaking the item frame",
-							"Very vanilla feeling way to allow invisible item frames",
-						],
-						[
-							<ExternalTabLink
-								key="wandering-cities"
-								href="https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/"
-							>
-								Wandering Cities
-							</ExternalTabLink>,
-							<ExternalTabLink
-								key="aceplante"
-								href="https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/"
-							>
-								Aceplante
-							</ExternalTabLink>,
-							"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an “Ancient City Map Crate”",
-							"Adds an easier way to find Ancient Cities",
-						],
+				<DatapackTable
+					datapacks={[
+						{
+							datapackName: "Item Frame Color",
+							version: "1.4",
+							downloadLinks: [
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/data-pack/item-frame-color/",
+								},
+								{
+									siteName: DownloadSites.GitHub,
+									url: "https://github.com/kikipunk/Item-Frame-Color-DataPack",
+								},
+							],
+							author: "kikpunk",
+							authorLinks: [
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/member/kikipunk/",
+								},
+								{
+									siteName: DownloadSites.YouTube,
+									url: "https://www.youtube.com/channel/UC0l_FnZ6USWl-obEocIlaoA",
+								},
+								{
+									siteName: DownloadSites.GitHub,
+									url: "https://github.com/kikipunk",
+								},
+							],
+							changes:
+								"Item frames can be recolored by shift clicking them with dye. Undo the color by shift clicking with a water bucket or breaking the item frame",
+							reasoning:
+								"Seemed like a nice decoration choice and since it seems to work well, I added it",
+						},
+						{
+							datapackName: "Take a Seat",
+							downloadLinks: [
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/data-pack/take-a-seat/",
+								},
+								{
+									siteName: DownloadSites.GitHub,
+									url: "https://github.com/dragon3025/My-Datapacks",
+								},
+							],
+							author: "dragon3025",
+							authorLinks: [
+								{
+									siteName: DownloadSites.GitHub,
+									url: "https://github.com/dragon3025",
+								},
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/member/dragon3025/",
+								},
+							],
+							changes: "The player can sit anywhere by using `/trigger sit`",
+							reasoning:
+								"It's a fun and simple emote. This seemed to me the most elegant way to implement this",
+						},
+						{
+							datapackName: "Invisible Item Frames",
+							version: "2.2",
+							downloadLinks: [
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/data-pack/invisible-item-frames-5403610/",
+								},
+							],
+							author: "8BitMonkey",
+							authorLinks: [
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/member/the8bitmonkey/",
+								},
+								{
+									siteName: DownloadSites.YouTube,
+									url: "https://www.youtube.com/channel/UC6N_YXUtiys1atyGZqNylKw",
+								},
+								{
+									siteName: DownloadSites.Twitch,
+									url: "https://www.twitch.tv/The8BitMonkey",
+								},
+								{
+									siteName: DownloadSites.Instagram,
+									url: "https://www.instagram.com/The8BitMonkey",
+								},
+							],
+							changes:
+								"Item frames can be made invisible by shift clicking them with shears. Includes a set of hidden advancements. Items in invisible frames can only be rotated if the player is sneaking. Some of these settings don’t apply if the frames are made invisible using a `Statues` book. Undo by breaking the item frame",
+							reasoning:
+								"Very vanilla feeling way to allow invisible item frames",
+						},
+						{
+							datapackName: "Wandering Cities",
+							downloadLinks: [
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
+								},
+							],
+							author: "Aceplante",
+							authorLinks: [
+								{
+									siteName: DownloadSites.PlanetMC,
+									url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
+								},
+							],
+							changes:
+								"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an 'Ancient City Map Crate'",
+							reasoning: "Adds an easier way to find Ancient Cities",
+						},
 					]}
 				/>
 			</TitledSubSection>
