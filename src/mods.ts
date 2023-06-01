@@ -3,11 +3,19 @@ import { DownloadSites, ModUsages } from "./constants";
 const allMods = [
 	{
 		modName: "Alternate Current",
-		version: "1.54.0",
+		version: "1.5.0",
 		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/alternate-current/versions",
+			},
 			{
 				siteName: DownloadSites.GitHub,
 				url: "https://github.com/SpaceWalkerRS/alternate-current/releases",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/alternate-current/files",
 			},
 		],
 		purpose: "Optimizes update order of redstone wire and components",
@@ -15,60 +23,72 @@ const allMods = [
 	},
 	{
 		modName: "c2me",
-		version: "0.2.0+alpha.10.518",
+		version: "0.2.0+alpha.10.51",
 		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/c2me-fabric/versions",
+			},
 			{
 				siteName: DownloadSites.GitHub,
 				url: "https://github.com/RelativityMC/C2ME-fabric/releases",
 			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/c2me-fabric/files",
+			},
 		],
 		purpose: "Optimizes chunk loading by using multiple CPU cores",
-		usage: ModUsages.all,
+		usage: ModUsages.server,
 	},
 	{
 		modName: "Fabric API",
-		version: "0.81.160.0+1.19.42",
+		version: "0.81.1",
 		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/fabric-api/versions",
+			},
 			{
 				siteName: DownloadSites.GitHub,
 				url: "https://github.com/FabricMC/fabric/releases",
 			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/fabric-api/files",
+			},
 		],
-		purpose: "Required library for most fabric mods",
+		purpose: "Library used by most fabric mods",
 		usage: ModUsages.all,
 	},
 	{
 		modName: "FerriteCore",
-		version: "5.20.0",
+		version: "5.2.0",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.CurseForge,
-				url: "https://www.curseforge.com/minecraft/mc-mods/ferritecore/files",
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/ferrite-core/versions",
 			},
 			{
 				siteName: DownloadSites.GitHub,
 				url: "https://github.com/malte0811/FerriteCore/tags",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/ferritecore/files",
 			},
 		],
 		purpose: "Optimizes memory usage",
 		usage: ModUsages.all,
 	},
 	{
-		modName: "LazyDFU",
-		version: "0.1.3",
+		modName: "Lithium",
+		version: "0.11.1",
 		downloadLinks: [
 			{
-				siteName: DownloadSites.GitHub,
-				url: "https://github.com/astei/lazydfu/releases",
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/lithium/versions",
 			},
-		],
-		purpose: "",
-		usage: ModUsages.client,
-	},
-	{
-		modName: "Lithium",
-		version: "0.11.10.8.3+1.19.2",
-		downloadLinks: [
 			{
 				siteName: DownloadSites.GitHub,
 				url: "https://github.com/CaffeineMC/lithium-fabric/releases",
@@ -78,21 +98,29 @@ const allMods = [
 		usage: ModUsages.all,
 	},
 	{
-		modName: "Servercore",
+		modName: "ServerCore",
 		version: "1.3.51",
 		downloadLinks: [
 			{
 				siteName: DownloadSites.Modrinth,
 				url: "https://modrinth.com/mod/servercore/versions",
 			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/servercore/files",
+			},
 		],
-		purpose: "Reduces lag spikes (offers other optimization options as well)",
+		purpose: "Reduces server lag spikes",
 		usage: ModUsages.server,
 	},
 	{
 		modName: "Sodium",
-		version: "0.4.2",
+		version: "0.4.10",
 		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/sodium/versions",
+			},
 			{
 				siteName: DownloadSites.GitHub,
 				url: "https://github.com/CaffeineMC/sodium-fabric/releases",
@@ -103,15 +131,22 @@ const allMods = [
 	},
 	{
 		modName: "Smooth Boot",
-		version: "1.19.4-1.7.01",
+		version: "1.7.0",
 		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/smoothboot-fabric/versions",
+			},
 			{
 				siteName: DownloadSites.GitHub,
 				url: "https://github.com/UltimateBoomer/mc-smoothboot/releases",
 			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/smooth-boot/files",
+			},
 		],
-		purpose:
-			"Changes order of multithreading during game boot (speeds up boot)",
+		purpose: "Makes multithreaded boot more efficient",
 		usage: ModUsages.all,
 	},
 	{
@@ -119,17 +154,16 @@ const allMods = [
 		version: "1.1.1",
 		downloadLinks: [
 			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/starlight/versions",
+			},
+			{
 				siteName: DownloadSites.CurseForge,
 				url: "https://www.curseforge.com/minecraft/mc-mods/starlight/files",
 			},
-			{
-				siteName: DownloadSites.GitHub,
-				url: "https://github.com/PaperMC/Starlight",
-			},
 		],
-		purpose:
-			"Rewrites lighting engine. Much more efficient than using Phosphor",
-		usage: ModUsages.all,
+		purpose: "Most efficient rewrite of the lighting engine. Useless 1.20+",
+		usage: ModUsages.server,
 	},
 	{
 		modName: "Very Many Player (VMP)",
@@ -139,9 +173,146 @@ const allMods = [
 				siteName: DownloadSites.Modrinth,
 				url: "https://modrinth.com/mod/vmp-fabric/versions",
 			},
+			{
+				siteName: DownloadSites.GitHub,
+				url: "https://github.com/RelativityMC/VMP-fabric/releases",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/vmp-fabric/files",
+			},
+		],
+		purpose: "Optimizes server networking and entity collisions",
+		usage: ModUsages.server,
+	},
+	{
+		modName: "Audaki Cart Engine",
+		version: "2.0.3",
+		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/audaki-cart-engine/versions",
+			},
+			{
+				siteName: DownloadSites.GitHub,
+				url: "https://github.com/audaki/minecraft-cart-engine/releases",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/audaki-cart-engine/files",
+			},
+		],
+		purpose: "Makes mine carts 4 times faster on straight sections",
+		usage: ModUsages.serverOnly,
+	},
+	{
+		modName: "Chunky",
+		version: "1.3.74",
+		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/plugin/chunky/versions",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator",
+			},
+		],
+		purpose: "Tool to pre-generate chunks",
+		usage: ModUsages.server,
+	},
+	{
+		//InvView
+		modName: "Inv View",
+		version: "1.4.10",
+		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/invview/versions",
+			},
+			{
+				siteName: DownloadSites.GitHub,
+				url: "https://github.com/PotatoPresident/InvView/releases",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/inv-view/files",
+			},
+		],
+		purpose: "Gives admins the ability to view and edit inventories",
+		usage: ModUsages.serverOnly,
+	},
+	{
+		modName: "Keep Head Names",
+		version: "1.5.1",
+		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/keepheadnames/versions",
+			},
+			{
+				siteName: DownloadSites.GitHub,
+				url: "https://github.com/Fourmisain/KeepHeadNames/releases",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/keepheadnames/files",
+			},
 		],
 		purpose:
-			"Improves performance for large numbers of players. Probably not necessary, but why not?",
+			"Preserves extra data on player heads that are placed and picked up again",
+		usage: ModUsages.serverOnly,
+	},
+	{
+		modName: "Ledger",
+		version: "1.2.7",
+		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/ledger/versions",
+			},
+			{
+				siteName: DownloadSites.GitHub,
+				url: "https://github.com/QuiltServerTools/Ledger/releases",
+			},
+			{
+				siteName: DownloadSites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/ledger/files",
+			},
+		],
+		purpose: "Gives admins a log of player actions",
+		usage: ModUsages.serverOnly,
+	},
+	{
+		modName: "Mods Command",
+		version: "1.1.2",
+		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/mods-command/versions",
+			},
+			{
+				siteName: DownloadSites.GitHub,
+				url: "https://github.com/jpenilla/mods-command/releases",
+			},
+		],
+		purpose: "Shows installed mods",
+		usage: ModUsages.server,
+	},
+	{
+		modName: "Slumber",
+		version: "1.1.0",
+		downloadLinks: [
+			{
+				siteName: DownloadSites.Modrinth,
+				url: "https://modrinth.com/mod/mods-command",
+			},
+			{
+				siteName: DownloadSites.GitHub,
+				url: "https://github.com/jpenilla/mods-command/releases",
+			},
+		],
+		purpose: "Hibernates the server when no players are online",
 		usage: ModUsages.serverOnly,
 	},
 ];
