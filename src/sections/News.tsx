@@ -10,6 +10,62 @@ interface NewsProps {
 const News: FunctionComponent<NewsProps> = ({ email }) => {
 	return (
 		<TitledSection header="News">
+			<TitledSubSection header="May 31">
+				<Text>
+					The original Google Docs page has been replaced with this website!
+					Feel free to offer suggestions on how I can improve this page.
+				</Text>
+				<Text>
+					Here is the promised list of mod changes:
+					<UnorderedList>
+						<ListItem>
+							Audaki Cart Engine: Makes mine carts 4 times faster on straight
+							sections
+						</ListItem>
+						<ListItem>Chunky: Tool to pre-generate chunks</ListItem>
+						<ListItem>
+							Inv View: Gives admins the ability to view and edit inventories
+						</ListItem>
+						<ListItem>
+							Keep Head: Preserves extra data on player heads that are placed
+							and picked up again
+						</ListItem>
+						<ListItem>Ledger: Gives admins a log of player actions</ListItem>
+						<ListItem>Mods Command: Shows installed mods</ListItem>
+						<ListItem>
+							Slumber: Hibernates the server when no players are online
+						</ListItem>
+					</UnorderedList>
+					And a list of datapack changes:
+					<UnorderedList>
+						<ListItem>ADD THE LIST HERE {/*TODO*/}</ListItem>
+					</UnorderedList>
+				</Text>
+			</TitledSubSection>
+			<TitledSubSection header="May 24">
+				<Text>
+					The server has been updated to 1.19.4. Players will need to update
+					Minecraft and any mods they use in order to play. Specifics on mods
+					and versions being used will be updated later.
+				</Text>
+				<Text>
+					Some quick notes:
+					<UnorderedList>
+						<ListItem>Shulkers now always drop 2 shells</ListItem>
+						<ListItem>
+							A held compass will show your current coordinates and direction
+						</ListItem>
+						<ListItem>
+							Armor swapping now exists in the game, no datapacks needed
+						</ListItem>
+						<ListItem>
+							Non-cobbled deepslate can be used in stone-cutters
+						</ListItem>
+						<ListItem>Mine carts are now up to 4x faster</ListItem>
+					</UnorderedList>
+				</Text>
+			</TitledSubSection>
+
 			<TitledSubSection header="August 21">
 				<Text>
 					The server has been updated to 1.19.2. Players will need to update
