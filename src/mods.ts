@@ -22,6 +22,26 @@ const allMods = [
 		usage: ModUsages.server,
 	},
 	{
+		modName: "Audaki Cart Engine",
+		version: "2.0.3",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/audaki-cart-engine/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/audaki/minecraft-cart-engine/releases",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/audaki-cart-engine/files",
+			},
+		],
+		purpose: "Makes mine carts 4 times faster on straight sections",
+		usage: ModUsages.serverOnly,
+	},
+	{
 		modName: "c2me",
 		version: "0.2.0+alpha.10.51",
 		downloadLinks: [
@@ -39,6 +59,22 @@ const allMods = [
 			},
 		],
 		purpose: "Optimizes chunk loading by using multiple CPU cores",
+		usage: ModUsages.server,
+	},
+	{
+		modName: "Chunky",
+		version: "1.3.74",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/plugin/chunky/versions",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator",
+			},
+		],
+		purpose: "Tool to pre-generate chunks",
 		usage: ModUsages.server,
 	},
 	{
@@ -82,6 +118,67 @@ const allMods = [
 		usage: ModUsages.all,
 	},
 	{
+		modName: "Inv View",
+		version: "1.4.10",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/invview/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/PotatoPresident/InvView/releases",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/inv-view/files",
+			},
+		],
+		purpose: "Gives admins the ability to view and edit inventories",
+		usage: ModUsages.serverOnly,
+	},
+	{
+		modName: "Keep Head Names",
+		version: "1.5.1",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/keepheadnames/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/Fourmisain/KeepHeadNames/releases",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/keepheadnames/files",
+			},
+		],
+		purpose:
+			"Preserves extra data on player heads that are placed and picked up again",
+		usage: ModUsages.serverOnly,
+	},
+	{
+		modName: "Ledger",
+		version: "1.2.7",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/ledger/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/QuiltServerTools/Ledger/releases",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/mc-mods/ledger/files",
+			},
+		],
+		purpose: "Gives admins a log of player actions",
+		usage: ModUsages.serverOnly,
+	},
+	{
 		modName: "Lithium",
 		version: "0.11.1",
 		downloadLinks: [
@@ -98,6 +195,22 @@ const allMods = [
 		usage: ModUsages.all,
 	},
 	{
+		modName: "Mods Command",
+		version: "1.1.2",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/mods-command/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/jpenilla/mods-command/releases",
+			},
+		],
+		purpose: "Shows installed mods",
+		usage: ModUsages.server,
+	},
+	{
 		modName: "ServerCore",
 		version: "1.3.51",
 		downloadLinks: [
@@ -111,6 +224,22 @@ const allMods = [
 			},
 		],
 		purpose: "Reduces server lag spikes",
+		usage: ModUsages.serverOnly,
+	},
+	{
+		modName: "Slumber",
+		version: "1.1.0",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/mods-command",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/jpenilla/mods-command/releases",
+			},
+		],
+		purpose: "Hibernates the server when no players are online",
 		usage: ModUsages.serverOnly,
 	},
 	{
@@ -183,136 +312,6 @@ const allMods = [
 			},
 		],
 		purpose: "Optimizes server networking and entity collisions",
-		usage: ModUsages.serverOnly,
-	},
-	{
-		modName: "Audaki Cart Engine",
-		version: "2.0.3",
-		downloadLinks: [
-			{
-				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/audaki-cart-engine/versions",
-			},
-			{
-				siteName: Websites.GitHub,
-				url: "https://github.com/audaki/minecraft-cart-engine/releases",
-			},
-			{
-				siteName: Websites.CurseForge,
-				url: "https://www.curseforge.com/minecraft/mc-mods/audaki-cart-engine/files",
-			},
-		],
-		purpose: "Makes mine carts 4 times faster on straight sections",
-		usage: ModUsages.serverOnly,
-	},
-	{
-		modName: "Chunky",
-		version: "1.3.74",
-		downloadLinks: [
-			{
-				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/plugin/chunky/versions",
-			},
-			{
-				siteName: Websites.CurseForge,
-				url: "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator",
-			},
-		],
-		purpose: "Tool to pre-generate chunks",
-		usage: ModUsages.server,
-	},
-	{
-		//InvView
-		modName: "Inv View",
-		version: "1.4.10",
-		downloadLinks: [
-			{
-				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/invview/versions",
-			},
-			{
-				siteName: Websites.GitHub,
-				url: "https://github.com/PotatoPresident/InvView/releases",
-			},
-			{
-				siteName: Websites.CurseForge,
-				url: "https://www.curseforge.com/minecraft/mc-mods/inv-view/files",
-			},
-		],
-		purpose: "Gives admins the ability to view and edit inventories",
-		usage: ModUsages.serverOnly,
-	},
-	{
-		modName: "Keep Head Names",
-		version: "1.5.1",
-		downloadLinks: [
-			{
-				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/keepheadnames/versions",
-			},
-			{
-				siteName: Websites.GitHub,
-				url: "https://github.com/Fourmisain/KeepHeadNames/releases",
-			},
-			{
-				siteName: Websites.CurseForge,
-				url: "https://www.curseforge.com/minecraft/mc-mods/keepheadnames/files",
-			},
-		],
-		purpose:
-			"Preserves extra data on player heads that are placed and picked up again",
-		usage: ModUsages.serverOnly,
-	},
-	{
-		modName: "Ledger",
-		version: "1.2.7",
-		downloadLinks: [
-			{
-				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/ledger/versions",
-			},
-			{
-				siteName: Websites.GitHub,
-				url: "https://github.com/QuiltServerTools/Ledger/releases",
-			},
-			{
-				siteName: Websites.CurseForge,
-				url: "https://www.curseforge.com/minecraft/mc-mods/ledger/files",
-			},
-		],
-		purpose: "Gives admins a log of player actions",
-		usage: ModUsages.serverOnly,
-	},
-	{
-		modName: "Mods Command",
-		version: "1.1.2",
-		downloadLinks: [
-			{
-				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/mods-command/versions",
-			},
-			{
-				siteName: Websites.GitHub,
-				url: "https://github.com/jpenilla/mods-command/releases",
-			},
-		],
-		purpose: "Shows installed mods",
-		usage: ModUsages.server,
-	},
-	{
-		modName: "Slumber",
-		version: "1.1.0",
-		downloadLinks: [
-			{
-				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/mods-command",
-			},
-			{
-				siteName: Websites.GitHub,
-				url: "https://github.com/jpenilla/mods-command/releases",
-			},
-		],
-		purpose: "Hibernates the server when no players are online",
 		usage: ModUsages.serverOnly,
 	},
 ];

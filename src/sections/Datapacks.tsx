@@ -240,6 +240,43 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 				<DatapackTable
 					datapacks={[
 						{
+							datapackName: "Better Compass",
+							downloadLinks: [
+								{
+									siteName: Websites.PlanetMC,
+									url: "https://www.planetminecraft.com/data-pack/better-compass-display-coordinates-and-cardinal-direction/",
+								},
+							],
+							author: "KawaMood",
+							authorLinks: [
+								{
+									siteName: Websites.PlanetMC,
+									url: "https://www.planetminecraft.com/member/kawamood/",
+								},
+							],
+							changes: "Compasses now show coordinates and cardinal direction",
+							reasoning: "Adds a good use to compasses",
+						},
+						{
+							datapackName: "Better Deepslate Stonecutting",
+							downloadLinks: [
+								{
+									siteName: Websites.PlanetMC,
+									url: "https://www.planetminecraft.com/data-pack/better-deepslate-stonecutting/",
+								},
+							],
+							author: "Xigzagamer",
+							authorLinks: [
+								{
+									siteName: Websites.PlanetMC,
+									url: "https://www.planetminecraft.com/member/xigzagamer/",
+								},
+							],
+							changes:
+								"Gives deepslate the same stonecutter recipes as cobbled deepslate",
+							reasoning: "I got tired of mining these two resources separate",
+						},
+						{
 							datapackName: "Item Frame Color",
 							version: "1.4",
 							downloadLinks: [
@@ -350,43 +387,6 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 							changes:
 								"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an 'Ancient City Map Crate'",
 							reasoning: "Adds an easier way to find Ancient Cities",
-						},
-						{
-							datapackName: "Better Compass",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/better-compass-display-coordinates-and-cardinal-direction/",
-								},
-							],
-							author: "KawaMood",
-							authorLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/member/kawamood/",
-								},
-							],
-							changes: "Compasses now show coordinates and cardinal direction",
-							reasoning: "Adds a good use to compasses",
-						},
-						{
-							datapackName: "Better Deepslate Stonecutting",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/better-deepslate-stonecutting/",
-								},
-							],
-							author: "Xigzagamer",
-							authorLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/member/xigzagamer/",
-								},
-							],
-							changes:
-								"Gives deepslate the same stonecutter recipes as cobbled deepslate",
-							reasoning: "I got tired of mining these two resources separate",
 						},
 					]}
 				/>
