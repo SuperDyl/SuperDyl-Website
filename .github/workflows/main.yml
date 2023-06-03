@@ -1,0 +1,19 @@
+name: Update Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Send POST request
+        run: |
+          # Replace `https://example.com/update-website` with the endpoint of your server
+          curl -X POST https://meta.superdyl.net/update
