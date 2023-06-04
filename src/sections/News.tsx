@@ -10,7 +10,7 @@ interface NewsProps {
 const News: FunctionComponent<NewsProps> = ({ email }) => {
 	return (
 		<TitledSection header="News">
-			<TitledSubSection header="June 1">
+			<TitledSubSection header="June 2">
 				<Text>
 					The original Google Docs page has been replaced with this website!
 					Feel free to offer suggestions on how I can improve this page.
