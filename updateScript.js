@@ -13,46 +13,46 @@ const pm2Name = "website";
 app.post("/upgrade", (req, res) => {
 	console.log("Received upgrade request");
 
-	setTimeout(() => {
-		//10 second delay
-		console.log("Finished waiting for delay");
-		git.pull((error, result) => {
-			if (error) {
-				console.error("Failed to pull changes:", error);
-				return res.sendStatus(500);
-			}
+	// setTimeout(() => {
+	//10 second delay
+	console.log("Finished waiting for delay");
+	git.pull((error, result) => {
+		if (error) {
+			console.error("Failed to pull changes:", error);
+			return res.sendStatus(500);
+		}
 
-			if (result && result.summary.changes) {
-				console.log("Successfully pulled changes:", result.summary);
+		if (result && result.summary.changes) {
+			console.log("Successfully pulled changes:", result.summary);
 
-				// Run npm install
-				exec("npm install", (error, stdout) => {
+			// Run npm install
+			exec("npm install", (error, stdout) => {
+				if (error) {
+					console.error("Failed to run npm install:", error);
+					return res.sendStatus(500);
+				}
+
+				console.log("npm install output:", stdout);
+
+				exec("gatsby build", (error, stdout, stderr) => {
 					if (error) {
-						console.error("Failed to run npm install:", error);
+						console.error("Failed to build the new page:", error);
 						return res.sendStatus(500);
 					}
 
-					console.log("npm install output:", stdout);
-
-					exec("gatsby build", (error, stdout, stderr) => {
-						if (error) {
-							console.error("Failed to build the new page:", error);
-							return res.sendStatus(500);
-						}
-
-						console.log("gatsby build output:", stdout);
-					});
-
-					// Restart the script via PM2
-					pm2Restart();
+					console.log("gatsby build output:", stdout);
 				});
-			} else {
-				console.log("No changes found. Skipping npm install and restart.");
-			}
 
-			res.sendStatus(200);
-		});
-	}, 1000); //10 second delay
+				// Restart the script via PM2
+				pm2Restart();
+			});
+		} else {
+			console.log("No changes found. Skipping npm install and restart.");
+		}
+
+		res.sendStatus(200);
+	});
+	// }, 1000); //10 second delay
 });
 
 // Restart the script through PM2
