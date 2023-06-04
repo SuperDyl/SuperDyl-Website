@@ -1,10 +1,12 @@
-import express from "express";
-import { exec } from "child_process";
-import simpleGit from "simple-git";
+/* eslint-disable @typescript-eslint/no-var-requires */
+const express = require("express");
+const simpleGit = require("simple-git/promise");
 const git = simpleGit();
 const app = express();
+const { exec } = require("child_process");
 const PORT = 3000;
 const pm2Name = "website";
+
 //use this 'pm2 start updateScript.js --name {pm2Name}'
 
 // Webhook route for receiving upgrade requests
@@ -28,6 +30,15 @@ app.post("/upgrade", (req, res) => {
 				}
 
 				console.log("npm install output:", stdout);
+
+				exec("gatsby build", (error, stdout, stderr) => {
+					if (error) {
+						console.error("Failed to build the new page:", error);
+						return res.sendStatus(500);
+					}
+
+					console.log("gatsby build output:", stdout);
+				});
 
 				// Restart the script via PM2
 				pm2Restart();
