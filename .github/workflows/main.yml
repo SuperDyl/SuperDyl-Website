@@ -16,4 +16,4 @@ jobs:
       - name: Send POST request
         run: |
           # Replace `https://example.com/update-website` with the endpoint of your server
-          curl -X POST https://meta.superdyl.net/update
+          curl -X POST https://meta.superdyl.net/upgrade
