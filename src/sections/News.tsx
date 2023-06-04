@@ -10,6 +10,58 @@ interface NewsProps {
 const News: FunctionComponent<NewsProps> = ({ email }) => {
 	return (
 		<TitledSection header="News">
+			<TitledSubSection header="June 4">
+				<Text>Summer Carnival Community Event</Text>
+				<Text>
+					I originally intended community events to happen rather often, but we
+					haven't had one since the Ender Dragon fight last August. It's time
+					for another event: the summer carnival! For this event, everyone is
+					invited to create some type of carnival ride or game at the carnival
+					grounds. This Friday or Saturday (depending on scheduling), everyone
+					can get on the server together to play the games together.
+				</Text>
+				<Text>
+					Other details:
+					<UnorderedList>
+						<ListItem>
+							All the games will be free to play. If a game requires a gamble,
+							you will need to provide some form of tokens to freely use (and
+							plenty for the duration of the carnival)
+						</ListItem>
+						<ListItem>
+							The carnival fairgrounds are southeast of the cobblestone
+							wall/lava cast
+						</ListItem>
+						<ListItem>
+							Everyone who puts in effort in building at least one game/event
+							will be compensated a couple diamonds for their effort
+						</ListItem>
+						<ListItem>Prizes will be given to the best games/events</ListItem>
+						<ListItem>
+							I expect the carnival to last about 90 minutes, but players can
+							stay on afterward or return to the carnival on other days
+						</ListItem>
+						<ListItem>
+							Generally, games should be low risk: players shouldn't be at risk
+							of losing valuable items. If possible, please provide all items
+							players will need for your games
+						</ListItem>
+					</UnorderedList>
+				</Text>
+				<Text>
+					Some suggestions:
+					<UnorderedList>
+						<ListItem>Ice boat racing</ListItem>
+						<ListItem>Parkour course</ListItem>
+						<ListItem>Spleef</ListItem>
+						<ListItem>PvP arena</ListItem>
+						<ListItem>Elytra race course</ListItem>
+						<ListItem>Bow/Crossbow shooting range</ListItem>
+						<ListItem>Pig jousting</ListItem>
+						<ListItem>Rollercoaster</ListItem>
+					</UnorderedList>
+				</Text>
+			</TitledSubSection>
 			<TitledSubSection header="June 2">
 				<Text>
 					The original Google Docs page has been replaced with this website!
