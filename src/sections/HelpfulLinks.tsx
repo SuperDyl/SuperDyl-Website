@@ -2,6 +2,7 @@ import React, { FunctionComponent, memo, useMemo } from "react";
 import { Text } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
 import ExternalTabLink from "../components/ExternalTabLink";
+import ClipboardLink from "../components/ClipboardLink";
 
 interface HelpfulLinksProps {
 	datapacksHref: string;
@@ -45,9 +46,14 @@ const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({
 		[]
 	);
 
+	const serverIP = "mc.superdyl.net";
+
 	return (
 		<TitledSection header={"Helpful Links"}>
-			<Text>Minecraft server ip: mc.superdyl.net</Text>
+			<Text>
+				Minecraft server ip:{" "}
+				<ClipboardLink text={serverIP}>{serverIP}</ClipboardLink>
+			</Text>
 			<Text>
 				Discord:{" "}
 				<ExternalTabLink href={discordHref}>

@@ -33,7 +33,7 @@ export const Header2 = styled.h2`
 	margin-bottom: 0.4em;
 `;
 
-const SharedLinkStyling = css`
+export const SharedLinkStyling = css`
 	${DefaultTextStyling}
 	text-decoration: underline;
 	cursor: pointer;
@@ -71,6 +71,7 @@ export const Table = styled.table`
 	min-width: 100%;
 	overflow: scroll;
 	border: solid 0.2em ${(props) => props.theme.primary};
+	display: block;
 `;
 
 export const TableHeader = styled.th`
