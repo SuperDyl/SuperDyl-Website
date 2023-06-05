@@ -16,6 +16,8 @@ export const TooltipBox = styled.div<TooltipBoxProps>`
 	border: 0.2em solid ${(props) => props.theme.base};
 	box-shadow: ${(props) => props.theme.baseAlt} 2px 2px 0.5em 5px;
 	border-radius: 0.5em;
+	top: -150%;
+	height: 100%;
 
 	::after {
 		content: "";
@@ -37,4 +39,6 @@ export const CenteringBox = styled.div`
 	position: absolute;
 	display: flex;
 	justify-content: center;
+	translate: 0 -100%;
+	z-index: 1;
 `;
