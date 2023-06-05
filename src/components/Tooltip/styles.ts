@@ -6,13 +6,11 @@ interface TooltipBoxProps {
 
 export const TooltipBox = styled.div<TooltipBoxProps>`
 	background-color: ${(props) => props.theme.base};
-	/* translate: 0 -200%; */
 	${({ $visible }) => ($visible ? "" : "display: none;")}
 	position: absolute;
 	z-index: 1;
 	padding: 0.1em 0.4em;
-	bottom: 100%;
-	/* transform: translateX(50%); */
+	bottom: 200%;
 	color: ${(props) => props.theme.text};
 	box-sizing: content-box;
 	border: 0.2em solid ${(props) => props.theme.base};
@@ -35,10 +33,8 @@ export const TooltipBox = styled.div<TooltipBoxProps>`
 
 export const CenteringBox = styled.div`
 	width: 100%;
+	height: 100%;
 	position: absolute;
 	display: flex;
 	justify-content: center;
-	translate: 0 -200%;
-	z-index: 1;
-	top: 0;
 `;
