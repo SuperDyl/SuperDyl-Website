@@ -1,8 +1,25 @@
 import { Websites, ModUsages } from "./constants";
+import { ExternalLink } from "./components/ExternalLinkList";
 
-const allMods = [
+const MC_1_19_4 = "1.19.4";
+const MC_1_20_0 = "1.20.0";
+
+type MC_VERSION = typeof MC_1_19_4 | typeof MC_1_20_0;
+type MOD_VERSION = string;
+
+export interface ModInfo {
+	modName: string;
+	versions: Map<MC_VERSION, MOD_VERSION>;
+	version?: MOD_VERSION;
+	downloadLinks: ExternalLink[];
+	purpose: string;
+	usage: keyof typeof ModUsages;
+}
+
+const allMods: ModInfo[] = [
 	{
 		modName: "Alternate Current",
+		versions: new Map([[MC_1_19_4, "1.5.0"]]),
 		version: "1.5.0",
 		downloadLinks: [
 			{
@@ -23,6 +40,7 @@ const allMods = [
 	},
 	{
 		modName: "Audaki Cart Engine",
+		versions: new Map([[MC_1_19_4, "2.0.3"]]),
 		version: "2.0.3",
 		downloadLinks: [
 			{
@@ -43,6 +61,7 @@ const allMods = [
 	},
 	{
 		modName: "c2me",
+		versions: new Map([[MC_1_19_4, "0.2.0+alpha.10.51"]]),
 		version: "0.2.0+alpha.10.51",
 		downloadLinks: [
 			{
@@ -63,6 +82,7 @@ const allMods = [
 	},
 	{
 		modName: "Chunky",
+		versions: new Map([[MC_1_19_4, "1.3.74"]]),
 		version: "1.3.74",
 		downloadLinks: [
 			{
@@ -79,6 +99,7 @@ const allMods = [
 	},
 	{
 		modName: "Fabric API",
+		versions: new Map([[MC_1_19_4, "0.81.1"]]),
 		version: "0.81.1",
 		downloadLinks: [
 			{
@@ -99,6 +120,7 @@ const allMods = [
 	},
 	{
 		modName: "FerriteCore",
+		versions: new Map([[MC_1_19_4, "5.2.0"]]),
 		version: "5.2.0",
 		downloadLinks: [
 			{
@@ -119,6 +141,7 @@ const allMods = [
 	},
 	{
 		modName: "Inv View",
+		versions: new Map([[MC_1_19_4, "1.4.10"]]),
 		version: "1.4.10",
 		downloadLinks: [
 			{
@@ -140,6 +163,7 @@ const allMods = [
 	{
 		modName: "Keep Head Names",
 		version: "1.5.1",
+		versions: new Map([[MC_1_19_4, "1.5.1"]]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -160,6 +184,7 @@ const allMods = [
 	},
 	{
 		modName: "Ledger",
+		versions: new Map([[MC_1_19_4, "1.2.7"]]),
 		version: "1.2.7",
 		downloadLinks: [
 			{
@@ -180,6 +205,7 @@ const allMods = [
 	},
 	{
 		modName: "Lithium",
+		versions: new Map([[MC_1_19_4, "0.11.1"]]),
 		version: "0.11.1",
 		downloadLinks: [
 			{
@@ -196,6 +222,7 @@ const allMods = [
 	},
 	{
 		modName: "Mods Command",
+		versions: new Map([[MC_1_19_4, "1.1.2"]]),
 		version: "1.1.2",
 		downloadLinks: [
 			{
@@ -212,6 +239,7 @@ const allMods = [
 	},
 	{
 		modName: "ServerCore",
+		versions: new Map([[MC_1_19_4, "1.3.51"]]),
 		version: "1.3.51",
 		downloadLinks: [
 			{
@@ -228,6 +256,7 @@ const allMods = [
 	},
 	{
 		modName: "Slumber",
+		versions: new Map([[MC_1_19_4, "1.1.0"]]),
 		version: "1.1.0",
 		downloadLinks: [
 			{
@@ -244,6 +273,7 @@ const allMods = [
 	},
 	{
 		modName: "Sodium",
+		versions: new Map([[MC_1_19_4, "0.4.10"]]),
 		version: "0.4.10",
 		downloadLinks: [
 			{
@@ -260,6 +290,7 @@ const allMods = [
 	},
 	{
 		modName: "Smooth Boot",
+		versions: new Map([[MC_1_19_4, "1.7.0"]]),
 		version: "1.7.0",
 		downloadLinks: [
 			{
@@ -280,6 +311,7 @@ const allMods = [
 	},
 	{
 		modName: "Starlight",
+		versions: new Map([[MC_1_19_4, "1.1.1"]]),
 		version: "1.1.1",
 		downloadLinks: [
 			{
@@ -296,7 +328,8 @@ const allMods = [
 	},
 	{
 		modName: "Very Many Player (VMP)",
-		version: "0.2.0+beta.7.736.37 for 1.19.1",
+		versions: new Map([[MC_1_19_4, "0.2.0+beta.7.736.37"]]),
+		version: "0.2.0+beta.7.736.37",
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,

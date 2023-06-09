@@ -1,17 +1,9 @@
 import React, { FunctionComponent, memo } from "react";
 import BasicTable from "../BasicTable";
 import { Text } from "../SharedStyles";
-import { ModUsages } from "../../constants";
 import ExternalTabLink from "../ExternalTabLink";
 import { ExternalLink } from "../ExternalLinkList";
-
-interface ModInfo {
-	modName: string;
-	version: string;
-	downloadLinks: ExternalLink[];
-	purpose: string;
-	usage: keyof typeof ModUsages;
-}
+import { ModInfo } from "../../mods";
 
 interface ModTableProps {
 	className?: string;
