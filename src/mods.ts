@@ -1,10 +1,12 @@
 import { Websites, ModUsages } from "./constants";
 import { ExternalLink } from "./components/ExternalLinkList";
 
-const MC_1_19_4 = "1.19.4";
 const MC_1_20_0 = "1.20.0";
+const MC_1_19_4 = "1.19.4";
 
-type MC_VERSION = typeof MC_1_19_4 | typeof MC_1_20_0;
+export const ALL_MC_VERSIONS = [MC_1_20_0, MC_1_19_4] as const;
+
+type MC_VERSION = (typeof ALL_MC_VERSIONS)[number];
 type MOD_VERSION = string;
 
 export interface ModInfo {
