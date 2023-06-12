@@ -29,6 +29,8 @@ export const MinifiedList = styled.div<MinifiedListProps>`
 export const ExpandedListHeader = styled.div`
 	${MinifiedStyling}
 	border-radius: 0.5em 0.5em 0px 0px;
+	display: flex;
+	justify-content: space-between;
 `;
 
 export const ExpandedListContainer = styled.div`

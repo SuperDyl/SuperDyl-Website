@@ -1,5 +1,4 @@
 import React, {
-	memo,
 	FunctionComponent,
 	useState,
 	useCallback,
@@ -14,20 +13,23 @@ import {
 	MinifiedList,
 } from "./styles";
 import ScreenBlocker from "../ScreenBlocker";
-import { cursorTo } from "readline";
+import ExpandMore from "../icons/ExpandMore";
+import ExpandLess from "../icons/ExpandLess";
+
+type CallbackFunction = (selection: string, result?: number) => void;
 
 interface DropDownListProps {
 	className?: string;
 	options: string[];
 	select: number;
+	onSelect?: CallbackFunction;
 }
-
-type CallbackFunction = (result: number) => void;
 
 const DropDownList: FunctionComponent<DropDownListProps> = ({
 	className,
 	options,
 	select,
+	onSelect = () => undefined,
 }) => {
 	const [selected, setSelected] = useState(select);
 	const [isExpanded, setIsExpanded] = useState(false);
@@ -43,6 +45,7 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 				$visible={visible}
 			>
 				{minifiedText}
+				<ExpandMore />
 			</MinifiedList>
 		),
 		[minifiedText, className]
@@ -55,6 +58,7 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 				onClick={() => setIsExpanded(false)}
 			>
 				{minifiedText}
+				<ExpandLess />
 			</ExpandedListHeader>
 		),
 		[minifiedText, className]
@@ -70,6 +74,7 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 								onClick={() => {
 									setSelected(index);
 									setIsExpanded(false);
+									onSelect(options[index], index);
 								}}
 							>
 								{item}
