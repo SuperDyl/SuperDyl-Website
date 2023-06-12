@@ -92,7 +92,7 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 				<ScreenBlocker onClick={() => setIsExpanded(false)} />
 			</>
 		);
-	}, [className]);
+	}, [className, selected]);
 
 	return (
 		<DropDownContainer>

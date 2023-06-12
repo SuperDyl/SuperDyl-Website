@@ -1,31 +1,34 @@
 import styled, { css } from "styled-components";
 import { ListItem, UnorderedList } from "../SharedStyles";
 
-const border = ``; //`border: 0.1em solid red;`;
+const border = css`
+	border: 0.2em solid ${(props) => props.theme.base};
+`;
 
 interface MinifiedListProps {
 	$visible: boolean;
 }
 
 const MinifiedStyling = css`
-	background-color: aqua;
 	cursor: pointer;
 	display: inline-block;
-	${border}
-	border-width: 0.2em;
 	width: 100%;
 	padding: 0.3em 0.5em;
+	background-color: ${(props) => props.theme.secondary};
+	color: ${(props) => props.theme.text};
 `;
 
 export const MinifiedList = styled.div<MinifiedListProps>`
 	${MinifiedStyling}
+	${border}
+
 	visibility: ${({ $visible }) => ($visible ? "visible" : "hidden")};
 	border-radius: 0.7em;
 `;
 
 export const ExpandedListHeader = styled.div`
 	${MinifiedStyling}
-	border-radius: 0.7em 0.7em 0 0;
+	border-radius: 0.5em 0.5em 0px 0px;
 `;
 
 export const ExpandedListContainer = styled.div`
@@ -34,24 +37,21 @@ export const ExpandedListContainer = styled.div`
 
 	position: absolute;
 	white-space: nowrap;
+
+	border-radius: 0.7em;
+	background-color: ${(props) => props.theme.baseAlt};
+	${border}
 `;
 
 export const ExpandedList = styled(UnorderedList)`
 	list-style: none;
 	margin: 0;
-	${border}
 `;
 
 export const ExpandedListItem = styled(ListItem)`
-	background-color: blue;
-	${border}
 	margin: 0;
-	padding: 0.3em;
+	padding: 0.3em 0.5em;
 	cursor: pointer;
-
-	&:last-child {
-		border-radius: 0 0 0.7em 0.7em;
-	}
 `;
 
 export const DropDownContainer = styled.div`
