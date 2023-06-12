@@ -1,8 +1,15 @@
-import React, { memo, FunctionComponent, useState, useCallback } from "react";
+import React, {
+	memo,
+	FunctionComponent,
+	useState,
+	useCallback,
+	useMemo,
+} from "react";
 import {
 	DropDownContainer,
 	ExpandedList,
 	ExpandedListContainer,
+	ExpandedListHeader,
 	ExpandedListItem,
 	MinifiedList,
 } from "./styles";
@@ -25,56 +32,71 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 	const [selected, setSelected] = useState(select);
 	const [isExpanded, setIsExpanded] = useState(false);
 
-	const minifiedList = useCallback(
-		(visible: boolean) => {
-			const minifiedText =
-				selected < 0 || selected >= options.length ? "" : options[selected];
+	const minifiedText =
+		selected < 0 || selected >= options.length ? "" : options[selected];
 
-			return (
-				<MinifiedList
-					className={className}
-					onClick={() => setIsExpanded((curr) => !curr)}
-					$visible={visible}
-				>
-					{minifiedText}
-				</MinifiedList>
-			);
-		},
-		[className, selected, isExpanded]
+	const minifiedState = useCallback(
+		(visible: boolean) => (
+			<MinifiedList
+				className={className}
+				onClick={() => setIsExpanded(true)}
+				$visible={visible}
+			>
+				{minifiedText}
+			</MinifiedList>
+		),
+		[minifiedText, className]
 	);
 
-	const expandedList = useCallback(
-		(selectItem: CallbackFunction) => {
-			const listItems = options.map((item, index) => {
-				return (
-					<ExpandedListItem
-						$selected={index === selected}
-						onClick={() => selectItem(index)}
-					>
-						{item}
-					</ExpandedListItem>
-				);
-			});
+	const expandedHeader = useMemo(
+		() => (
+			<ExpandedListHeader
+				className={className}
+				onClick={() => setIsExpanded(false)}
+			>
+				{minifiedText}
+			</ExpandedListHeader>
+		),
+		[minifiedText, className]
+	);
 
-			return (
+	const expandedList = useMemo(
+		() => (
+			<ExpandedList>
+				{options.map(
+					(item, index) =>
+						index !== selected && (
+							<ExpandedListItem
+								onClick={() => {
+									setSelected(index);
+									setIsExpanded(false);
+								}}
+							>
+								{item}
+							</ExpandedListItem>
+						)
+				)}
+			</ExpandedList>
+		),
+		[options, selected]
+	);
+
+	const expandedState = useMemo(() => {
+		return (
+			<>
+				{minifiedState(false)}
 				<ExpandedListContainer className={className}>
-					{minifiedList(true)}
-					<ExpandedList>{listItems}</ExpandedList>
+					{expandedHeader}
+					{expandedList}
 				</ExpandedListContainer>
-			);
-		},
-		[options, className, selected]
-	);
+				<ScreenBlocker onClick={() => setIsExpanded(false)} />
+			</>
+		);
+	}, [className]);
 
 	return (
 		<DropDownContainer>
-			{minifiedList(!isExpanded)}
-			{isExpanded &&
-				expandedList((index) => {
-					setSelected(index);
-					setIsExpanded(false);
-				})}
-			{isExpanded && <ScreenBlocker onClick={() => setIsExpanded(false)} />}
+			{!isExpanded ? minifiedState(true) : expandedState}
 		</DropDownContainer>
 	);
 };
