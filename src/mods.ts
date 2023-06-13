@@ -4,7 +4,7 @@ import { ExternalLink } from "./components/ExternalLinkList";
 const MC_1_20_0 = "1.20.0";
 const MC_1_19_4 = "1.19.4";
 
-export const ALL_MC_VERSIONS = [MC_1_20_0, MC_1_19_4] as const;
+export const ALL_MC_VERSIONS = [MC_1_20_0, MC_1_19_4] as string[];
 
 type MC_VERSION = (typeof ALL_MC_VERSIONS)[number];
 type MOD_VERSION = string;
@@ -362,4 +362,10 @@ export const getClientMods = () => {
 			ModUsages.all === mod.usage ||
 			ModUsages.server === mod.usage
 	);
+};
+
+export const filterVersion = (mods: ModInfo[], version: MC_VERSION) => {
+	return mods.filter((mod) => {
+		return mod.versions.has(version);
+	});
 };
