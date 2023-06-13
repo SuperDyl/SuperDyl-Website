@@ -64,3 +64,7 @@ export const DropDownContainer = styled.div`
 
 	position: relative;
 `;
+
+export const HeaderText = styled.span`
+	padding-right: 0.5em;
+`;
