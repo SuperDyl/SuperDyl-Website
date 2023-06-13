@@ -71,7 +71,7 @@ export const Table = styled.table`
 	min-width: 100%;
 	overflow: scroll;
 	border: solid 0.2em ${(props) => props.theme.primary};
-	display: block;
+	display: table;
 `;
 
 export const TableHeader = styled.th`

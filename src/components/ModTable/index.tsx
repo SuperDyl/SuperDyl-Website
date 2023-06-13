@@ -1,12 +1,11 @@
 import React, { FunctionComponent, memo } from "react";
-import BasicTable from "../BasicTable";
+import BasicTable, { TableContainer } from "../BasicTable";
 import { Text } from "../SharedStyles";
 import ExternalTabLink from "../ExternalTabLink";
 import { ExternalLink } from "../ExternalLinkList";
 import { ModInfo } from "../../mods";
 
 interface ModTableProps {
-	className?: string;
 	mods: ModInfo[];
 }
 
@@ -36,22 +35,23 @@ const CreateModLinks: FunctionComponent<CreateModLinksProps> = ({
 	);
 };
 
-const ModTable: FunctionComponent<ModTableProps> = ({ className, mods }) => {
+const ModTable: FunctionComponent<ModTableProps> = ({ mods }) => {
 	return (
-		<BasicTable
-			className={className}
-			columnHeaders={["Mod Name", "Version", "Download link(s)", "Purpose"]}
-			rows={mods.map((mod) => [
-				mod.modName,
-				mod.version,
-				<CreateModLinks
-					downloadLinks={mod.downloadLinks}
-					modName={mod.modName}
-					key={`${mod.modName}-download-links-outside`}
-				/>,
-				mod.purpose,
-			])}
-		></BasicTable>
+		<TableContainer>
+			<BasicTable
+				columnHeaders={["Mod Name", "Version", "Download link(s)", "Purpose"]}
+				rows={mods.map((mod) => [
+					mod.modName,
+					mod.version,
+					<CreateModLinks
+						downloadLinks={mod.downloadLinks}
+						modName={mod.modName}
+						key={`${mod.modName}-download-links-outside`}
+					/>,
+					mod.purpose,
+				])}
+			/>
+		</TableContainer>
 	);
 };
 

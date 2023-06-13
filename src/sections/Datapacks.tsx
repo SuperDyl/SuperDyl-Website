@@ -7,6 +7,157 @@ import ExternalTabLink from "../components/ExternalTabLink";
 import DatapackTable from "../components/DatapackTable";
 import { Websites } from "../constants";
 
+const otherDatapacks = [
+	{
+		datapackName: "Better Compass",
+		downloadLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/data-pack/better-compass-display-coordinates-and-cardinal-direction/",
+			},
+		],
+		author: "KawaMood",
+		authorLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/member/kawamood/",
+			},
+		],
+		changes: "Compasses now show coordinates and cardinal direction",
+		reasoning: "Adds a good use to compasses",
+	},
+	{
+		datapackName: "Better Deepslate Stonecutting",
+		downloadLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/data-pack/better-deepslate-stonecutting/",
+			},
+		],
+		author: "Xigzagamer",
+		authorLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/member/xigzagamer/",
+			},
+		],
+		changes:
+			"Gives deepslate the same stonecutter recipes as cobbled deepslate",
+		reasoning: "I got tired of mining these two resources separate",
+	},
+	{
+		datapackName: "Item Frame Color",
+		version: "1.4",
+		downloadLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/data-pack/item-frame-color/",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/kikipunk/Item-Frame-Color-DataPack",
+			},
+		],
+		author: "kikpunk",
+		authorLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/member/kikipunk/",
+			},
+			{
+				siteName: Websites.YouTube,
+				url: "https://www.youtube.com/channel/UC0l_FnZ6USWl-obEocIlaoA",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/kikipunk",
+			},
+		],
+		changes:
+			"Item frames can be recolored by shift clicking them with dye. Undo the color by shift clicking with a water bucket or breaking the item frame",
+		reasoning:
+			"Seemed like a nice decoration choice and since it seems to work well, I added it",
+	},
+	{
+		datapackName: "Take a Seat",
+		downloadLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/data-pack/take-a-seat/",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/dragon3025/My-Datapacks",
+			},
+		],
+		author: "dragon3025",
+		authorLinks: [
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/dragon3025",
+			},
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/member/dragon3025/",
+			},
+		],
+		changes: "The player can sit anywhere by using `/trigger sit`",
+		reasoning:
+			"It's a fun and simple emote. This seemed to me the most elegant way to implement this",
+	},
+	{
+		datapackName: "Invisible Item Frames",
+		version: "2.2",
+		downloadLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/data-pack/invisible-item-frames-5403610/",
+			},
+		],
+		author: "8BitMonkey",
+		authorLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/member/the8bitmonkey/",
+			},
+			{
+				siteName: Websites.YouTube,
+				url: "https://www.youtube.com/channel/UC6N_YXUtiys1atyGZqNylKw",
+			},
+			{
+				siteName: Websites.Twitch,
+				url: "https://www.twitch.tv/The8BitMonkey",
+			},
+			{
+				siteName: Websites.Instagram,
+				url: "https://www.instagram.com/The8BitMonkey",
+			},
+		],
+		changes:
+			"Item frames can be made invisible by shift clicking them with shears. Includes a set of hidden advancements. Items in invisible frames can only be rotated if the player is sneaking. Some of these settings don’t apply if the frames are made invisible using a `Statues` book. Undo by breaking the item frame",
+		reasoning: "Very vanilla feeling way to allow invisible item frames",
+	},
+	{
+		datapackName: "Wandering Cities",
+		downloadLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
+			},
+		],
+		author: "Aceplante",
+		authorLinks: [
+			{
+				siteName: Websites.PlanetMC,
+				url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
+			},
+		],
+		changes:
+			"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an 'Ancient City Map Crate'",
+		reasoning: "Adds an easier way to find Ancient Cities",
+	},
+];
+
 interface DatapacksProps {
 	vtDatapacksHref: string;
 	vtCraftingHref: string;
@@ -237,159 +388,7 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 				/>
 			</TitledSubSection>
 			<TitledSubSection header="Other Datapacks">
-				<DatapackTable
-					datapacks={[
-						{
-							datapackName: "Better Compass",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/better-compass-display-coordinates-and-cardinal-direction/",
-								},
-							],
-							author: "KawaMood",
-							authorLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/member/kawamood/",
-								},
-							],
-							changes: "Compasses now show coordinates and cardinal direction",
-							reasoning: "Adds a good use to compasses",
-						},
-						{
-							datapackName: "Better Deepslate Stonecutting",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/better-deepslate-stonecutting/",
-								},
-							],
-							author: "Xigzagamer",
-							authorLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/member/xigzagamer/",
-								},
-							],
-							changes:
-								"Gives deepslate the same stonecutter recipes as cobbled deepslate",
-							reasoning: "I got tired of mining these two resources separate",
-						},
-						{
-							datapackName: "Item Frame Color",
-							version: "1.4",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/item-frame-color/",
-								},
-								{
-									siteName: Websites.GitHub,
-									url: "https://github.com/kikipunk/Item-Frame-Color-DataPack",
-								},
-							],
-							author: "kikpunk",
-							authorLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/member/kikipunk/",
-								},
-								{
-									siteName: Websites.YouTube,
-									url: "https://www.youtube.com/channel/UC0l_FnZ6USWl-obEocIlaoA",
-								},
-								{
-									siteName: Websites.GitHub,
-									url: "https://github.com/kikipunk",
-								},
-							],
-							changes:
-								"Item frames can be recolored by shift clicking them with dye. Undo the color by shift clicking with a water bucket or breaking the item frame",
-							reasoning:
-								"Seemed like a nice decoration choice and since it seems to work well, I added it",
-						},
-						{
-							datapackName: "Take a Seat",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/take-a-seat/",
-								},
-								{
-									siteName: Websites.GitHub,
-									url: "https://github.com/dragon3025/My-Datapacks",
-								},
-							],
-							author: "dragon3025",
-							authorLinks: [
-								{
-									siteName: Websites.GitHub,
-									url: "https://github.com/dragon3025",
-								},
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/member/dragon3025/",
-								},
-							],
-							changes: "The player can sit anywhere by using `/trigger sit`",
-							reasoning:
-								"It's a fun and simple emote. This seemed to me the most elegant way to implement this",
-						},
-						{
-							datapackName: "Invisible Item Frames",
-							version: "2.2",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/invisible-item-frames-5403610/",
-								},
-							],
-							author: "8BitMonkey",
-							authorLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/member/the8bitmonkey/",
-								},
-								{
-									siteName: Websites.YouTube,
-									url: "https://www.youtube.com/channel/UC6N_YXUtiys1atyGZqNylKw",
-								},
-								{
-									siteName: Websites.Twitch,
-									url: "https://www.twitch.tv/The8BitMonkey",
-								},
-								{
-									siteName: Websites.Instagram,
-									url: "https://www.instagram.com/The8BitMonkey",
-								},
-							],
-							changes:
-								"Item frames can be made invisible by shift clicking them with shears. Includes a set of hidden advancements. Items in invisible frames can only be rotated if the player is sneaking. Some of these settings don’t apply if the frames are made invisible using a `Statues` book. Undo by breaking the item frame",
-							reasoning:
-								"Very vanilla feeling way to allow invisible item frames",
-						},
-						{
-							datapackName: "Wandering Cities",
-							downloadLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
-								},
-							],
-							author: "Aceplante",
-							authorLinks: [
-								{
-									siteName: Websites.PlanetMC,
-									url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
-								},
-							],
-							changes:
-								"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an 'Ancient City Map Crate'",
-							reasoning: "Adds an easier way to find Ancient Cities",
-						},
-					]}
-				/>
+				<DatapackTable datapacks={otherDatapacks} />
 			</TitledSubSection>
 		</TitledSection>
 	);

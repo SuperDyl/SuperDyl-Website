@@ -1,5 +1,6 @@
 import React, { FunctionComponent, memo } from "react";
 import { Table, TableRow, TableData, TableHeader } from "../SharedStyles";
+import styled from "styled-components";
 
 interface TableProps {
 	className?: string;
@@ -42,5 +43,10 @@ const SimpleTable: FunctionComponent<TableProps> = ({
 		</Table>
 	);
 };
+
+export const TableContainer = styled.div`
+	width: 100%;
+	overflow: auto;
+`;
 
 export default memo(SimpleTable);
