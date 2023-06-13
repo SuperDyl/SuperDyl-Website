@@ -10,6 +10,7 @@ import {
 	ExpandedListContainer,
 	ExpandedListHeader,
 	ExpandedListItem,
+	HeaderText,
 	MinifiedList,
 } from "./styles";
 import ScreenBlocker from "../ScreenBlocker";
@@ -44,11 +45,11 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 				onClick={() => setIsExpanded(true)}
 				$visible={visible}
 			>
-				{minifiedText}
+				<HeaderText>{minifiedText}</HeaderText>
 				<ExpandMore />
 			</MinifiedList>
 		),
-		[minifiedText, className]
+		[minifiedText, className, options]
 	);
 
 	const expandedHeader = useMemo(
@@ -57,11 +58,11 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 				className={className}
 				onClick={() => setIsExpanded(false)}
 			>
-				{minifiedText}
+				<HeaderText>{minifiedText}</HeaderText>
 				<ExpandLess />
 			</ExpandedListHeader>
 		),
-		[minifiedText, className]
+		[minifiedText, className, options]
 	);
 
 	const expandedList = useMemo(
@@ -97,7 +98,7 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 				<ScreenBlocker onClick={() => setIsExpanded(false)} />
 			</>
 		);
-	}, [className, selected]);
+	}, [className, selected, options]);
 
 	return (
 		<DropDownContainer>
