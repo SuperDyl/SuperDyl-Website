@@ -54,15 +54,12 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 
 	const expandedHeader = useMemo(
 		() => (
-			<ExpandedListHeader
-				className={className}
-				onClick={() => setIsExpanded(false)}
-			>
+			<ExpandedListHeader onClick={() => setIsExpanded(false)}>
 				<HeaderText>{minifiedText}</HeaderText>
 				<ExpandLess />
 			</ExpandedListHeader>
 		),
-		[minifiedText, className, options]
+		[minifiedText, options]
 	);
 
 	const expandedList = useMemo(
@@ -98,7 +95,7 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 				<ScreenBlocker onClick={() => setIsExpanded(false)} />
 			</>
 		);
-	}, [className, selected, options]);
+	}, [selected, options, className]);
 
 	return (
 		<DropDownContainer>
