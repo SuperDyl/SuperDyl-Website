@@ -21,7 +21,10 @@ const FilteredModTable: FunctionComponent<FilteredModTableProps> = ({
 					setMcSelection(result || 0)
 				}
 			/>
-			<ModTable mods={filterVersion(mods, ALL_MC_VERSIONS[mcSelection])} />
+			<ModTable
+				mods={filterVersion(mods, ALL_MC_VERSIONS[mcSelection])}
+				mc_version={ALL_MC_VERSIONS[mcSelection]}
+			/>
 		</>
 	);
 };

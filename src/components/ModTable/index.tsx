@@ -3,10 +3,11 @@ import BasicTable, { TableContainer } from "../BasicTable";
 import { Text } from "../SharedStyles";
 import ExternalTabLink from "../ExternalTabLink";
 import { ExternalLink } from "../ExternalLinkList";
-import { ModInfo } from "../../mods";
+import { MC_VERSION, ModInfo } from "../../mods";
 
 interface ModTableProps {
 	mods: ModInfo[];
+	mc_version: MC_VERSION;
 }
 
 interface CreateModLinksProps {
@@ -35,14 +36,14 @@ const CreateModLinks: FunctionComponent<CreateModLinksProps> = ({
 	);
 };
 
-const ModTable: FunctionComponent<ModTableProps> = ({ mods }) => {
+const ModTable: FunctionComponent<ModTableProps> = ({ mods, mc_version }) => {
 	return (
 		<TableContainer>
 			<BasicTable
 				columnHeaders={["Mod Name", "Version", "Download link(s)", "Purpose"]}
 				rows={mods.map((mod) => [
 					mod.modName,
-					mod.version,
+					mod.versions.get(mc_version),
 					<CreateModLinks
 						downloadLinks={mod.downloadLinks}
 						modName={mod.modName}

@@ -1,10 +1,10 @@
 import { Websites, ModUsages } from "./constants";
 import { ExternalLink } from "./components/ExternalLinkList";
 
-const MC_1_20_0 = "1.20.0";
+const MC_1_20_1 = "1.20.1";
 const MC_1_19_4 = "1.19.4";
 
-export const ALL_MC_VERSIONS = [MC_1_20_0, MC_1_19_4] as string[];
+export const ALL_MC_VERSIONS = [MC_1_20_1, MC_1_19_4] as string[];
 
 export type MC_VERSION = (typeof ALL_MC_VERSIONS)[number];
 type MOD_VERSION = string;
@@ -12,7 +12,6 @@ type MOD_VERSION = string;
 export interface ModInfo {
 	modName: string;
 	versions: Map<MC_VERSION, MOD_VERSION>;
-	version?: MOD_VERSION;
 	downloadLinks: ExternalLink[];
 	purpose: string;
 	usage: keyof typeof ModUsages;
@@ -21,8 +20,10 @@ export interface ModInfo {
 const allMods: ModInfo[] = [
 	{
 		modName: "Alternate Current",
-		versions: new Map([[MC_1_19_4, "1.5.0"]]),
-		version: "1.5.0",
+		versions: new Map([
+			[MC_1_19_4, "1.5.0"],
+			[MC_1_20_1, "1.6.0"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -42,8 +43,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Audaki Cart Engine",
-		versions: new Map([[MC_1_19_4, "2.0.3"]]),
-		version: "2.0.3",
+		versions: new Map([
+			[MC_1_19_4, "2.0.3"],
+			[MC_1_20_1, "2.0.5"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -63,8 +66,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "c2me",
-		versions: new Map([[MC_1_19_4, "0.2.0+alpha.10.51"]]),
-		version: "0.2.0+alpha.10.51",
+		versions: new Map([
+			[MC_1_19_4, "0.2.0+alpha.10.51"],
+			[MC_1_20_1, "0.2.0+alpha.10.91"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -84,8 +89,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Chunky",
-		versions: new Map([[MC_1_19_4, "1.3.74"]]),
-		version: "1.3.74",
+		versions: new Map([
+			[MC_1_19_4, "1.3.74"],
+			[MC_1_20_1, "1.3.92"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -101,8 +108,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Fabric API",
-		versions: new Map([[MC_1_19_4, "0.81.1"]]),
-		version: "0.81.1",
+		versions: new Map([
+			[MC_1_19_4, "0.81.1"],
+			[MC_1_20_1, "0.83.1"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -122,8 +131,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "FerriteCore",
-		versions: new Map([[MC_1_19_4, "5.2.0"]]),
-		version: "5.2.0",
+		versions: new Map([
+			[MC_1_19_4, "5.2.0"],
+			[MC_1_20_1, "6.0.0"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -143,8 +154,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Inv View",
-		versions: new Map([[MC_1_19_4, "1.4.10"]]),
-		version: "1.4.10",
+		versions: new Map([
+			[MC_1_19_4, "1.4.10"],
+			[MC_1_20_1, "1.4.11"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -164,8 +177,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Keep Head Names",
-		version: "1.5.1",
-		versions: new Map([[MC_1_19_4, "1.5.1"]]),
+		versions: new Map([
+			[MC_1_19_4, "1.5.1"],
+			[MC_1_20_1, "1.5.1"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -186,8 +201,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Ledger",
-		versions: new Map([[MC_1_19_4, "1.2.7"]]),
-		version: "1.2.7",
+		versions: new Map([
+			[MC_1_19_4, "1.2.7"],
+			[MC_1_20_1, "1.2.8"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -207,8 +224,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Lithium",
-		versions: new Map([[MC_1_19_4, "0.11.1"]]),
-		version: "0.11.1",
+		versions: new Map([
+			[MC_1_19_4, "0.11.1"],
+			[MC_1_20_1, "0.11.2"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -224,8 +243,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Mods Command",
-		versions: new Map([[MC_1_19_4, "1.1.2"]]),
-		version: "1.1.2",
+		versions: new Map([
+			[MC_1_19_4, "1.1.2"],
+			[MC_1_20_1, "1.1.3"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -241,8 +262,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "ServerCore",
-		versions: new Map([[MC_1_19_4, "1.3.51"]]),
-		version: "1.3.51",
+		versions: new Map([
+			[MC_1_19_4, "1.3.5"],
+			[MC_1_20_1, "1.3.7"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -258,16 +281,18 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Slumber",
-		versions: new Map([[MC_1_19_4, "1.1.0"]]),
-		version: "1.1.0",
+		versions: new Map([
+			[MC_1_19_4, "1.1.0"],
+			[MC_1_20_1, "1.1.0"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/mods-command",
+				url: "https://modrinth.com/mod/slumber/versions",
 			},
 			{
 				siteName: Websites.GitHub,
-				url: "https://github.com/jpenilla/mods-command/releases",
+				url: "https://github.com/Tater-Certified/Slumber/releases",
 			},
 		],
 		purpose: "Hibernates the server when no players are online",
@@ -276,7 +301,6 @@ const allMods: ModInfo[] = [
 	{
 		modName: "Sodium",
 		versions: new Map([[MC_1_19_4, "0.4.10"]]),
-		version: "0.4.10",
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -293,7 +317,6 @@ const allMods: ModInfo[] = [
 	{
 		modName: "Smooth Boot",
 		versions: new Map([[MC_1_19_4, "1.7.0"]]),
-		version: "1.7.0",
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -313,8 +336,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Starlight",
-		versions: new Map([[MC_1_19_4, "1.1.1"]]),
-		version: "1.1.1",
+		versions: new Map([
+			[MC_1_19_4, "1.1.1"],
+			[MC_1_20_1, "1.1.2"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -325,13 +350,16 @@ const allMods: ModInfo[] = [
 				url: "https://www.curseforge.com/minecraft/mc-mods/starlight/files",
 			},
 		],
-		purpose: "Most efficient rewrite of the lighting engine. Useless 1.20+",
-		usage: ModUsages.server,
+		purpose:
+			"Most efficient rewrite of the lighting engine. Almost useless client-side 1.20+",
+		usage: ModUsages.serverOnly,
 	},
 	{
 		modName: "Very Many Player (VMP)",
-		versions: new Map([[MC_1_19_4, "0.2.0+beta.7.736.37"]]),
-		version: "0.2.0+beta.7.736.37",
+		versions: new Map([
+			[MC_1_19_4, "0.2.0+beta.7.736.37"],
+			[MC_1_20_1, "0.2.0+beta.7.96"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
