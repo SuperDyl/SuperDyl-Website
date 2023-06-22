@@ -10,6 +10,33 @@ interface NewsProps {
 const News: FunctionComponent<NewsProps> = ({ email }) => {
 	return (
 		<TitledSection header="News">
+			<TitledSubSection header="June 21">
+				<Text>
+					The server has been updated to 1.20.1, the Trails and Tales update.
+					This update includes new terrain generation such as suspicious
+					sand/gravel, the trail ruins structure, and the cherry grove biome.
+				</Text>
+				<Text>
+					To make this update easier, I have deleted all Overworld chunks which
+					players have not visited for more than a few minutes. This will mean
+					more lag from loading new chunks. It also means that content from the
+					new update will be closer to already loaded chunks.
+				</Text>
+				<Text>
+					Also, here again is a reminder to update the mods you use. If you are
+					using the suggested client-side mods, you will need to update these
+					mods:
+				</Text>
+				<UnorderedList>
+					<ListItem>Alternate Current --{">"} 1.6.0</ListItem>
+					<ListItem>c2me --{">"} 0.2.0+alpha.10.91</ListItem>
+					<ListItem>Chunky --{">"} 1.3.92</ListItem>
+					<ListItem>Fabric API --{">"} 0.83.1</ListItem>
+					<ListItem>FerriteCore --{">"} 6.0.0</ListItem>
+					<ListItem>Lithium --{">"} 0.11.2</ListItem>
+					<ListItem>Mods Command --{">"} 1.1.3</ListItem>
+				</UnorderedList>
+			</TitledSubSection>
 			<TitledSubSection header="June 4">
 				<Text>Summer Carnival Community Event</Text>
 				<Text>
