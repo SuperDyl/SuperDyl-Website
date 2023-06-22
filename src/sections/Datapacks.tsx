@@ -10,6 +10,7 @@ import { Websites } from "../constants";
 const otherDatapacks = [
 	{
 		datapackName: "Better Compass",
+		version: "2.0.1",
 		downloadLinks: [
 			{
 				siteName: Websites.PlanetMC,
@@ -47,7 +48,7 @@ const otherDatapacks = [
 	},
 	{
 		datapackName: "Item Frame Color",
-		version: "1.4",
+		version: "2.1",
 		downloadLinks: [
 			{
 				siteName: Websites.PlanetMC,
@@ -107,7 +108,7 @@ const otherDatapacks = [
 	},
 	{
 		datapackName: "Invisible Item Frames",
-		version: "2.2",
+		version: "2.2.1",
 		downloadLinks: [
 			{
 				siteName: Websites.PlanetMC,
@@ -158,6 +159,8 @@ const otherDatapacks = [
 	},
 ];
 
+const vtCraftingVersion = "v1.20.1";
+
 interface DatapacksProps {
 	vtDatapacksHref: string;
 	vtCraftingHref: string;
@@ -195,61 +198,61 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"armor statues",
-							"v2.8.4",
+							"v2.8.5",
 							"Use `/trigger as_help` or title a written book `Statues` to get a book for editing armor stands",
 							"It's nice to be able to give armor stands something in their off hand. Also allows creating invisible item frames",
 						],
 						[
 							"unlock all recipes",
-							"v2.0.4",
+							"v2.0.5",
 							"Immediately unlocks all recipes in the recipe book",
 							"I find it more annoying to forget a recipe and look it up than I feel overwhelmed by the number of recipes in the book",
 						],
 						[
 							"afk display",
-							"v1.1.3",
+							"v1.1.4",
 							"Grays out player names if they haven't moved in a while",
 							"Rather annoying to message someone who isn't actually at their computer",
 						],
 						[
 							"custom nether portals",
-							"v2.3.6",
+							"v2.3.7",
 							"Portals can be made using crying obsidian and unique shapes. They only require 4+ obsidian",
 							"Adds more options for decorating with a portal",
 						],
 						[
 							"durability ping",
-							"v1.1.3",
+							"v1.1.4",
 							"Gives a noise notification when a tool is low on durability. Turned off by default: configure with `/trigger duraPing`",
 							"Gives the option for players that want the notifications",
 						],
 						[
 							"cauldron concrete",
-							"v2.0.6",
+							"v2.0.7",
 							"Allows crafting concrete by throwing concrete powder in a cauldron of water",
 							"Getting large amounts of concrete is a very menial task",
 						],
 						[
 							"track raw statistics",
-							"v1.5.3",
+							"v1.7.0",
 							"Tracks more extra statistics about player activity",
 							"Ditto ^",
 						],
 						[
 							"track statistics",
-							"v1.1.4",
+							"v1.1.5",
 							"Tracks extra statistics about player activity",
 							"I thought it might be fun to look at sometime",
 						],
 						[
 							"Nether Portal Coords",
-							"v1.1.3",
+							"v1.1.4",
 							"Use /trigger nc_inNether or nc_inOverworld to see get calculation of coords to link nether portals",
 							"It should make linking portals easier",
 						],
 						[
 							"real time clock",
-							"v1.1.3",
+							"v1.1.4",
 							"How long the world has been running in real time can be seen via a function",
 							"It's a helpful debug tool to see if the world has been down recently",
 						],
@@ -262,7 +265,7 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"player head drops",
-							"v1.1.3",
+							"v1.1.4",
 							"Players drop their head when killed by another player",
 							"As long as it doesn't become a problem, player heads are cool trophies",
 						],
@@ -275,25 +278,25 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"dragon drops",
-							"v1.3.3",
+							"v1.3.4",
 							"Ender dragon drops an Elytra and Dragon Egg each time it dies",
 							"A very multiplayer friendly way for dragon eggs and elytra to be accessible",
 						],
 						[
 							"more mob heads",
-							"v2.10.1",
+							"v2.12.1",
 							"All mobs have a chance of dropping their head upon death. Chances depend on the mob. Unique heads exist for different zombie villagers; colors of parrots, llamas, and cats; and different wither variants exist. Pre-existing heads/skulls still only drop in the normal ways",
 							"Another set of interesting trophies",
 						],
 						[
 							"silence mobs",
-							"v1.1.3",
+							"v1.1.4",
 							"Mobs can be silenced by naming them `Silence me`, `silence me`, or `silence_me`",
 							"As long as it doesn't become a problem, avoids annoying mob noises in certain situations",
 						],
 						[
 							"double shulker shells",
-							"v1.3.3",
+							"v1.3.4",
 							"Shulkers always drop 2 shells",
 							"It was a request to make shulker boxes easier to acquire",
 						],
@@ -303,7 +306,7 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					header="Datapacks"
 					subheader="Hermitcraft"
 					columnHeaders={columnHeaders}
-					rows={[["tag", "v2.1.3", "A game of tag!", "It seemed fun"]]}
+					rows={[["tag", "v2.1.4", "A game of tag!", "It seemed fun"]]}
 				/>
 				<VanillaTweaksTable
 					header="Crafting"
@@ -312,31 +315,31 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"dropper to dispenser",
-							"v1.19",
+							vtCraftingVersion,
 							"Extra recipes for crafting dispensers. Uses same number of materials, just allows quicker crafting ",
 							"Makes crafting many dispensers quicker without changing material requirements",
 						],
 						[
 							"straight to shapeless",
-							"v1.19",
+							vtCraftingVersion,
 							"Bread, shulker boxes, paper, etc. are now shapeless recipes",
 							"Makes some simple recipes easier to craft",
 						],
 						[
 							"universal dyeing",
-							"v1.19",
+							vtCraftingVersion,
 							"Wool, terracotta, and stained glass can be re-dyed different colors",
 							"Reusability for dyed items",
 						],
 						[
 							"blackstone cobblestone",
-							"v1.19",
+							vtCraftingVersion,
 							"Most recipes that use cobblestone can now alternatively use blackstone",
 							"Probably should just be a feature",
 						],
 						[
 							"powder to glass",
-							"v1.19",
+							vtCraftingVersion,
 							"Concrete powder can be smelted into stained glass of the same color",
 							"If this helps someone, I figured this didn't cause any harm",
 						],
@@ -349,13 +352,13 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"more bark",
-							"v1.19",
+							vtCraftingVersion,
 							"Bark crafting now gives 4 blocks instead of 3",
 							"Removes a needless expense",
 						],
 						[
 							"more bricks",
-							"v1.19",
+							vtCraftingVersion,
 							"Brick block crafting now gives 4 blocks instead of 1",
 							"Encourages people to build using brick blocks",
 						],
@@ -368,19 +371,19 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"craftable coral blocks 3x3",
-							"v1.19",
+							vtCraftingVersion,
 							"Coral blocks can be crafted from 9 tubes/fans of the same color",
 							"Encourages people to not absolutely destroy coral reefs in warm oceans",
 						],
 						[
 							"craftable gravel",
-							"v1.19",
+							vtCraftingVersion,
 							"Gravel can be crafted from 4 flint",
 							"If someone needs it, here it is",
 						],
 						[
 							"craftable bundles rabbit hide",
-							"v1.19",
+							vtCraftingVersion,
 							"Bundles can be crafted using rabbit hide, string, and sticks",
 							"Bundles sound fun, I'd like to try them out in their current state",
 						],
