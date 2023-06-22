@@ -29,4 +29,4 @@ const Tooltip: FunctionComponent<TooltipProps> = ({
 	);
 };
 
-export default Tooltip;
+export default memo(Tooltip);

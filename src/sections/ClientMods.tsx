@@ -1,8 +1,8 @@
 import React, { FunctionComponent, memo } from "react";
 import TitledSection from "../components/TitledSection";
 import { Text } from "../components/SharedStyles";
-import ModTable from "../components/ModTable";
 import { getClientMods } from "../mods";
+import FilteredModTable from "../components/FilteredModTable";
 
 interface ClientModsProps {
 	className?: string;
@@ -21,7 +21,7 @@ const ClientMods: FunctionComponent<ClientModsProps> = ({ className }) => {
 				the server and here. If you only use mods for multiplayer, these are the
 				mods I use:
 			</Text>
-			<ModTable mods={getClientMods()} />
+			<FilteredModTable mods={getClientMods()} />
 		</TitledSection>
 	);
 };

@@ -1,9 +1,29 @@
 import { Websites, ModUsages } from "./constants";
+import { ExternalLink } from "./components/ExternalLinkList";
 
-const allMods = [
+const MC_1_20_1 = "1.20.1";
+const MC_1_19_4 = "1.19.4";
+
+export const ALL_MC_VERSIONS = [MC_1_20_1, MC_1_19_4] as string[];
+
+export type MC_VERSION = (typeof ALL_MC_VERSIONS)[number];
+type MOD_VERSION = string;
+
+export interface ModInfo {
+	modName: string;
+	versions: Map<MC_VERSION, MOD_VERSION>;
+	downloadLinks: ExternalLink[];
+	purpose: string;
+	usage: keyof typeof ModUsages;
+}
+
+const allMods: ModInfo[] = [
 	{
 		modName: "Alternate Current",
-		version: "1.5.0",
+		versions: new Map([
+			[MC_1_19_4, "1.5.0"],
+			[MC_1_20_1, "1.6.0"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -23,7 +43,10 @@ const allMods = [
 	},
 	{
 		modName: "Audaki Cart Engine",
-		version: "2.0.3",
+		versions: new Map([
+			[MC_1_19_4, "2.0.3"],
+			[MC_1_20_1, "2.0.5"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -43,7 +66,10 @@ const allMods = [
 	},
 	{
 		modName: "c2me",
-		version: "0.2.0+alpha.10.51",
+		versions: new Map([
+			[MC_1_19_4, "0.2.0+alpha.10.51"],
+			[MC_1_20_1, "0.2.0+alpha.10.91"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -63,7 +89,10 @@ const allMods = [
 	},
 	{
 		modName: "Chunky",
-		version: "1.3.74",
+		versions: new Map([
+			[MC_1_19_4, "1.3.74"],
+			[MC_1_20_1, "1.3.92"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -79,7 +108,10 @@ const allMods = [
 	},
 	{
 		modName: "Fabric API",
-		version: "0.81.1",
+		versions: new Map([
+			[MC_1_19_4, "0.81.1"],
+			[MC_1_20_1, "0.83.1"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -99,7 +131,10 @@ const allMods = [
 	},
 	{
 		modName: "FerriteCore",
-		version: "5.2.0",
+		versions: new Map([
+			[MC_1_19_4, "5.2.0"],
+			[MC_1_20_1, "6.0.0"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -119,7 +154,10 @@ const allMods = [
 	},
 	{
 		modName: "Inv View",
-		version: "1.4.10",
+		versions: new Map([
+			[MC_1_19_4, "1.4.10"],
+			[MC_1_20_1, "1.4.11"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -139,7 +177,10 @@ const allMods = [
 	},
 	{
 		modName: "Keep Head Names",
-		version: "1.5.1",
+		versions: new Map([
+			[MC_1_19_4, "1.5.1"],
+			[MC_1_20_1, "1.5.1"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -160,7 +201,10 @@ const allMods = [
 	},
 	{
 		modName: "Ledger",
-		version: "1.2.7",
+		versions: new Map([
+			[MC_1_19_4, "1.2.7"],
+			[MC_1_20_1, "1.2.8"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -180,7 +224,10 @@ const allMods = [
 	},
 	{
 		modName: "Lithium",
-		version: "0.11.1",
+		versions: new Map([
+			[MC_1_19_4, "0.11.1"],
+			[MC_1_20_1, "0.11.2"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -196,7 +243,10 @@ const allMods = [
 	},
 	{
 		modName: "Mods Command",
-		version: "1.1.2",
+		versions: new Map([
+			[MC_1_19_4, "1.1.2"],
+			[MC_1_20_1, "1.1.3"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -212,7 +262,10 @@ const allMods = [
 	},
 	{
 		modName: "ServerCore",
-		version: "1.3.51",
+		versions: new Map([
+			[MC_1_19_4, "1.3.5"],
+			[MC_1_20_1, "1.3.7"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -228,15 +281,18 @@ const allMods = [
 	},
 	{
 		modName: "Slumber",
-		version: "1.1.0",
+		versions: new Map([
+			[MC_1_19_4, "1.1.0"],
+			[MC_1_20_1, "1.1.0"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/mods-command",
+				url: "https://modrinth.com/mod/slumber/versions",
 			},
 			{
 				siteName: Websites.GitHub,
-				url: "https://github.com/jpenilla/mods-command/releases",
+				url: "https://github.com/Tater-Certified/Slumber/releases",
 			},
 		],
 		purpose: "Hibernates the server when no players are online",
@@ -244,7 +300,7 @@ const allMods = [
 	},
 	{
 		modName: "Sodium",
-		version: "0.4.10",
+		versions: new Map([[MC_1_19_4, "0.4.10"]]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -260,7 +316,7 @@ const allMods = [
 	},
 	{
 		modName: "Smooth Boot",
-		version: "1.7.0",
+		versions: new Map([[MC_1_19_4, "1.7.0"]]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -280,7 +336,10 @@ const allMods = [
 	},
 	{
 		modName: "Starlight",
-		version: "1.1.1",
+		versions: new Map([
+			[MC_1_19_4, "1.1.1"],
+			[MC_1_20_1, "1.1.2"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -291,12 +350,16 @@ const allMods = [
 				url: "https://www.curseforge.com/minecraft/mc-mods/starlight/files",
 			},
 		],
-		purpose: "Most efficient rewrite of the lighting engine. Useless 1.20+",
-		usage: ModUsages.server,
+		purpose:
+			"Most efficient rewrite of the lighting engine. Almost useless client-side 1.20+",
+		usage: ModUsages.serverOnly,
 	},
 	{
 		modName: "Very Many Player (VMP)",
-		version: "0.2.0+beta.7.736.37 for 1.19.1",
+		versions: new Map([
+			[MC_1_19_4, "0.2.0+beta.7.736.37"],
+			[MC_1_20_1, "0.2.0+beta.7.96"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -327,4 +390,10 @@ export const getClientMods = () => {
 			ModUsages.all === mod.usage ||
 			ModUsages.server === mod.usage
 	);
+};
+
+export const filterVersion = (mods: ModInfo[], version: MC_VERSION) => {
+	return mods.filter((mod) => {
+		return mod.versions.has(version);
+	});
 };

@@ -1,9 +1,9 @@
 import React, { FunctionComponent, memo } from "react";
 import TitledSection from "../components/TitledSection";
 import { Text } from "../components/SharedStyles";
-import ModTable from "../components/ModTable";
-import { getServerMods } from "../mods";
 import ExternalTabLink from "../components/ExternalTabLink";
+import FilteredModTable from "../components/FilteredModTable";
+import { getServerMods } from "../mods";
 
 interface ServerModsProps {
 	className?: string;
@@ -25,7 +25,7 @@ const ServerMods: FunctionComponent<ServerModsProps> = ({
 				bugs. The server is supposed to feel vanilla, so mods {"shouldn't"}{" "}
 				require players to download anything on their side.
 			</Text>
-			<ModTable mods={getServerMods()} />
+			<FilteredModTable mods={getServerMods()} />
 		</TitledSection>
 	);
 };

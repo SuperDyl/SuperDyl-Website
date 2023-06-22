@@ -71,7 +71,7 @@ export const Table = styled.table`
 	min-width: 100%;
 	overflow: scroll;
 	border: solid 0.2em ${(props) => props.theme.primary};
-	display: block;
+	display: table;
 `;
 
 export const TableHeader = styled.th`
@@ -88,4 +88,17 @@ export const TableRow = styled.tr`
 export const TableData = styled.td`
 	border: solid 0.1em ${(props) => props.theme.primary};
 	padding: 0.25em;
+`;
+
+export const StyledSVG = styled.svg`
+	fill: currentColor;
+	stroke: currentColor;
+	color: ${(props) => props.theme.text};
+	font-size: 1em;
+	height: 1em;
+	width: auto;
+
+	path {
+		stroke-width: 5em;
+	}
 `;
