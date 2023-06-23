@@ -1,7 +1,7 @@
 import { HeadFC } from "gatsby";
 import React, { memo, useMemo } from "react";
 import Layout from "../../components/Layout";
-import { Forms, Pages } from "../../constants";
+import { Forms, MC_PAGES } from "../../constants";
 import HelpfulLinks from "../../sections/HelpfulLinks";
 import News from "../../sections/News";
 import Rules from "../../sections/Rules";
@@ -27,7 +27,7 @@ const Minecraft = () => {
 	const discordHref = "https://discord.superdyl.net";
 
 	return (
-		<Layout activeLink={Pages.MINECRAFT}>
+		<Layout activeLink={MC_PAGES.HOME}>
 			<HelpfulLinks
 				datapacksHref={Forms.datapacksHref}
 				modsHref={Forms.modsHref}
@@ -36,7 +36,7 @@ const Minecraft = () => {
 				underReviewHref={Forms.underReviewHref}
 				discordHref={discordHref}
 			/>
-			<News email={email} />
+			<News />
 			<Rules
 				email={email}
 				whitelistHref={Forms.whitelistHref}

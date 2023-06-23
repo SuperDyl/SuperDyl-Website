@@ -4,7 +4,7 @@ import {
 	ThemeProps,
 	ThemeProvider,
 } from "styled-components";
-import { Pages } from "../../constants";
+import { MC_PAGES } from "../../constants";
 import NavBar from "../NavBar";
 import {
 	FullViewContainer,
@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 interface LayoutProps {
 	children?: ReactNode;
 	className?: string;
-	activeLink?: Pages;
+	activeLink?: MC_PAGES;
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({
@@ -76,11 +76,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
 	className,
 	activeLink,
 }) => {
-	const links = [
-		{ id: Pages.MINECRAFT, to: "/minecraft", text: "Minecraft" },
-		{ id: Pages.BLOG, to: "/minecraft", text: "Blog" },
-		{ id: Pages.ARCHIVE, to: "/minecraft", text: "Archive" },
-	];
+	const links = [{ id: MC_PAGES.NEWS, to: "/minecraft/news", text: "News" }];
 
 	return (
 		//TODO override html with theme base color
@@ -89,7 +85,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
 		<ThemeProvider theme={true ? darkTheme : lightTheme}>
 			<FullViewContainer>
 				<Banner>
-					<BannerText to={"/minecraft"}>SuperDyl.net</BannerText>
+					<BannerText to={"/minecraft"}>SD | Minecraft</BannerText>
 				</Banner>
 				<NavBar
 					navItems={links.map(({ id, to, text }) => ({

@@ -1,8 +1,6 @@
-export enum Pages {
+export enum MC_PAGES {
 	HOME,
-	MINECRAFT,
-	BLOG,
-	ARCHIVE,
+	NEWS,
 }
 
 export const Forms = {
