@@ -19,9 +19,8 @@ export const WeakText = styled.em`
 export const Header1 = styled.h1`
 	${DefaultTextStyling}
 	color: ${(props) => props.theme.primary};
-	font-size: 1.5em;
+	font-size: 1.7em;
 	font-weight: bold;
-	text-decoration: underline;
 	margin-bottom: 0.4em;
 `;
 
