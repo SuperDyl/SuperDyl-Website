@@ -1,7 +1,14 @@
 import React, { memo, FunctionComponent, ReactNode } from "react";
 import { News, NewsContent, NewsContentType } from "../../news";
 import TitledSubSection from "../TitledSubSection";
-import { ListItem, Text, UnorderedList } from "../SharedStyles";
+import {
+	Header1,
+	Header2,
+	ListItem,
+	Text,
+	UnorderedList,
+} from "../SharedStyles";
+import { HeaderContainer, NewsItemContainer } from "./styles";
 
 interface NewsItemProps {
 	className?: string;
@@ -27,17 +34,19 @@ const NewsItem: FunctionComponent<NewsItemProps> = ({ className, news }) => {
 				</UnorderedList>
 			);
 		} else {
-			//this shouldn't be possible
+			//this shouldn't be reachable
 		}
 	}
 
 	return (
-		<TitledSubSection
-			header={news.date}
-			className={className}
-		>
+		<NewsItemContainer className={className}>
+			<HeaderContainer>
+				<Header1>{news.title}—</Header1>
+				<Header2>{news.date}</Header2>
+			</HeaderContainer>
+
 			{content}
-		</TitledSubSection>
+		</NewsItemContainer>
 	);
 };
 
