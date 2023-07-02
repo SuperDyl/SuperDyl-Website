@@ -1,4 +1,5 @@
 import NewsItem from "../NewsItem";
+import AltRightArrow from "../icons/AltRightArrow";
 import { ExternalLink, LocalLink } from "./../SharedStyles";
 import styled, { css } from "styled-components";
 
@@ -31,4 +32,8 @@ export const StyledExternalLink = styled(ExternalLink)`
 export const StyledNewsItem = styled(NewsItem)`
 	margin: 0;
 	padding-bottom: 0.5em;
+`;
+
+export const StyledArrow = styled(AltRightArrow)`
+	color: unset;
 `;

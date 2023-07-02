@@ -2,11 +2,11 @@ import React, { memo, FunctionComponent, ReactNode } from "react";
 import { HorizontalLine } from "../SharedStyles";
 import {
 	LinkContainer,
+	StyledArrow,
 	StyledExternalLink,
 	StyledLocalLink,
 	TeaserContainer,
 } from "./styles";
-import AltRightArrow from "../icons/AltRightArrow";
 
 interface TeaserProps {
 	className?: string;
@@ -33,7 +33,7 @@ const Teaser: FunctionComponent<TeaserProps> = ({
 				) : (
 					<StyledLocalLink to={url}>
 						{linkText}
-						<AltRightArrow />
+						<StyledArrow />
 					</StyledLocalLink>
 				)}
 			</LinkContainer>
