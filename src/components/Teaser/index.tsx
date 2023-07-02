@@ -6,6 +6,7 @@ import {
 	StyledLocalLink,
 	TeaserContainer,
 } from "./styles";
+import AltRightArrow from "../icons/AltRightArrow";
 
 interface TeaserProps {
 	className?: string;
@@ -30,7 +31,10 @@ const Teaser: FunctionComponent<TeaserProps> = ({
 				{isExternal ? (
 					<StyledExternalLink href={url}>{linkText}</StyledExternalLink>
 				) : (
-					<StyledLocalLink to={url}>{linkText}</StyledLocalLink>
+					<StyledLocalLink to={url}>
+						{linkText}
+						<AltRightArrow />
+					</StyledLocalLink>
 				)}
 			</LinkContainer>
 		</TeaserContainer>

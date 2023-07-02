@@ -17,6 +17,7 @@ const LinkStyling = css`
 	color: ${(props) => props.theme.primary};
 	font-size: 1.2em;
 	font-weight: bold;
+	text-decoration: none;
 `;
 
 export const StyledLocalLink = styled(LocalLink)`
