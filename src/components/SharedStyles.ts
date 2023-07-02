@@ -101,3 +101,10 @@ export const StyledSVG = styled.svg`
 		stroke-width: 5em;
 	}
 `;
+
+export const HorizontalLine = styled.hr`
+	background: ${(props) => props.theme.primary};
+	height: 0.2em;
+	border-radius: 1em;
+	margin: 0 1em;
+`;
