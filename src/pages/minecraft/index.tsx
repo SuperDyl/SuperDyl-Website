@@ -36,7 +36,7 @@ const Minecraft = () => {
 				underReviewHref={Forms.underReviewHref}
 				discordHref={discordHref}
 			/>
-			<News />
+			<News teaser={true} />
 			<Rules
 				email={email}
 				whitelistHref={Forms.whitelistHref}

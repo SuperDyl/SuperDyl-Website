@@ -8,7 +8,7 @@ interface NewsPageProps {}
 const NewsPage: FunctionComponent<NewsPageProps> = ({}) => {
 	return (
 		<Layout activeLink={MC_PAGES.NEWS}>
-			<News />
+			<News teaser={false} />
 		</Layout>
 	);
 };
