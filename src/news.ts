@@ -55,7 +55,6 @@ export const news: News[] = [
 			{
 				type: NewsContentType.PARAGRAPHS,
 				items: [
-					"Summer Carnival Community Event",
 					"I originally intended community events to happen rather often, but we " +
 						"haven't had one since the Ender Dragon fight last August. It's time " +
 						"for another event: the summer carnival! For this event, everyone is " +
