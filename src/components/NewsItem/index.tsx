@@ -8,7 +8,11 @@ import {
 	Text,
 	UnorderedList,
 } from "../SharedStyles";
-import { HeaderContainer, NewsItemContainer } from "./styles";
+import {
+	DisappearingHeader1,
+	HeaderContainer,
+	NewsItemContainer,
+} from "./styles";
 
 interface NewsItemProps {
 	className?: string;
@@ -41,7 +45,8 @@ const NewsItem: FunctionComponent<NewsItemProps> = ({ className, news }) => {
 	return (
 		<NewsItemContainer className={className}>
 			<HeaderContainer>
-				<Header1>{news.title}—</Header1>
+				<Header1>{news.title}</Header1>
+				<DisappearingHeader1>—</DisappearingHeader1>
 				<Header2>{news.date}</Header2>
 			</HeaderContainer>
 

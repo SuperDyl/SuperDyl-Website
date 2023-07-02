@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Header1 } from "../SharedStyles";
+import { mobileWidth } from "../../constants";
 
 export const NewsItemContainer = styled.div`
 	padding: 1.5em;
@@ -8,5 +10,18 @@ export const NewsItemContainer = styled.div`
 
 export const HeaderContainer = styled.div`
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
+
+	@media (min-width: ${mobileWidth}px) {
+		flex-direction: row;
+		align-items: center;
+	}
+`;
+
+export const DisappearingHeader1 = styled(Header1)`
+	display: none;
+	@media (min-width: ${mobileWidth}px) {
+		display: unset;
+	}
 `;

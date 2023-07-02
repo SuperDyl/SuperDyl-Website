@@ -27,3 +27,5 @@ export const ModUsages = {
 	serverOnly: "serverOnly",
 	all: "all",
 } as const;
+
+export const mobileWidth: number = 600;
