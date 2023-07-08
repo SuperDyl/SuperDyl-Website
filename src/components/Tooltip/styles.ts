@@ -24,7 +24,7 @@ export const TooltipBox = styled.div<TooltipBoxProps>`
 		position: absolute;
 		top: 100%;
 		left: 50%;
-		border-width: 9px;
+		border-width: 0.5em;
 		border-style: solid;
 		border-color: ${(props) => props.theme.base} transparent transparent
 			transparent;
