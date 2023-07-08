@@ -7,14 +7,13 @@ import {
 	StyledLocalLink,
 	TeaserContainer,
 } from "./styles";
+import { RequiredUrlProps } from "../../constants";
 
-interface TeaserProps {
+type TeaserProps = {
 	className?: string;
 	children?: ReactNode;
-	url: string;
 	linkText: string;
-	isExternal?: boolean;
-}
+} & RequiredUrlProps;
 
 const Teaser: FunctionComponent<TeaserProps> = ({
 	className,
@@ -22,6 +21,7 @@ const Teaser: FunctionComponent<TeaserProps> = ({
 	url,
 	linkText,
 	isExternal = false,
+	isLocal = false,
 }) => {
 	return (
 		<TeaserContainer className={className}>

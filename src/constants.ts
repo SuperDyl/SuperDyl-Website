@@ -30,3 +30,15 @@ export const ModUsages = {
 
 export const mobileWidth: number = 600;
 export const tabletWidth: number = 1000;
+
+export type OptionalUrlProps =
+	| ({ url: string } & (
+			| { isExternal: boolean; isLocal?: never }
+			| { isExternal?: never; isLocal: boolean }
+	  ))
+	| { url?: never; isExternal?: never; isLocal?: never };
+
+export type RequiredUrlProps = { url: string } & (
+	| { isExternal: boolean; isLocal?: never }
+	| { isExternal?: never; isLocal: boolean }
+);

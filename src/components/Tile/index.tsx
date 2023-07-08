@@ -1,19 +1,34 @@
 import React, { memo, FunctionComponent, ReactNode } from "react";
-import { LocalLinkContainer, TileContainer } from "./styles";
-import { LocalLink } from "../SharedStyles";
+import {
+	ExternalLinkContainer,
+	LocalLinkContainer,
+	TileContainer,
+} from "./styles";
+import { OptionalUrlProps } from "../../constants";
 
-export interface TileProps {
+export type TileProps = {
 	className?: string;
 	children?: ReactNode;
-	url: string;
-}
+} & OptionalUrlProps;
 
-const Tile: FunctionComponent<TileProps> = ({ className, children, url }) => {
-	if (url !== undefined) {
+const Tile: FunctionComponent<TileProps> = ({
+	className,
+	children,
+	url = undefined,
+	isExternal = false,
+	isLocal = false,
+}) => {
+	if (url === undefined) {
+		return <TileContainer className={className}>{children}</TileContainer>;
+	}
+	if (isExternal) {
+		return <ExternalLinkContainer href={url}>{children}</ExternalLinkContainer>;
+	}
+	if (isLocal) {
 		return <LocalLinkContainer to={url}>{children}</LocalLinkContainer>;
 	}
 
-	return <TileContainer className={className}>{children}</TileContainer>;
+	return <></>; //should be unreachable
 };
 
 export default memo(Tile);
