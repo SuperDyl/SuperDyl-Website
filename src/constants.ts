@@ -29,3 +29,4 @@ export const ModUsages = {
 } as const;
 
 export const mobileWidth: number = 600;
+export const tabletWidth: number = 1000;

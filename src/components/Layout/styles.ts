@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { tabletWidth } from "../../constants";
 
 export const FullViewContainer = styled.div`
 	height: 100vh;
@@ -31,8 +32,8 @@ export const PageContent = styled.main`
 	height: 100%;
 	width: 100%;
 
-	@media (min-width: 1000px) {
-		width: 1000px;
+	@media (min-width: ${tabletWidth}px) {
+		width: ${tabletWidth}px;
 		justify-content: center;
 	}
 `;
