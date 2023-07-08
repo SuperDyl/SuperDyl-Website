@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 
-const DefaultTextStyling = css`
+export const DefaultTextStyling = css`
 	color: ${(props) => props.theme.text};
 `;
 
