@@ -10,7 +10,7 @@ const ContainerStyling = css`
 	display: flex;
 	justify-content: center;
 	min-height: 4em;
-	font-size: 2em;
+	font-size: 1.7em;
 	align-items: center;
 	flex-direction: column;
 `;
