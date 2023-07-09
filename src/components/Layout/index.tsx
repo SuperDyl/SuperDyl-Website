@@ -4,7 +4,7 @@ import {
 	ThemeProps,
 	ThemeProvider,
 } from "styled-components";
-import { MC_PAGES } from "../../constants";
+import { getPageUrl, MC_PAGES, PAGE_URLS } from "../../constants";
 import NavBar from "../NavBar";
 import {
 	FullViewContainer,
@@ -71,13 +71,16 @@ interface LayoutProps {
 	activeLink?: MC_PAGES;
 }
 
+const navbarItems: [MC_PAGES, string][] = [
+	[MC_PAGES.NEWS, "News"],
+	[MC_PAGES.PLAY, "Play"],
+];
+
 const Layout: FunctionComponent<LayoutProps> = ({
 	children,
 	className,
 	activeLink,
 }) => {
-	const links = [{ id: MC_PAGES.NEWS, to: "/minecraft/news", text: "News" }];
-
 	return (
 		//TODO override html with theme base color
 		//TODO add actual switching between themes
@@ -85,15 +88,15 @@ const Layout: FunctionComponent<LayoutProps> = ({
 		<ThemeProvider theme={true ? darkTheme : lightTheme}>
 			<FullViewContainer>
 				<Banner>
-					<BannerText to={"/minecraft"}>SD | Minecraft</BannerText>
+					<BannerText to={getPageUrl(MC_PAGES.HOME)}>SD | Minecraft</BannerText>
 				</Banner>
 				<NavBar
-					navItems={links.map(({ id, to, text }) => ({
-						to,
+					navItems={navbarItems.map(([id, text]) => ({
+						to: getPageUrl(id),
 						text,
 						active: activeLink === id,
 					}))}
-				></NavBar>
+				/>
 				<MainContainer>
 					<PageContent className={className}>{children}</PageContent>
 				</MainContainer>

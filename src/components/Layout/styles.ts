@@ -31,6 +31,7 @@ export const BannerText = styled(Link)`
 export const PageContent = styled.main`
 	height: 100%;
 	width: 100%;
+	padding-top: 0.6em;
 
 	@media (min-width: ${tabletWidth}px) {
 		width: ${tabletWidth}px;
@@ -39,7 +40,6 @@ export const PageContent = styled.main`
 `;
 
 export const MainContainer = styled.div`
-	padding-top: 10px;
 	background-color: ${(props) => props.theme.base};
 	flex-grow: 1;
 	display: flex;
