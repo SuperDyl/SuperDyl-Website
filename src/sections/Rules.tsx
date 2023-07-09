@@ -3,9 +3,10 @@ import { Text } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
 import TitledSubSection from "../components/TitledSubSection";
 import ExternalTabLink from "../components/ExternalTabLink";
+import EmailLink from "../components/EmailLink";
 
 interface RulesProps {
-	email: JSX.Element;
+	email: string;
 	whitelistHref: string;
 }
 
@@ -18,17 +19,21 @@ const Rules: FunctionComponent<RulesProps> = ({ email, whitelistHref }) => {
 			</Text>
 			<TitledSubSection header="Be considerate of others">
 				<Text>
-					{
-						"If they don't (or probably don't) like something, don't do it to them. Depending on the person and situation, this could include stealing, killing players or their animals, building too close to someone's builds, destroying other player's stuff, etc.This also includes avoiding profanity and pretty much anything crass. Within reason, if someone asks you to stop, you stop."
-					}
+					If they don't (or probably don't) like something, don't do it to them.
+					Depending on the person and situation, this could include stealing,
+					killing players or their animals, building too close to someone's
+					builds, destroying other player's stuff, etc.This also includes
+					avoiding profanity and pretty much anything crass. Within reason, if
+					someone asks you to stop, you stop.
 				</Text>
 			</TitledSubSection>
 			<TitledSubSection header="The server is whitelisted">
 				<Text>
-					{
-						"Let me know who you want added to the whitelist and I probably will add them to the server whitelist. Just give me their username (spelled correctly with capital/lowercase also correct) and how they're related to you (such as friend, relative, alternate account, etc.) You can email me directly at "
-					}
-					{email}
+					Let me know who you want added to the whitelist and I probably will
+					add them to the server whitelist. Just give me their username (spelled
+					correctly with capital/lowercase also correct) and how they're related
+					to you (such as friend, relative, alternate account, etc.) You can
+					email me directly at <EmailLink emailAddr={email} />
 					{" or use this "}
 					<ExternalTabLink href={whitelistHref}>whitelist form</ExternalTabLink>
 				</Text>
@@ -54,7 +59,7 @@ const Rules: FunctionComponent<RulesProps> = ({ email, whitelistHref }) => {
 			<TitledSubSection header="If rules are broken">
 				<Text>
 					If rules are broken, they will be encouraged to try reconciling the
-					issue with each other first. If the issue isn’t resolved, then I will
+					issue with each other first. If the issue isn't resolved, then I will
 					act as arbiter if possible before giving punishments. Taden defaults
 					as arbiter if needed if an issue arises between me and another player
 					that we cannot resolve on our own.

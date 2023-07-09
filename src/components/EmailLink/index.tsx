@@ -8,14 +8,14 @@ interface EmailLinkProps {
 
 const EmailLink: FunctionComponent<EmailLinkProps> = ({
 	className,
-	emailAddr = "mailto:SuperDylEnt@gmail.com",
+	emailAddr = "SuperDylEnt@gmail.com",
 }) => {
 	return (
 		<ExternalTabLink
 			className={className}
-			href={emailAddr}
+			href={`mailto:${emailAddr}`}
 		>
-			SuperDylEnt@gmail.com
+			{emailAddr}
 		</ExternalTabLink>
 	);
 };

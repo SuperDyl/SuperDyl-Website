@@ -14,18 +14,18 @@ import ClientMods from "../../sections/ClientMods";
 import ExternalTabLink from "../../components/ExternalTabLink";
 import Tile from "../../components/Tile";
 import TileGrid from "../../components/TileGrid";
-import { LocalLink, Text, TightText } from "../../components/SharedStyles";
+import { LocalLink, TightText } from "../../components/SharedStyles";
 import ClipboardLink from "../../components/ClipboardLink";
-import EmailLink from "../../components/EmailLink";
 
 const minecraftUrl: string = getPageUrl(MC_PAGES.HOME);
 const playUrl: string = getPageUrl(MC_PAGES.PLAY);
+const emailAddress: string = "SuperDylEnt@gmail.com";
+
+const vtDatapacks = "https://vanillatweaks.net/share#XI164f";
+const vtCrafting = "https://vanillatweaks.net/share#2h8GfZ";
+const discordHref = "https://discord.superdyl.net";
 
 const Minecraft = () => {
-	const vtDatapacks = "https://vanillatweaks.net/share#XI164f";
-	const vtCrafting = "https://vanillatweaks.net/share#2h8GfZ";
-	const discordHref = "https://discord.superdyl.net";
-
 	return (
 		<Layout activeLink={MC_PAGES.HOME}>
 			<News teaser={true} />
@@ -75,7 +75,7 @@ const Minecraft = () => {
 				discordHref={discordHref}
 			/>
 			<Rules
-				email={<EmailLink />}
+				email={emailAddress}
 				whitelistHref={Forms.whitelistHref}
 			/>
 			<Changes
@@ -86,7 +86,7 @@ const Minecraft = () => {
 			/>
 			<UnderReview
 				underReviewHref={Forms.underReviewHref}
-				email={<EmailLink />}
+				email={emailAddress}
 			/>
 			<RejectedChanges />
 			<Datapacks
