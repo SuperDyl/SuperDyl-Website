@@ -1,5 +1,6 @@
-import React, { memo, FunctionComponent, ReactNode } from "react";
-import { ExternalLink } from "../SharedStyles";
+import React, { memo, FunctionComponent, ReactNode, useMemo } from "react";
+import { useOverrideParentLink } from "../hooks";
+import ExternalLink from "../ExternalLink";
 
 interface ExternalTabLinkProps {
 	className?: string;
@@ -14,6 +15,8 @@ export const ExternalTabLink: FunctionComponent<ExternalTabLinkProps> = ({
 	href,
 	overrideParent,
 }) => {
+	const override = useOverrideParentLink(href, true);
+
 	return (
 		<ExternalLink
 			className={className}
@@ -21,13 +24,7 @@ export const ExternalTabLink: FunctionComponent<ExternalTabLinkProps> = ({
 			target="_blank"
 			rel="noopener noreferrer"
 			onClick={(e: React.FormEvent) => {
-				if (overrideParent) {
-					e.preventDefault();
-					const newTab = window.open(href, "_blank", "noopener,noreferrer");
-					if (newTab !== null) {
-						newTab.opener = null;
-					}
-				}
+				if (overrideParent) override(e);
 			}}
 		>
 			{children}

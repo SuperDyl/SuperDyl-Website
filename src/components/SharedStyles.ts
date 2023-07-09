@@ -54,10 +54,6 @@ export const LocalLink = styled(Link)`
 	${SharedLinkStyling}
 `;
 
-export const ExternalLink = styled.a`
-	${SharedLinkStyling}
-`;
-
 const ListStyling = css`
 	${DefaultTextStyling}
 	margin-left: 2em;

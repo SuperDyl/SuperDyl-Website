@@ -1,6 +1,7 @@
+import ExternalLink from "../ExternalLink";
 import NewsItem from "../NewsItem";
 import AltRightArrow from "../icons/AltRightArrow";
-import { ExternalLink, LocalLink } from "./../SharedStyles";
+import { LocalLink } from "./../SharedStyles";
 import styled, { css } from "styled-components";
 
 export const TeaserContainer = styled.div`
