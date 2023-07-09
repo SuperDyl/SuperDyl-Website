@@ -11,6 +11,11 @@ export const Text = styled.p`
 	padding-bottom: 0.4em;
 `;
 
+export const TightText = styled.p`
+	${DefaultTextStyling}
+	margin: 0;
+`;
+
 export const WeakText = styled.em`
 	${DefaultTextStyling}
 	color: ${(props) => props.theme.textAlt};
@@ -53,11 +58,20 @@ export const ExternalLink = styled.a`
 	${SharedLinkStyling}
 `;
 
-export const UnorderedList = styled.ul`
+const ListStyling = css`
 	${DefaultTextStyling}
-	list-style: disc;
 	margin-left: 2em;
 	margin-bottom: 0.75em;
+`;
+
+export const UnorderedList = styled.ul`
+	${ListStyling}
+	list-style: disc;
+`;
+
+export const OrderedList = styled.ol`
+	${ListStyling}
+	list-style: lower-alpha;
 `;
 
 export const ListItem = styled.li`
