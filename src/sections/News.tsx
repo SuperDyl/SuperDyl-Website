@@ -12,6 +12,7 @@ const News: FunctionComponent<NewsProps> = ({ teaser }) => {
 	return teaser ? (
 		<Teaser
 			url="/minecraft/news"
+			isLocal
 			linkText="See all News"
 		>
 			<StyledNewsItem news={news[0]} />

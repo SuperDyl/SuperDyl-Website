@@ -1,8 +1,8 @@
 import React, { memo } from "react";
-import Layout from "../../../components/Layout";
 import { MC_PAGES } from "../../../constants";
 import { ListItem, OrderedList, Text } from "../../../components/SharedStyles";
 import { StyledLayout } from "./styles";
+import { HeadFC } from "gatsby";
 
 const Play = () => {
 	return (
@@ -30,3 +30,5 @@ const Play = () => {
 };
 
 export default memo(Play);
+
+export const Head: HeadFC = () => <title>SD|Minecraft Play</title>;
