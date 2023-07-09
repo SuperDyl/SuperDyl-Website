@@ -1,7 +1,18 @@
 export enum MC_PAGES {
 	HOME,
 	NEWS,
+	PLAY,
 }
+
+export const PAGE_URLS: Map<MC_PAGES, string> = new Map([
+	[MC_PAGES.HOME, "/minecraft"],
+	[MC_PAGES.NEWS, "/minecraft/news"],
+	[MC_PAGES.PLAY, "/minecraft/play"],
+]);
+
+export const getPageUrl = (page: MC_PAGES): string => {
+	return PAGE_URLS.get(page) || "/404";
+};
 
 export const Forms = {
 	datapacksHref: "https://forms.gle/u2FAnFn7dc8Ft3qm6",
