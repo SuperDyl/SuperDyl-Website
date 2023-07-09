@@ -4,7 +4,7 @@ import {
 	ThemeProps,
 	ThemeProvider,
 } from "styled-components";
-import { getPageUrl, MC_PAGES, PAGE_URLS } from "../../constants";
+import { getPageUrl, MC_PAGES } from "../../constants";
 import NavBar from "../NavBar";
 import {
 	FullViewContainer,
