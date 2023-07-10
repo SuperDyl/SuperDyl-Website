@@ -7,12 +7,9 @@ import MiniLayout, {
 	TopLeftContainer,
 } from "../../../components/MiniLayout";
 import DiscordIcon from "../../../components/icons/DiscordIcon";
-import {
-	EmphasisClipboardLink,
-	EmphasisExternalLink,
-	EmphasisHeader2,
-} from "../../../components/EmphasisStyles";
+import { InlineEmphasis } from "../../../components/SharedStyles";
 import ExternalLink from "../../../components/ExternalLink";
+import ClipboardLink from "../../../components/ClipboardLink";
 
 const Discord = () => {
 	return (
@@ -25,15 +22,19 @@ const Discord = () => {
 				</Text>
 				<Header2>
 					Join the{" "}
-					<EmphasisExternalLink href={externalDiscordHref}>
-						Discord channel
-					</EmphasisExternalLink>
+					<InlineEmphasis>
+						<ExternalLink href={externalDiscordHref}>
+							Discord channel
+						</ExternalLink>
+					</InlineEmphasis>
 				</Header2>
 				<Header2>
 					Share{" "}
-					<EmphasisClipboardLink text={externalDiscordHref}>
-						discord.superdyl.net
-					</EmphasisClipboardLink>
+					<InlineEmphasis>
+						<ClipboardLink text={externalDiscordHref}>
+							discord.superdyl.net
+						</ClipboardLink>
+					</InlineEmphasis>
 				</Header2>
 			</TopLeftContainer>
 			<BottomRightContainer>

@@ -123,3 +123,15 @@ export const HorizontalLine = styled.hr`
 	border-radius: 1em;
 	margin: 0 1em;
 `;
+
+const EmphasisStylings = css`
+	color: ${(props) => props.theme.tertiary};
+`;
+
+export const InlineEmphasis = styled.span`
+	${EmphasisStylings}
+
+	& > * {
+		${EmphasisStylings}
+	}
+`;
