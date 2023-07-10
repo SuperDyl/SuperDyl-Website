@@ -99,7 +99,11 @@ export const TableData = styled.td`
 	padding: 0.25em;
 `;
 
-export const StyledSVG = styled.svg`
+interface StyledSVGProps {
+	$strokeWidth?: string;
+}
+
+export const StyledSVG = styled.svg<StyledSVGProps>`
 	fill: currentColor;
 	stroke: currentColor;
 	color: ${(props) => props.theme.text};
@@ -108,7 +112,8 @@ export const StyledSVG = styled.svg`
 	width: auto;
 
 	path {
-		stroke-width: 5em;
+		stroke-width: ${({ $strokeWidth }) =>
+			$strokeWidth !== undefined ? $strokeWidth : "5em"};
 	}
 `;
 
