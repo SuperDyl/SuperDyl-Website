@@ -46,6 +46,7 @@ export const tabletWidth: number = 1000;
 
 export const serverIp: string = "mc.superdyl.net";
 export const email: string = "SuperDylEnt@gmail.com";
+export const externalDiscordHref = "https://discord.superdyl.net";
 
 export type OptionalUrlProps =
 	| ({ url: string } & (

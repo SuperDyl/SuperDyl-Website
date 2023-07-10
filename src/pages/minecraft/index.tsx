@@ -1,7 +1,12 @@
 import { HeadFC } from "gatsby";
 import React, { memo, useMemo } from "react";
 import Layout from "../../components/Layout";
-import { Forms, MC_PAGES, PAGE_URLS, getPageUrl } from "../../constants";
+import {
+	Forms,
+	MC_PAGES,
+	externalDiscordHref,
+	getPageUrl,
+} from "../../constants";
 import HelpfulLinks from "../../sections/HelpfulLinks";
 import News from "../../sections/News";
 import Rules from "../../sections/Rules";
@@ -19,11 +24,12 @@ import ClipboardLink from "../../components/ClipboardLink";
 
 const minecraftUrl: string = getPageUrl(MC_PAGES.HOME);
 const playUrl: string = getPageUrl(MC_PAGES.PLAY);
+const discordUrl: string = getPageUrl(MC_PAGES.DISCORD);
+
 const emailAddress: string = "SuperDylEnt@gmail.com";
 
 const vtDatapacks = "https://vanillatweaks.net/share#XI164f";
 const vtCrafting = "https://vanillatweaks.net/share#2h8GfZ";
-const discordHref = "https://discord.superdyl.net";
 
 const Minecraft = () => {
 	return (
@@ -40,12 +46,12 @@ const Minecraft = () => {
 					</ClipboardLink>
 				</Tile>
 				<Tile
-					url={minecraftUrl}
+					url={discordUrl}
 					isLocal
 				>
 					<TightText>Chat!</TightText>
 					<ExternalTabLink
-						href={discordHref}
+						href={externalDiscordHref}
 						overrideParent
 					>
 						Discord
@@ -72,7 +78,7 @@ const Minecraft = () => {
 				whitelistHref={Forms.whitelistHref}
 				otherHref={Forms.otherHref}
 				underReviewHref={Forms.underReviewHref}
-				discordHref={discordHref}
+				discordHref={externalDiscordHref}
 			/>
 			<Rules
 				email={emailAddress}

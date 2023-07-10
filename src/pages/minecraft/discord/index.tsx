@@ -1,14 +1,23 @@
 import React, { memo } from "react";
 import { MC_PAGES } from "../../../constants";
 import { HeadFC } from "gatsby";
-import { StyledLayout } from "./styles";
 import { Text } from "../../../components/SharedStyles";
+import MiniLayout, {
+	BottomRightContainer,
+	TopLeftContainer,
+} from "../../../components/MiniLayout";
+import DiscordIcon from "../../../components/icons/DiscordIcon";
 
 const Discord = () => {
 	return (
-		<StyledLayout activeLink={MC_PAGES.DISCORD}>
-			<Text></Text>
-		</StyledLayout>
+		<MiniLayout activeLink={MC_PAGES.DISCORD}>
+			<TopLeftContainer>
+				<Text>Here's some text about Discord</Text>
+			</TopLeftContainer>
+			<BottomRightContainer>
+				<DiscordIcon />
+			</BottomRightContainer>
+		</MiniLayout>
 	);
 };
 
