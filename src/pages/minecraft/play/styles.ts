@@ -1,6 +1,16 @@
-import styled from "styled-components";
-import Layout from "../../../components/Layout";
+import styled, { css } from "styled-components";
+import ClipboardLink from "../../../components/ClipboardLink";
+import { Header2 } from "../../../components/SharedStyles";
 
-export const StyledLayout = styled(Layout)`
-	padding: 2em;
+const EmphasisStylings = css`
+	color: ${(props) => props.theme.tertiary};
+`;
+
+export const StyledClipboardLink = styled(ClipboardLink)`
+	${EmphasisStylings}
+`;
+
+export const StyledHeader2 = styled(Header2)`
+	${EmphasisStylings}
+	display: inline;
 `;

@@ -74,6 +74,7 @@ interface LayoutProps {
 const navbarItems: [MC_PAGES, string][] = [
 	[MC_PAGES.NEWS, "News"],
 	[MC_PAGES.PLAY, "Play"],
+	[MC_PAGES.DISCORD, "Discord"],
 ];
 
 const Layout: FunctionComponent<LayoutProps> = ({

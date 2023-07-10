@@ -2,12 +2,14 @@ export enum MC_PAGES {
 	HOME,
 	NEWS,
 	PLAY,
+	DISCORD,
 }
 
 export const PAGE_URLS: Map<MC_PAGES, string> = new Map([
 	[MC_PAGES.HOME, "/minecraft"],
 	[MC_PAGES.NEWS, "/minecraft/news"],
 	[MC_PAGES.PLAY, "/minecraft/play"],
+	[MC_PAGES.DISCORD, "/minecraft/discord"],
 ]);
 
 export const getPageUrl = (page: MC_PAGES): string => {
@@ -41,6 +43,9 @@ export const ModUsages = {
 
 export const mobileWidth: number = 600;
 export const tabletWidth: number = 1000;
+
+export const serverIp: string = "mc.superdyl.net";
+export const email: string = "SuperDylEnt@gmail.com";
 
 export type OptionalUrlProps =
 	| ({ url: string } & (
