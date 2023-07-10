@@ -12,7 +12,7 @@ export const FullViewContainer = styled.div`
 //TODO should I set a max and min for the banner/banner text?
 export const Banner = styled.div`
 	padding: 1vh 1vw;
-	height: 12vh;
+	/* height: 12vh; */
 	display: flex;
 	justify-content: center;
 	align-items: center;

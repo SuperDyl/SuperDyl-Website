@@ -1,7 +1,10 @@
 import React, { memo } from "react";
 import { Forms, MC_PAGES, serverIp } from "../../../constants";
 import { Header2, Text } from "../../../components/SharedStyles";
-import { StyledClipboardLink, StyledHeader2 } from "./styles";
+import {
+	EmphasisClipboardLink,
+	EmphasisHeader2,
+} from "../../../components/EmphasisStyles";
 import { HeadFC } from "gatsby";
 import ClipboardLink from "../../../components/ClipboardLink";
 import { ALL_MC_VERSIONS } from "../../../mods";
@@ -35,10 +38,13 @@ const Play = () => {
 			<BottomRightContainer>
 				<Header2>
 					Server ip:{" "}
-					<StyledClipboardLink text={serverIp}>{serverIp}</StyledClipboardLink>
+					<EmphasisClipboardLink text={serverIp}>
+						{serverIp}
+					</EmphasisClipboardLink>
 				</Header2>
 				<Header2>
-					Minecraft version: <StyledHeader2>{ALL_MC_VERSIONS[0]}</StyledHeader2>
+					Minecraft version:{" "}
+					<EmphasisHeader2>{ALL_MC_VERSIONS[0]}</EmphasisHeader2>
 				</Header2>
 			</BottomRightContainer>
 		</MiniLayout>
