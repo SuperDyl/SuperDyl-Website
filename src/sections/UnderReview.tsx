@@ -7,12 +7,10 @@ import EmailLink from "../components/EmailLink";
 
 interface UnderReviewProps {
 	underReviewHref: string;
-	email: string;
 }
 
 const UnderReview: FunctionComponent<UnderReviewProps> = ({
 	underReviewHref,
-	email,
 }) => {
 	const underReview = useMemo(
 		() => (
@@ -27,8 +25,8 @@ const UnderReview: FunctionComponent<UnderReviewProps> = ({
 		<TitledSection header="Changes Under Review">
 			<Text>
 				To give feedback specific to this section, please use the form{" "}
-				{underReview} or email me at {<EmailLink emailAddr={email} />} and
-				mention the title of the change
+				{underReview} or email me at {<EmailLink />} and mention the title of
+				the change
 				{"you're"} giving feedback on. I will consider all feedback on these
 				potential changes before making a final decision.
 			</Text>

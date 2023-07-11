@@ -6,11 +6,10 @@ import ExternalTabLink from "../components/ExternalTabLink";
 import EmailLink from "../components/EmailLink";
 
 interface RulesProps {
-	email: string;
 	whitelistHref: string;
 }
 
-const Rules: FunctionComponent<RulesProps> = ({ email, whitelistHref }) => {
+const Rules: FunctionComponent<RulesProps> = ({ whitelistHref }) => {
 	return (
 		<TitledSection header="Rules">
 			<Text>
@@ -33,7 +32,7 @@ const Rules: FunctionComponent<RulesProps> = ({ email, whitelistHref }) => {
 					add them to the server whitelist. Just give me their username (spelled
 					correctly with capital/lowercase also correct) and how they're related
 					to you (such as friend, relative, alternate account, etc.) You can
-					email me directly at <EmailLink emailAddr={email} />
+					email me directly at <EmailLink />
 					{" or use this "}
 					<ExternalTabLink href={whitelistHref}>whitelist form</ExternalTabLink>
 				</Text>
