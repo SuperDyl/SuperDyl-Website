@@ -76,6 +76,7 @@ const navbarItems: [MC_PAGES, string][] = [
 	[MC_PAGES.PLAY, "Play"],
 	[MC_PAGES.DISCORD, "Discord"],
 	[MC_PAGES.WHITELIST, "Whitelist"],
+	[MC_PAGES.CHANGES, "Changes"],
 ];
 
 const Layout: FunctionComponent<LayoutProps> = ({

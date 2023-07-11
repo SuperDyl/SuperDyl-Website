@@ -4,6 +4,7 @@ export enum MC_PAGES {
 	PLAY,
 	DISCORD,
 	WHITELIST,
+	CHANGES,
 }
 
 export const PAGE_URLS: Map<MC_PAGES, string> = new Map([
@@ -12,6 +13,7 @@ export const PAGE_URLS: Map<MC_PAGES, string> = new Map([
 	[MC_PAGES.PLAY, "/minecraft/play"],
 	[MC_PAGES.DISCORD, "/minecraft/discord"],
 	[MC_PAGES.WHITELIST, "/minecraft/whitelist"],
+	[MC_PAGES.CHANGES, "/minecraft/changes"],
 ]);
 
 export const getPageUrl = (page: MC_PAGES): string => {

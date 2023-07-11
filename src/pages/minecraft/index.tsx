@@ -25,6 +25,8 @@ import ClipboardLink from "../../components/ClipboardLink";
 const minecraftUrl: string = getPageUrl(MC_PAGES.HOME);
 const playUrl: string = getPageUrl(MC_PAGES.PLAY);
 const discordUrl: string = getPageUrl(MC_PAGES.DISCORD);
+const whitelistUrl: string = getPageUrl(MC_PAGES.WHITELIST);
+const changesUrl: string = getPageUrl(MC_PAGES.CHANGES);
 
 const emailAddress: string = "SuperDylEnt@gmail.com";
 
@@ -58,18 +60,18 @@ const Minecraft = () => {
 					</ExternalTabLink>
 				</Tile>
 				<Tile
-					url={minecraftUrl}
+					url={whitelistUrl}
 					isLocal
 				>
 					<TightText>Join!</TightText>
-					<LocalLink to={minecraftUrl}>Whitelist</LocalLink>
+					<LocalLink to={Forms.whitelistHref}>Whitelist</LocalLink>
 				</Tile>
 				<Tile
-					url={minecraftUrl}
+					url={changesUrl}
 					isLocal
 				>
 					<TightText>Suggest!</TightText>
-					<LocalLink to={minecraftUrl}>Changes</LocalLink>
+					<LocalLink to={Forms.otherHref}>Changes</LocalLink>
 				</Tile>
 			</TileGrid>
 			<HelpfulLinks

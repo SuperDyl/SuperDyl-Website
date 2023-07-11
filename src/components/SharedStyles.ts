@@ -131,7 +131,7 @@ const EmphasisStylings = css`
 export const InlineEmphasis = styled.span`
 	${EmphasisStylings}
 
-	& > * {
+	& *:not(button) {
 		${EmphasisStylings}
 	}
 `;

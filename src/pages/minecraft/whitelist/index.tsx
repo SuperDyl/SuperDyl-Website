@@ -35,7 +35,7 @@ const Whitelist = () => {
 					</InlineEmphasis>
 				</Header2>
 				<Header2>
-					Email me at{" "}
+					Email:{" "}
 					<InlineEmphasis>
 						<EmailLink />
 					</InlineEmphasis>
