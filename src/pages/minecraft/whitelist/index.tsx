@@ -8,7 +8,7 @@ import MiniLayout, {
 import { Header2, Text } from "../../../components/SharedStyles";
 import { InlineEmphasis } from "../../../components/SharedStyles";
 import EmailLink from "../../../components/EmailLink";
-import ExternalLink from "../../../components/ExternalLink";
+import ExternalTabLink from "../../../components/ExternalTabLink";
 
 const Whitelist = () => {
 	return (
@@ -31,7 +31,7 @@ const Whitelist = () => {
 				<Header2>
 					Fill out this{" "}
 					<InlineEmphasis>
-						<ExternalLink href={Forms.whitelistHref}>form</ExternalLink>
+						<ExternalTabLink href={Forms.whitelistHref}>form</ExternalTabLink>
 					</InlineEmphasis>
 				</Header2>
 				<Header2>

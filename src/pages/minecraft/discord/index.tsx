@@ -8,7 +8,7 @@ import MiniLayout, {
 } from "../../../components/MiniLayout";
 import DiscordIcon from "../../../components/icons/DiscordIcon";
 import { InlineEmphasis } from "../../../components/SharedStyles";
-import ExternalLink from "../../../components/ExternalLink";
+import ExternalTabLink from "../../../components/ExternalTabLink";
 import ClipboardLink from "../../../components/ClipboardLink";
 
 const Discord = () => {
@@ -23,9 +23,9 @@ const Discord = () => {
 				<Header2>
 					Join the{" "}
 					<InlineEmphasis>
-						<ExternalLink href={externalDiscordHref}>
+						<ExternalTabLink href={externalDiscordHref}>
 							Discord channel
-						</ExternalLink>
+						</ExternalTabLink>
 					</InlineEmphasis>
 				</Header2>
 				<Header2>

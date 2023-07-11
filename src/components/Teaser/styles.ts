@@ -1,4 +1,4 @@
-import ExternalLink from "../ExternalLink";
+import ExternalTabLink from "../ExternalTabLink";
 import NewsItem from "../NewsItem";
 import AltRightArrow from "../icons/AltRightArrow";
 import { LocalLink } from "./../SharedStyles";
@@ -26,7 +26,7 @@ export const StyledLocalLink = styled(LocalLink)`
 	${LinkStyling}
 `;
 
-export const StyledExternalLink = styled(ExternalLink)`
+export const StyledExternalLink = styled(ExternalTabLink)`
 	${LinkStyling}
 `;
 

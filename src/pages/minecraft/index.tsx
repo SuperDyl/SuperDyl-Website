@@ -64,14 +64,24 @@ const Minecraft = () => {
 					isLocal
 				>
 					<TightText>Join!</TightText>
-					<LocalLink to={Forms.whitelistHref}>Whitelist</LocalLink>
+					<ExternalTabLink
+						href={Forms.whitelistHref}
+						overrideParent
+					>
+						Whitelist
+					</ExternalTabLink>
 				</Tile>
 				<Tile
 					url={changesUrl}
 					isLocal
 				>
 					<TightText>Suggest!</TightText>
-					<LocalLink to={Forms.otherHref}>Changes</LocalLink>
+					<ExternalTabLink
+						href={Forms.otherHref}
+						overrideParent
+					>
+						Changes
+					</ExternalTabLink>
 				</Tile>
 			</TileGrid>
 			<HelpfulLinks
