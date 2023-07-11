@@ -26,16 +26,20 @@ const ClipboardLink: FunctionComponent<ClipboardLinkProps> = ({
 	const [tooltipVisible, setTooltipVisible] = useState(false);
 	const [tooltipContent, setTooltipContent] = useState("Copy");
 
-	const onClick = useCallback(() => {
-		copyTextToClipboard(text).then(
-			() => {
-				setTooltipContent("Copied!");
-			},
-			() => {
-				setTooltipContent("Copy failed");
-			}
-		);
-	}, [text]);
+	const onClick = useCallback(
+		(e: React.FormEvent) => {
+			e.preventDefault();
+			copyTextToClipboard(text).then(
+				() => {
+					setTooltipContent("Copied!");
+				},
+				() => {
+					setTooltipContent("Copy failed");
+				}
+			);
+		},
+		[text]
+	);
 
 	return (
 		<CopyToClipboard

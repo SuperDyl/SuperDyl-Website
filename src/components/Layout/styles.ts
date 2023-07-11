@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { tabletWidth } from "../../constants";
 
 export const FullViewContainer = styled.div`
 	height: 100vh;
@@ -11,7 +12,7 @@ export const FullViewContainer = styled.div`
 //TODO should I set a max and min for the banner/banner text?
 export const Banner = styled.div`
 	padding: 1vh 1vw;
-	height: 12vh;
+	/* height: 12vh; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -30,15 +31,15 @@ export const BannerText = styled(Link)`
 export const PageContent = styled.main`
 	height: 100%;
 	width: 100%;
+	padding-top: 0.6em;
 
-	@media (min-width: 1000px) {
-		width: 1000px;
+	@media (min-width: ${tabletWidth}px) {
+		width: ${tabletWidth}px;
 		justify-content: center;
 	}
 `;
 
 export const MainContainer = styled.div`
-	padding-top: 10px;
 	background-color: ${(props) => props.theme.base};
 	flex-grow: 1;
 	display: flex;

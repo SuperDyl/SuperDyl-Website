@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 
-const DefaultTextStyling = css`
+export const DefaultTextStyling = css`
 	color: ${(props) => props.theme.text};
 `;
 
@@ -9,6 +9,11 @@ export const Text = styled.p`
 	${DefaultTextStyling}
 	margin: 0;
 	padding-bottom: 0.4em;
+`;
+
+export const TightText = styled.p`
+	${DefaultTextStyling}
+	margin: 0;
 `;
 
 export const WeakText = styled.em`
@@ -19,9 +24,8 @@ export const WeakText = styled.em`
 export const Header1 = styled.h1`
 	${DefaultTextStyling}
 	color: ${(props) => props.theme.primary};
-	font-size: 1.5em;
+	font-size: 1.7em;
 	font-weight: bold;
-	text-decoration: underline;
 	margin-bottom: 0.4em;
 `;
 
@@ -50,15 +54,20 @@ export const LocalLink = styled(Link)`
 	${SharedLinkStyling}
 `;
 
-export const ExternalLink = styled.a`
-	${SharedLinkStyling}
+const ListStyling = css`
+	${DefaultTextStyling}
+	margin-left: 2em;
+	margin-bottom: 0.75em;
 `;
 
 export const UnorderedList = styled.ul`
-	${DefaultTextStyling}
+	${ListStyling}
 	list-style: disc;
-	margin-left: 2em;
-	margin-bottom: 0.75em;
+`;
+
+export const OrderedList = styled.ol`
+	${ListStyling}
+	list-style: lower-alpha;
 `;
 
 export const ListItem = styled.li`
@@ -90,7 +99,11 @@ export const TableData = styled.td`
 	padding: 0.25em;
 `;
 
-export const StyledSVG = styled.svg`
+interface StyledSVGProps {
+	$strokeWidth?: string;
+}
+
+export const StyledSVG = styled.svg<StyledSVGProps>`
 	fill: currentColor;
 	stroke: currentColor;
 	color: ${(props) => props.theme.text};
@@ -99,6 +112,26 @@ export const StyledSVG = styled.svg`
 	width: auto;
 
 	path {
-		stroke-width: 5em;
+		stroke-width: ${({ $strokeWidth }) =>
+			$strokeWidth !== undefined ? $strokeWidth : "5em"};
+	}
+`;
+
+export const HorizontalLine = styled.hr`
+	background: ${(props) => props.theme.primary};
+	height: 0.2em;
+	border-radius: 1em;
+	margin: 0 1em;
+`;
+
+const EmphasisStylings = css`
+	color: ${(props) => props.theme.tertiary};
+`;
+
+export const InlineEmphasis = styled.span`
+	${EmphasisStylings}
+
+	& *:not(div) {
+		${EmphasisStylings}
 	}
 `;

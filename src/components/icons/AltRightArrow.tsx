@@ -1,11 +1,13 @@
 import React, { FunctionComponent, memo } from "react";
 import { StyledSVG } from "../SharedStyles";
 
-interface ExpandLessProps {
+interface AltRightArrowProps {
 	className?: string;
 }
 
-const ExpandLess: FunctionComponent<ExpandLessProps> = ({ className }) => {
+const AltRightArrow: FunctionComponent<AltRightArrowProps> = ({
+	className,
+}) => {
 	return (
 		<StyledSVG
 			xmlns="http://www.w3.org/2000/svg"
@@ -14,9 +16,9 @@ const ExpandLess: FunctionComponent<ExpandLessProps> = ({ className }) => {
 			width="48"
 			className={className}
 		>
-			<path d="m283-345-43-43 240-240 240 239-43 43-197-197-197 198Z" />
+			<path d="m561-242-43-42 168-168H160v-60h526L517-681l43-42 241 241-240 240Z" />
 		</StyledSVG>
 	);
 };
 
-export default memo(ExpandLess);
+export default memo(AltRightArrow);

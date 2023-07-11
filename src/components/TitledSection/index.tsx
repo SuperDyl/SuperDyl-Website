@@ -1,9 +1,9 @@
-import React, { FunctionComponent, memo } from "react";
+import React, { FunctionComponent, ReactNode, memo } from "react";
 import { TitledSectionContainer, StickyHeader1 } from "./styles";
 
 interface TitledSectionProps {
 	header: string;
-	children?: JSX.Element | JSX.Element[];
+	children?: ReactNode;
 	className?: string;
 }
 

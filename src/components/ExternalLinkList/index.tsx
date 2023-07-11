@@ -1,6 +1,6 @@
 import React, { memo, FunctionComponent } from "react";
-import { Websites } from "../constants";
-import ExternalTabLink from "./ExternalTabLink";
+import { Websites } from "../../constants";
+import ExternalTabLink from "../ExternalTabLink";
 
 export interface ExternalLink {
 	siteName: keyof typeof Websites;

@@ -1,9 +1,24 @@
-export enum Pages {
+export enum MC_PAGES {
 	HOME,
-	MINECRAFT,
-	BLOG,
-	ARCHIVE,
+	NEWS,
+	PLAY,
+	DISCORD,
+	WHITELIST,
+	CHANGES,
 }
+
+export const PAGE_URLS: Map<MC_PAGES, string> = new Map([
+	[MC_PAGES.HOME, "/minecraft"],
+	[MC_PAGES.NEWS, "/minecraft/news"],
+	[MC_PAGES.PLAY, "/minecraft/play"],
+	[MC_PAGES.DISCORD, "/minecraft/discord"],
+	[MC_PAGES.WHITELIST, "/minecraft/whitelist"],
+	[MC_PAGES.CHANGES, "/minecraft/changes"],
+]);
+
+export const getPageUrl = (page: MC_PAGES): string => {
+	return PAGE_URLS.get(page) || "/404";
+};
 
 export const Forms = {
 	datapacksHref: "https://forms.gle/u2FAnFn7dc8Ft3qm6",
@@ -29,3 +44,22 @@ export const ModUsages = {
 	serverOnly: "serverOnly",
 	all: "all",
 } as const;
+
+export const mobileWidth: number = 600;
+export const tabletWidth: number = 1000;
+
+export const serverIp: string = "mc.superdyl.net";
+export const email: string = "SuperDylEnt@gmail.com";
+export const externalDiscordHref = "https://discord.superdyl.net";
+
+export type OptionalUrlProps =
+	| ({ url: string } & (
+			| { isExternal: boolean; isLocal?: never }
+			| { isExternal?: never; isLocal: boolean }
+	  ))
+	| { url?: never; isExternal?: never; isLocal?: never };
+
+export type RequiredUrlProps = { url: string } & (
+	| { isExternal: boolean; isLocal?: never }
+	| { isExternal?: never; isLocal: boolean }
+);

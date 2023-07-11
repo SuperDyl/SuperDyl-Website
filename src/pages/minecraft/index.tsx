@@ -1,7 +1,12 @@
 import { HeadFC } from "gatsby";
 import React, { memo, useMemo } from "react";
 import Layout from "../../components/Layout";
-import { Forms, Pages } from "../../constants";
+import {
+	Forms,
+	MC_PAGES,
+	externalDiscordHref,
+	getPageUrl,
+} from "../../constants";
 import HelpfulLinks from "../../sections/HelpfulLinks";
 import News from "../../sections/News";
 import Rules from "../../sections/Rules";
@@ -12,33 +17,83 @@ import Datapacks from "../../sections/Datapacks";
 import ServerMods from "../../sections/ServerMods";
 import ClientMods from "../../sections/ClientMods";
 import ExternalTabLink from "../../components/ExternalTabLink";
+import Tile from "../../components/Tile";
+import TileGrid from "../../components/TileGrid";
+import { LocalLink, TightText } from "../../components/SharedStyles";
+import ClipboardLink from "../../components/ClipboardLink";
+
+const minecraftUrl: string = getPageUrl(MC_PAGES.HOME);
+const playUrl: string = getPageUrl(MC_PAGES.PLAY);
+const discordUrl: string = getPageUrl(MC_PAGES.DISCORD);
+const whitelistUrl: string = getPageUrl(MC_PAGES.WHITELIST);
+const changesUrl: string = getPageUrl(MC_PAGES.CHANGES);
+
+const emailAddress: string = "SuperDylEnt@gmail.com";
+
+const vtDatapacks = "https://vanillatweaks.net/share#XI164f";
+const vtCrafting = "https://vanillatweaks.net/share#2h8GfZ";
 
 const Minecraft = () => {
-	const email = useMemo(
-		() => (
-			<ExternalTabLink href="mailto:SuperDylEnt@gmail.com">
-				SuperDylEnt@gmail.com
-			</ExternalTabLink>
-		),
-		[]
-	);
-	const vtDatapacks = "https://vanillatweaks.net/share#XI164f";
-	const vtCrafting = "https://vanillatweaks.net/share#2h8GfZ";
-	const discordHref = "https://discord.superdyl.net";
-
 	return (
-		<Layout activeLink={Pages.MINECRAFT}>
+		<Layout activeLink={MC_PAGES.HOME}>
+			<News teaser={true} />
+			<TileGrid>
+				<Tile
+					url={playUrl}
+					isLocal
+				>
+					<TightText>Play!</TightText>
+					<ClipboardLink text={"mc.superdyl.net"}>
+						mc.superdyl.net
+					</ClipboardLink>
+				</Tile>
+				<Tile
+					url={discordUrl}
+					isLocal
+				>
+					<TightText>Chat!</TightText>
+					<ExternalTabLink
+						href={externalDiscordHref}
+						overrideParent
+					>
+						Discord
+					</ExternalTabLink>
+				</Tile>
+				<Tile
+					url={whitelistUrl}
+					isLocal
+				>
+					<TightText>Join!</TightText>
+					<ExternalTabLink
+						href={Forms.whitelistHref}
+						overrideParent
+					>
+						Whitelist
+					</ExternalTabLink>
+				</Tile>
+				<Tile
+					url={changesUrl}
+					isLocal
+				>
+					<TightText>Suggest!</TightText>
+					<ExternalTabLink
+						href={Forms.otherHref}
+						overrideParent
+					>
+						Changes
+					</ExternalTabLink>
+				</Tile>
+			</TileGrid>
 			<HelpfulLinks
 				datapacksHref={Forms.datapacksHref}
 				modsHref={Forms.modsHref}
 				whitelistHref={Forms.whitelistHref}
 				otherHref={Forms.otherHref}
 				underReviewHref={Forms.underReviewHref}
-				discordHref={discordHref}
+				discordHref={externalDiscordHref}
 			/>
-			<News email={email} />
 			<Rules
-				email={email}
+				email={emailAddress}
 				whitelistHref={Forms.whitelistHref}
 			/>
 			<Changes
@@ -49,7 +104,7 @@ const Minecraft = () => {
 			/>
 			<UnderReview
 				underReviewHref={Forms.underReviewHref}
-				email={email}
+				email={emailAddress}
 			/>
 			<RejectedChanges />
 			<Datapacks
