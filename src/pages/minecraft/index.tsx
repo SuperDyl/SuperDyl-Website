@@ -7,7 +7,6 @@ import {
 	externalDiscordHref,
 	getPageUrl,
 } from "../../constants";
-import HelpfulLinks from "../../sections/HelpfulLinks";
 import News from "../../sections/News";
 import Rules from "../../sections/Rules";
 import Changes from "../../sections/Changes";
@@ -90,14 +89,6 @@ const Minecraft = () => {
 					</TightText>
 				</Tile>
 			</TileGrid>
-			<HelpfulLinks
-				datapacksHref={Forms.datapacksHref}
-				modsHref={Forms.modsHref}
-				whitelistHref={Forms.whitelistHref}
-				otherHref={Forms.otherHref}
-				underReviewHref={Forms.underReviewHref}
-				discordHref={externalDiscordHref}
-			/>
 			<Rules
 				email={emailAddress}
 				whitelistHref={Forms.whitelistHref}
