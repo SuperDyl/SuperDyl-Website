@@ -11,7 +11,7 @@ const IndexPage = () => {
 
 	return (
 		<Layout>
-			<Text>{"Redirecting"}</Text>
+			<Text>{"Redirecting..."}</Text>
 		</Layout>
 	);
 };

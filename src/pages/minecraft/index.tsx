@@ -52,36 +52,42 @@ const Minecraft = () => {
 					isLocal
 				>
 					<TightText>Chat!</TightText>
-					<ExternalTabLink
-						href={externalDiscordHref}
-						overrideParent
-					>
-						Discord
-					</ExternalTabLink>
+					<TightText>
+						<ExternalTabLink
+							href={externalDiscordHref}
+							overrideParent
+						>
+							Discord
+						</ExternalTabLink>
+					</TightText>
 				</Tile>
 				<Tile
 					url={whitelistUrl}
 					isLocal
 				>
 					<TightText>Join!</TightText>
-					<ExternalTabLink
-						href={Forms.whitelistHref}
-						overrideParent
-					>
-						Whitelist
-					</ExternalTabLink>
+					<TightText>
+						<ExternalTabLink
+							href={Forms.whitelistHref}
+							overrideParent
+						>
+							Whitelist
+						</ExternalTabLink>
+					</TightText>
 				</Tile>
 				<Tile
 					url={changesUrl}
 					isLocal
 				>
 					<TightText>Suggest!</TightText>
-					<ExternalTabLink
-						href={Forms.otherHref}
-						overrideParent
-					>
-						Changes
-					</ExternalTabLink>
+					<TightText>
+						<ExternalTabLink
+							href={Forms.otherHref}
+							overrideParent
+						>
+							Changes
+						</ExternalTabLink>
+					</TightText>
 				</Tile>
 			</TileGrid>
 			<HelpfulLinks
