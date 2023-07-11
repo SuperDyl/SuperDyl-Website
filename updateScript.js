@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const express = require("express");
-const simpleGit = require("simple-git/promise");
-const git = simpleGit();
+import { simpleGit, CleanOptions } from "simple-git";
+const git = simpleGit().clean(CleanOptions.FORCE);
 const app = express();
 const { exec } = require("child_process");
 const PORT = 3000;
