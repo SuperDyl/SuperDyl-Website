@@ -16,6 +16,39 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "July 10",
+		title: "Website Redesign Begins",
+		content: [
+			{
+				type: NewsContentType.PARAGRAPHS,
+				items: [
+					"I have begun redesigning the website. Why? Because this webpage is a journey. " +
+						"Please give me suggestions on how to improve it!",
+					"When I started the server, I needed somewhere to put information down, so I " +
+						"started a Google Docs page. This housed links to the Discord channel, " +
+						"Minecraft IP address, the rules, and information about the mods and " +
+						"datapacks used.",
+					"Eventually, I decided I had enough web design skills to start a proper " +
+						"webpage. I wasn't sure how long it would take to finish designing the " +
+						"full website, so I settled on a compromise—I copied all the information " +
+						"from the Google Docs page with some light styling and stopped there. This " +
+						"allowed the page to be up, since I knew it was technically higher quality " +
+						"than the Google Docs page, even if it was kind of ugly and had really bad " +
+						"design choices (like the giant amount of scrolling). I have been able to " +
+						"add a couple small features, like click-to-copy buttons, links that open in " +
+						"new tabs, and the mod tables having filters by Minecraft versions.",
+					"It's finally time for a major redesign. I want to make the website look better " +
+						"(especially on phones). I also would like to use multiple webpages to collection " +
+						"similar information together. I want the home page to give an idea what's on the " +
+						"website, but not be so long it takes forever to scroll through. It might take a " +
+						"while, but I think we'll end up with a pretty nice website.",
+					"And, once again, please let me know if anything breaks or if you have suggestions " +
+						"for how to improve the website. Now is an especially good time for that.",
+				],
+			},
+		],
+	},
+	{
 		date: "June 21",
 		title: "Trails & Tales Update",
 		content: [
