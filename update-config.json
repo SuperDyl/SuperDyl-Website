@@ -1,0 +1,25 @@
+{
+  "commands": [
+    {
+      "command": "git pull",
+      "directory": "./",
+      "failOnText": "Already up to date."
+    },
+    {
+      "command": "npm install",
+      "directory": "./"
+    },
+    {
+      "command": "npm run build",
+      "directory": "./"
+    },
+    {
+      "command": "git submodule update updateHelper/",
+      "directory": "./"
+    },
+    {
+      "command": "npm install",
+      "directory": "./updateHelper"
+    }
+  ]
+}
