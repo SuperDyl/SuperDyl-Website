@@ -13,7 +13,7 @@ You need to setup the auto-update script
 cd updateHelper
 npm i
 cd ..
-pm2 start ./updateHelper/update.js --name update-website -- --port 3019 --name update-website
+pm2 start ./updateHelper/update.js --name update-website -- --port 3019 --serverName update-website
 ```
 
 This will necessitate some changes to your server configuration. Here's an example Caddyfile:
