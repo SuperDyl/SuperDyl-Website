@@ -1,7 +1,7 @@
 import React, { FunctionComponent, memo, ReactNode } from "react";
 import {
 	createGlobalStyle,
-	DefaultTheme,
+	ThemeProps,
 	ThemeProvider,
 } from "styled-components";
 import { getPageUrl, MC_PAGES } from "../../constants";
@@ -55,7 +55,7 @@ const lightTheme: Theme = {
 	textAlt: darkishGray,
 };
 
-const GlobalStyle = createGlobalStyle<DefaultTheme>`
+const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 		* {
   		font-family: sans-serif;
 		}
