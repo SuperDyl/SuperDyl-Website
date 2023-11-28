@@ -1,6 +1,6 @@
 import React, { memo, FunctionComponent, ReactNode } from "react";
-import { News, NewsContent, NewsContentType } from "../../news";
-import TitledSubSection from "../TitledSubSection";
+import { News } from "../../news";
+import Markdown from "markdown-to-jsx";
 import {
 	Header1,
 	Header2,
@@ -22,26 +22,6 @@ interface NewsItemProps {
 const NewsItem: FunctionComponent<NewsItemProps> = ({ className, news }) => {
 	const content: ReactNode[] = [];
 
-	let item: NewsContent;
-	for (item of news.content) {
-		if (item.type === NewsContentType.PARAGRAPHS) {
-			let paragraph: string;
-			for (paragraph of item.items) {
-				content.push(<Text>{paragraph}</Text>);
-			}
-		} else if (item.type === NewsContentType.LIST) {
-			content.push(
-				<UnorderedList>
-					{item.items.map((listItem) => (
-						<ListItem>{listItem}</ListItem>
-					))}
-				</UnorderedList>
-			);
-		} else {
-			//this shouldn't be reachable
-		}
-	}
-
 	return (
 		<NewsItemContainer className={className}>
 			<HeaderContainer>
@@ -49,8 +29,19 @@ const NewsItem: FunctionComponent<NewsItemProps> = ({ className, news }) => {
 				<DisappearingHeader1>—</DisappearingHeader1>
 				<Header2>{news.date}</Header2>
 			</HeaderContainer>
-
-			{content}
+			<Markdown
+				options={{
+					overrides: {
+						p: Text,
+						ul: UnorderedList,
+						li: ListItem,
+						h1: Header1,
+						h2: Header2,
+					},
+				}}
+			>
+				{news.markdown}
+			</Markdown>
 		</NewsItemContainer>
 	);
 };

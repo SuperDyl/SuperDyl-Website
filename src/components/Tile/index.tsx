@@ -1,34 +1,44 @@
-import React, { memo, FunctionComponent, ReactNode } from "react";
+import React, { memo, FunctionComponent, ReactNode, useMemo } from "react";
 import {
-	ExternalLinkContainer,
-	LocalLinkContainer,
-	TileContainer,
+	OuterContainer,
+	TopContainer,
+	BottomContainer,
+	TopExternalLink,
+	TopLocalLink,
 } from "./styles";
 import { OptionalUrlProps } from "../../constants";
 
 export type TileProps = {
 	className?: string;
 	children?: ReactNode;
+	topText: string;
 } & OptionalUrlProps;
 
 const Tile: FunctionComponent<TileProps> = ({
-	className,
 	children,
+	topText,
 	url = undefined,
 	isExternal = false,
 	isLocal = false,
 }) => {
-	if (url === undefined) {
-		return <TileContainer className={className}>{children}</TileContainer>;
-	}
-	if (isExternal) {
-		return <ExternalLinkContainer href={url}>{children}</ExternalLinkContainer>;
-	}
-	if (isLocal) {
-		return <LocalLinkContainer to={url}>{children}</LocalLinkContainer>;
-	}
+	const top = useMemo(() => {
+		if (url === undefined) {
+			return <TopContainer>{topText}</TopContainer>;
+		}
+		if (isLocal) {
+			return <TopLocalLink to={url}>{topText}</TopLocalLink>;
+		}
+		if (isExternal) {
+			return <TopExternalLink href={url}>{topText}</TopExternalLink>;
+		}
+	}, []);
 
-	return <></>; //should be unreachable
+	return (
+		<OuterContainer>
+			{top}
+			<BottomContainer>{children}</BottomContainer>
+		</OuterContainer>
+	);
 };
 
 export default memo(Tile);

@@ -19,17 +19,17 @@ const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({ className }) => {
 	return (
 		<TileGrid className={className}>
 			<Tile
+				topText="Play!"
 				url={playUrl}
 				isLocal
 			>
-				<TightText>Play!</TightText>
 				<ClipboardLink text={"mc.superdyl.net"}>mc.superdyl.net</ClipboardLink>
 			</Tile>
 			<Tile
+				topText="Chat!"
 				url={discordUrl}
 				isLocal
 			>
-				<TightText>Chat!</TightText>
 				<TightText>
 					<ExternalTabLink
 						href={externalDiscordHref}
@@ -40,10 +40,10 @@ const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({ className }) => {
 				</TightText>
 			</Tile>
 			<Tile
+				topText="Join!"
 				url={whitelistUrl}
 				isLocal
 			>
-				<TightText>Join!</TightText>
 				<TightText>
 					<ExternalTabLink
 						href={Forms.whitelistHref}
@@ -54,10 +54,10 @@ const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({ className }) => {
 				</TightText>
 			</Tile>
 			<Tile
+				topText="Suggest!"
 				url={changesUrl}
 				isLocal
 			>
-				<TightText>Suggest!</TightText>
 				<TightText>
 					<ExternalTabLink
 						href={Forms.otherHref}

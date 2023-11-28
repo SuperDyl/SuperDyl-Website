@@ -42,10 +42,10 @@ export const SharedLinkStyling = css`
 	text-decoration: underline;
 	cursor: pointer;
 
-	:hover {
+	&:hover {
 		color: ${(props) => props.theme.secondary};
 	}
-	:active {
+	&:active {
 		text-decoration: none;
 	}
 `;

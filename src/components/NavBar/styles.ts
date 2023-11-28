@@ -17,10 +17,10 @@ export const NavItem = styled(LocalLink)<NavItemProps>`
 	padding: 0.2em;
 	color: ${({ $active, theme }) => ($active ? theme.tertiary : theme.text)};
 
-	:hover {
+	&:hover {
 		color: ${(props) => props.theme.tertiary};
 	}
-	:active {
+	&:active {
 		text-decoration: ${({ $active }) => ($active ? "none" : "underline")};
 	}
 `; //TODO deal with the text-decoration flickering when clicked on
