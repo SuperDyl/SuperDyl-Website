@@ -1,6 +1,6 @@
 import React, { memo, FunctionComponent, ReactNode } from "react";
 import { News } from "../../news";
-import ReactMarkdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
 import {
 	Header1,
 	Header2,
@@ -29,17 +29,19 @@ const NewsItem: FunctionComponent<NewsItemProps> = ({ className, news }) => {
 				<DisappearingHeader1>—</DisappearingHeader1>
 				<Header2>{news.date}</Header2>
 			</HeaderContainer>
-			<ReactMarkdown
-				components={{
-					p: Text,
-					ul: UnorderedList,
-					li: ListItem,
-					h1: Header1,
-					h2: Header2,
+			<Markdown
+				options={{
+					overrides: {
+						p: Text,
+						ul: UnorderedList,
+						li: ListItem,
+						h1: Header1,
+						h2: Header2,
+					},
 				}}
 			>
 				{news.markdown}
-			</ReactMarkdown>
+			</Markdown>
 		</NewsItemContainer>
 	);
 };
