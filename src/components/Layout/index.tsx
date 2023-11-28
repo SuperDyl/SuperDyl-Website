@@ -1,7 +1,7 @@
 import React, { FunctionComponent, memo, ReactNode } from "react";
 import {
 	createGlobalStyle,
-	ThemeProps,
+	DefaultTheme,
 	ThemeProvider,
 } from "styled-components";
 import { getPageUrl, MC_PAGES } from "../../constants";
@@ -55,7 +55,7 @@ const lightTheme: Theme = {
 	textAlt: darkishGray,
 };
 
-const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
+const GlobalStyle = createGlobalStyle<DefaultTheme>`
 		* {
   		font-family: sans-serif;
 		}
@@ -72,6 +72,7 @@ interface LayoutProps {
 }
 
 const navbarItems: [MC_PAGES, string][] = [
+	[MC_PAGES.HOME, "Home"],
 	[MC_PAGES.NEWS, "News"],
 	[MC_PAGES.PLAY, "Play"],
 	[MC_PAGES.DISCORD, "Discord"],
