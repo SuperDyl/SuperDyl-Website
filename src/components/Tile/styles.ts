@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 import { DefaultTextStyling } from "../SharedStyles";
+import Clickable from "../Clickable";
 
 export const OuterContainer = styled.div`
 	${DefaultTextStyling}
@@ -45,6 +46,24 @@ export const TopExternalLink = styled.a`
 `;
 
 export const BottomContainer = styled.div`
+	background: ${(props) => props.theme.baseAlt};
+	height: 34%;
+	width: 100%;
+	border-radius: 0 0 1em 1em;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const StyledTopTile = styled(Clickable)`
+	${TopContainerStylings}
+	&:hover {
+		background-color: ${(props) => props.theme.primary};
+	}
+`;
+
+export const StyledBottomTile = styled(Clickable)`
 	background: ${(props) => props.theme.baseAlt};
 	height: 34%;
 	width: 100%;
