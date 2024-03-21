@@ -6,6 +6,43 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "March 20",
+		title: "1.20.4 Update",
+		markdown: `
+The server has been updated to 1.20.4.
+Please make sure you update any mods accordingly.
+
+## Why the wait?
+
+Though the server doesn't use Optifine,
+I know a number of players rely on Optifine to play on the server.
+That is why I usually wait until Optifine has a stable version available
+before updating the server.
+
+The developer of Optifine has taken a couple months to catch up
+with development of their mod due to personal matters,
+and since most changes were minor, I opted to wait as well.
+
+## Significant changes
+
+* Diamonds are much more common in deep caves
+* Villagers will no longer stack discounts for curing more than once
+* Mob attack reach is based on their size
+    + Small mobs cannot hit very high, tall mobs can reach high
+* The server is better about sending chunks to players
+* Decorated pots can store items
+* Shields follow player's vertical view
+* Bat model updated
+
+## Changes to Datapacks and Mods
+
+* Removed Mods Command mod (no version for 1.20.4)
+* Added Krypton mod (better server/client communication)
+* Added Memory Leak Fix mod (helps the server work well)
+
+		`,
+	},
+	{
 		date: "July 10",
 		title: "Website Redesign Begins",
 		markdown: `

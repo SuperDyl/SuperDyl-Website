@@ -1,10 +1,11 @@
 import { Websites, ModUsages } from "./constants";
 import { ExternalLink } from "./components/ExternalLinkList";
 
+const MC_1_20_4 = "1.20.4";
 const MC_1_20_1 = "1.20.1";
 const MC_1_19_4 = "1.19.4";
 
-export const ALL_MC_VERSIONS = [MC_1_20_1, MC_1_19_4] as string[];
+export const ALL_MC_VERSIONS = [MC_1_20_4, MC_1_20_1, MC_1_19_4] as string[];
 
 export type MC_VERSION = (typeof ALL_MC_VERSIONS)[number];
 type MOD_VERSION = string;
@@ -23,6 +24,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "1.5.0"],
 			[MC_1_20_1, "1.6.0"],
+			[MC_1_20_4, "1.7.0"],
 		]),
 		downloadLinks: [
 			{
@@ -46,6 +48,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "2.0.3"],
 			[MC_1_20_1, "2.0.5"],
+			[MC_1_20_4, "2.0.6"],
 		]),
 		downloadLinks: [
 			{
@@ -69,6 +72,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "0.2.0+alpha.10.51"],
 			[MC_1_20_1, "0.2.0+alpha.10.91"],
+			[MC_1_20_4, "0.2.0+alpha.11.58"],
 		]),
 		downloadLinks: [
 			{
@@ -92,6 +96,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "1.3.74"],
 			[MC_1_20_1, "1.3.92"],
+			[MC_1_20_4, "1.3.138"],
 		]),
 		downloadLinks: [
 			{
@@ -111,6 +116,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "0.81.1"],
 			[MC_1_20_1, "0.83.1"],
+			[MC_1_20_4, "0.96.11"],
 		]),
 		downloadLinks: [
 			{
@@ -134,6 +140,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "5.2.0"],
 			[MC_1_20_1, "6.0.0"],
+			[MC_1_20_4, "6.0.3"],
 		]),
 		downloadLinks: [
 			{
@@ -157,6 +164,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "1.4.10"],
 			[MC_1_20_1, "1.4.11"],
+			[MC_1_20_4, "1.4.14"],
 		]),
 		downloadLinks: [
 			{
@@ -180,6 +188,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "1.5.1"],
 			[MC_1_20_1, "1.5.1"],
+			[MC_1_20_4, "1.5.1"],
 		]),
 		downloadLinks: [
 			{
@@ -200,10 +209,27 @@ const allMods: ModInfo[] = [
 		usage: ModUsages.serverOnly,
 	},
 	{
+		modName: "Krypton",
+		versions: new Map([[MC_1_20_4, "0.2.6"]]),
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/krypton/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/astei/krypton/releases",
+			},
+		],
+		purpose: "Improves networking between client and server",
+		usage: ModUsages.server,
+	},
+	{
 		modName: "Ledger",
 		versions: new Map([
 			[MC_1_19_4, "1.2.7"],
 			[MC_1_20_1, "1.2.8"],
+			[MC_1_20_4, "1.2.10"],
 		]),
 		downloadLinks: [
 			{
@@ -227,6 +253,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "0.11.1"],
 			[MC_1_20_1, "0.11.2"],
+			[MC_1_20_4, "0.12.1"],
 		]),
 		downloadLinks: [
 			{
@@ -240,6 +267,22 @@ const allMods: ModInfo[] = [
 		],
 		purpose: "Optimizes many game operations",
 		usage: ModUsages.all,
+	},
+	{
+		modName: "Memory Leak Fix",
+		versions: new Map([[MC_1_20_4, "1.1.5"]]),
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/memoryleakfix/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/FxMorin/memoryleakfix/releases",
+			},
+		],
+		purpose: "Keeps RAM from being wasted",
+		usage: ModUsages.server,
 	},
 	{
 		modName: "Mods Command",
@@ -261,10 +304,27 @@ const allMods: ModInfo[] = [
 		usage: ModUsages.server,
 	},
 	{
+		modName: "More Culling",
+		versions: new Map([[MC_1_20_4, "0.22.1"]]),
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/moreculling/versions",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/FxMorin/MoreCulling/releases",
+			},
+		],
+		purpose: "Hides out of view objects to speed up the game",
+		usage: ModUsages.client,
+	},
+	{
 		modName: "ServerCore",
 		versions: new Map([
 			[MC_1_19_4, "1.3.5"],
 			[MC_1_20_1, "1.3.7"],
+			[MC_1_20_4, "1.4.0"],
 		]),
 		downloadLinks: [
 			{
@@ -284,6 +344,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "1.1.0"],
 			[MC_1_20_1, "1.1.0"],
+			[MC_1_20_4, "1.2.0"],
 		]),
 		downloadLinks: [
 			{
@@ -300,7 +361,11 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Sodium",
-		versions: new Map([[MC_1_19_4, "0.4.10"]]),
+		versions: new Map([
+			[MC_1_19_4, "0.4.10"],
+			[MC_1_20_1, "0.5.8"],
+			[MC_1_20_4, "0.5.8"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -339,6 +404,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "1.1.1"],
 			[MC_1_20_1, "1.1.2"],
+			[MC_1_20_4, "1.1.3"],
 		]),
 		downloadLinks: [
 			{
@@ -359,6 +425,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_19_4, "0.2.0+beta.7.736.37"],
 			[MC_1_20_1, "0.2.0+beta.7.96"],
+			[MC_1_20_4, "0.2.0+beta.7.138"],
 		]),
 		downloadLinks: [
 			{
