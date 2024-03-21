@@ -1,9 +1,8 @@
 import React, { memo, FunctionComponent } from "react";
 import TileGrid from "../components/TileGrid";
-import Tile from "../components/Tile";
+import { Tile, TileBottom, TileTop } from "../components/Tile";
 import { TightText } from "../components/SharedStyles";
 import ClipboardLink from "../components/ClipboardLink";
-import ExternalTabLink from "../components/ExternalTabLink";
 import { Forms, MC_PAGES, externalDiscordHref, getPageUrl } from "../constants";
 
 const playUrl: string = getPageUrl(MC_PAGES.PLAY);
@@ -18,54 +17,60 @@ interface HelpfulLinksProps {
 const HelpfulLinks: FunctionComponent<HelpfulLinksProps> = ({ className }) => {
 	return (
 		<TileGrid className={className}>
-			<Tile
-				topText="Play!"
-				url={playUrl}
-				isLocal
-			>
-				<ClipboardLink text={"mc.superdyl.net"}>mc.superdyl.net</ClipboardLink>
+			<Tile>
+				<TileTop
+					url={playUrl}
+					isLocal={true}
+				>
+					<TightText>Play!</TightText>
+				</TileTop>
+				<TileBottom>
+					<ClipboardLink text={"mc.superdyl.net"}>
+						mc.superdyl.net
+					</ClipboardLink>
+				</TileBottom>
 			</Tile>
-			<Tile
-				topText="Chat!"
-				url={discordUrl}
-				isLocal
-			>
-				<TightText>
-					<ExternalTabLink
-						href={externalDiscordHref}
-						overrideParent
-					>
-						Discord
-					</ExternalTabLink>
-				</TightText>
+			<Tile>
+				<TileTop
+					url={discordUrl}
+					isLocal
+				>
+					<TightText>Chat!</TightText>
+				</TileTop>
+				<TileBottom
+					url={externalDiscordHref}
+					isExternal
+				>
+					<TightText>Discord</TightText>
+				</TileBottom>
 			</Tile>
-			<Tile
-				topText="Join!"
-				url={whitelistUrl}
-				isLocal
-			>
-				<TightText>
-					<ExternalTabLink
-						href={Forms.whitelistHref}
-						overrideParent
-					>
-						Whitelist
-					</ExternalTabLink>
-				</TightText>
+			<Tile>
+				<TileTop
+					url={whitelistUrl}
+					isLocal
+				>
+					<TightText>Join!</TightText>
+				</TileTop>
+				<TileBottom
+					url={Forms.whitelistHref}
+					isExternal
+				>
+					<TightText>Whitelist</TightText>
+				</TileBottom>
 			</Tile>
-			<Tile
-				topText="Suggest!"
-				url={changesUrl}
-				isLocal
-			>
-				<TightText>
-					<ExternalTabLink
-						href={Forms.otherHref}
-						overrideParent
-					>
-						Changes
-					</ExternalTabLink>
-				</TightText>
+			<Tile>
+				<TileTop
+					url={changesUrl}
+					isLocal
+				>
+					<TightText>Suggest!</TightText>
+				</TileTop>
+				<TileBottom
+					url={Forms.otherHref}
+					isExternal
+				>
+					<TightText>Changes</TightText>
+				</TileBottom>
 			</Tile>
 		</TileGrid>
 	);

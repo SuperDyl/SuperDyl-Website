@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import { CopyToClipboard } from "./styles";
 import Tooltip from "../Tooltip";
+import CopyContent from "../icons/CopyContent";
 
 function copyTextToClipboard(text: string) {
 	return navigator.clipboard.writeText(text);
@@ -16,12 +17,14 @@ interface ClipboardLinkProps {
 	children?: ReactNode;
 	className?: string;
 	text: string;
+	hideIcon?: boolean;
 }
 
 const ClipboardLink: FunctionComponent<ClipboardLinkProps> = ({
 	children,
 	className,
 	text,
+	hideIcon = false,
 }) => {
 	const [tooltipVisible, setTooltipVisible] = useState(false);
 	const [tooltipContent, setTooltipContent] = useState("Copy");
@@ -30,12 +33,8 @@ const ClipboardLink: FunctionComponent<ClipboardLinkProps> = ({
 		(e: React.FormEvent) => {
 			e.preventDefault();
 			copyTextToClipboard(text).then(
-				() => {
-					setTooltipContent("Copied!");
-				},
-				() => {
-					setTooltipContent("Copy failed");
-				}
+				() => setTooltipContent("Copied!"),
+				() => setTooltipContent("Copy failed")
 			);
 		},
 		[text]
@@ -56,6 +55,7 @@ const ClipboardLink: FunctionComponent<ClipboardLinkProps> = ({
 				visible={tooltipVisible}
 			>
 				{children}
+				{!hideIcon && <CopyContent />}
 			</Tooltip>
 		</CopyToClipboard>
 	);

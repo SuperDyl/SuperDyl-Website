@@ -1,44 +1,20 @@
-import React, { memo, FunctionComponent, ReactNode, useMemo } from "react";
-import {
-	OuterContainer,
-	TopContainer,
-	BottomContainer,
-	TopExternalLink,
-	TopLocalLink,
-} from "./styles";
-import { OptionalUrlProps } from "../../constants";
+import React, { FunctionComponent, ReactNode, ReactElement } from "react";
+import { OuterContainer, StyledBottomTile, StyledTopTile } from "./styles";
+import { ClickableProps } from "../Clickable";
+
+export const TileTop: FunctionComponent<ClickableProps> = (props) => {
+	return <StyledTopTile {...props}></StyledTopTile>;
+};
+
+export const TileBottom: FunctionComponent<ClickableProps> = (props) => {
+	return <StyledBottomTile {...props}></StyledBottomTile>;
+};
 
 export type TileProps = {
 	className?: string;
-	children?: ReactNode;
-	topText: string;
-} & OptionalUrlProps;
-
-const Tile: FunctionComponent<TileProps> = ({
-	children,
-	topText,
-	url = undefined,
-	isExternal = false,
-	isLocal = false,
-}) => {
-	const top = useMemo(() => {
-		if (url === undefined) {
-			return <TopContainer>{topText}</TopContainer>;
-		}
-		if (isLocal) {
-			return <TopLocalLink to={url}>{topText}</TopLocalLink>;
-		}
-		if (isExternal) {
-			return <TopExternalLink href={url}>{topText}</TopExternalLink>;
-		}
-	}, []);
-
-	return (
-		<OuterContainer>
-			{top}
-			<BottomContainer>{children}</BottomContainer>
-		</OuterContainer>
-	);
+	children: [ReactElement<typeof TileTop>, ReactElement<typeof TileBottom>];
 };
 
-export default memo(Tile);
+export const Tile: FunctionComponent<TileProps> = ({ className, children }) => {
+	return <OuterContainer className={className}>{children}</OuterContainer>;
+};

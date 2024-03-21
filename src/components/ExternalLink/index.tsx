@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import { StyledExternalLink } from "./styles";
 import { useOverrideParentLink } from "../hooks";
+import ExternalArrow from "../icons/ExternalArrow";
 
 interface LocalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	className?: string;
@@ -33,6 +34,7 @@ const ExternalLink: FunctionComponent<LocalLinkProps> = ({
 			{...props}
 		>
 			{children}
+			<ExternalArrow />
 		</StyledExternalLink>
 	);
 };
