@@ -6,6 +6,30 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "April 1",
+		title: "Poisonous Potato Update",
+		markdown: `
+The server has been updated to 24w14potato: The Poisonous Potato Update.
+Unfortunately, the potatoes poisoned the server, so it will take me
+a day to return the world to normal.
+
+## Changelog
+
+Full changelog available at: [minecraft.net](https://www.minecraft.net/en-us/article/poisonous-potato-update)
+
+## Significant Additions
+
+* Poisonous Potato Dimension
+* Colosseum Structure and it's Potato Boss
+* Frying table
+* Fletching table functionality
+* Replaced all mobs with potatoes
+* More potato themed...everything!
+
+And yes, Samwise Gamgee would be conflicted about this update
+		`,
+	},
+	{
 		date: "March 20",
 		title: "1.20.4 Update",
 		markdown: `
