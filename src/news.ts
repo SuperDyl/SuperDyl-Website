@@ -6,6 +6,26 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "April 2",
+		title: "Return to 1.20.4",
+		markdown: `
+I hope everyone who wanted to was able to play with the
+April Fools snapshot.
+I have reverted the server back to normal,
+so your bases and gear should be returned to you
+(including your prized poisonous potatoes!)
+
+In the future, I may be able to run two servers concurrently,
+so if you have any ideas for a fun events that require
+a second server, please let me know.
+We may be able to turn on a favorite mini-game, adventure map,
+or mess around with some crazy datapacks.
+
+I still plan on the main server not resetting for updates,
+so any second server ideas would be temporary spaces that reset often.
+		`,
+	},
+	{
 		date: "April 1",
 		title: "Poisonous Potato Update",
 		markdown: `
