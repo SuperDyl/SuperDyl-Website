@@ -10,8 +10,12 @@ import { Websites } from "../constants";
 const otherDatapacks = [
 	{
 		datapackName: "Better Compass",
-		version: "2.0.2",
+		version: "3.0.0",
 		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/datapack/better-compass",
+			},
 			{
 				siteName: Websites.PlanetMC,
 				url: "https://www.planetminecraft.com/data-pack/better-compass-display-coordinates-and-cardinal-direction/",
@@ -29,18 +33,26 @@ const otherDatapacks = [
 		reasoning: "Adds a good use to compasses",
 	},
 	{
-		datapackName: "Better Deepslate Stonecutting",
+		datapackName: "Deepcutting",
 		downloadLinks: [
 			{
-				siteName: Websites.PlanetMC,
-				url: "https://www.planetminecraft.com/data-pack/better-deepslate-stonecutting/",
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/datapack/deepslate-stonecutting",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/SuperDyl/deepslate-stonecutting",
 			},
 		],
-		author: "Xigzagamer",
+		author: "SuperDyl",
 		authorLinks: [
 			{
-				siteName: Websites.PlanetMC,
-				url: "https://www.planetminecraft.com/member/xigzagamer/",
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/user/SuperDyl",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/Superdyl",
 			},
 		],
 		changes:
@@ -49,7 +61,7 @@ const otherDatapacks = [
 	},
 	{
 		datapackName: "Item Frame Color",
-		version: "2.1",
+		version: "3.1",
 		downloadLinks: [
 			{
 				siteName: Websites.CurseForge,
@@ -86,7 +98,7 @@ const otherDatapacks = [
 	},
 	{
 		datapackName: "Take a Seat",
-		version: "1.1",
+		version: "2.1",
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -171,9 +183,63 @@ const otherDatapacks = [
 			"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an 'Ancient City Map Crate'",
 		reasoning: "Adds an easier way to find Ancient Cities",
 	},
+	{
+		datapackName: "Keep Head Data",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/datapack/keepheadnames",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://www.curseforge.com/minecraft/data-packs/keep-head-data",
+			},
+		],
+		author: "Fourmisain",
+		authorLinks: [
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/Fourmisain",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://www.curseforge.com/members/fourmisain/projects",
+			},
+		],
+		changes: "Saves custom item data to placed heads",
+		reasoning:
+			"Players can keep data like item lore when they place player/mob heads",
+	},
+	{
+		datapackName: "Tag Game",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/datapack/tag-game",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/SuperDyl/tag-game",
+			},
+		],
+		author: "SuperDyl",
+		authorLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/user/SuperDyl",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/Superdyl",
+			},
+		],
+		changes: "Continues the tag game originally part of Vanilla Tweaks",
+		reasoning:
+			"I enjoy tag, it's keep players from killing each other as often",
+	},
 ];
 
-const vtCraftingVersion = "v1.20.4";
+const vtCraftingVersion = "v1.21.0";
 
 interface DatapacksProps {
 	vtDatapacksHref: string;
@@ -207,120 +273,126 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 				</Text>
 				<VanillaTweaksTable
 					header="Datapacks"
-					subheader="Survival"
+					subheader="Decorative/Cosmetic"
 					columnHeaders={columnHeaders}
 					rows={[
 						[
 							"armor statues",
-							"v2.8.11",
+							"v2.8.13",
 							"Use `/trigger as_help` or title a written book `Statues` to get a book for editing armor stands",
 							"It's nice to be able to give armor stands something in their off hand. Also allows creating invisible item frames",
 						],
 						[
-							"unlock all recipes",
-							"v2.0.7",
-							"Immediately unlocks all recipes in the recipe book",
-							"I find it more annoying to forget a recipe and look it up than I feel overwhelmed by the number of recipes in the book",
-						],
-						[
-							"afk display",
-							"v1.1.6",
-							"Grays out player names if they haven't moved in a while",
-							"Rather annoying to message someone who isn't actually at their computer",
-						],
-						[
 							"custom nether portals",
-							"v2.3.9",
+							"v2.3.11",
 							"Portals can be made using crying obsidian and unique shapes. They only require 4+ obsidian",
 							"Adds more options for decorating with a portal",
 						],
 						[
-							"durability ping",
-							"v1.1.6",
-							"Gives a noise notification when a tool is low on durability. Turned off by default: configure with `/trigger duraPing`",
-							"Gives the option for players that want the notifications",
+							"more mob heads",
+							"v2.14.0",
+							"All mobs have a chance of dropping their head upon death. Chances depend on the mob. Unique heads exist for different zombie villagers; colors of parrots, llamas, and cats; and different wither variants exist. Pre-existing heads/skulls still only drop in the normal ways",
+							"Another set of interesting trophies",
 						],
-						[
-							"cauldron concrete",
-							"v2.0.9",
-							"Allows crafting concrete by throwing concrete powder in a cauldron of water",
-							"Getting large amounts of concrete is a very menial task",
-						],
-						[
-							"track raw statistics",
-							"v1.7.2",
-							"Tracks more extra statistics about player activity",
-							"Ditto ^",
-						],
-						[
-							"track statistics",
-							"v1.1.7",
-							"Tracks extra statistics about player activity",
-							"I thought it might be fun to look at sometime",
-						],
-						[
-							"Nether Portal Coords",
-							"v1.1.6",
-							"Use /trigger nc_inNether or nc_inOverworld to see get calculation of coords to link nether portals",
-							"It should make linking portals easier",
-						],
-						[
-							"real time clock",
-							"v1.1.6",
-							"How long the world has been running in real time can be seen via a function",
-							"It's a helpful debug tool to see if the world has been down recently",
-						],
-					]}
-				/>
-				<VanillaTweaksTable
-					header="Datapacks"
-					subheader="Items"
-					columnHeaders={columnHeaders}
-					rows={[
 						[
 							"player head drops",
-							"v1.1.6",
+							"v1.1.8",
 							"Players drop their head when killed by another player",
 							"As long as it doesn't become a problem, player heads are cool trophies",
 						],
+						[
+							"silence mobs",
+							"v1.2.2",
+							"Mobs can be silenced by naming them `Silence me`, `silence me`, or `silence_me`",
+							"As long as it doesn't become a problem, avoids annoying mob noises in certain situations",
+						],
+						[
+							"Wandering Trades",
+							"v1.7.5",
+							"Wandering traders sell mini versions of blocks as player heads",
+							"Adds variety to building and reduces wandering trader murder",
+						],
 					]}
 				/>
 				<VanillaTweaksTable
 					header="Datapacks"
-					subheader="Mobs"
+					subheader="Convenience"
 					columnHeaders={columnHeaders}
 					rows={[
 						[
+							"cauldron concrete",
+							"v3.0.1",
+							"Adds crafting concrete by throwing concrete powder in a cauldron of water",
+							"Getting large amounts of concrete is a very menial task",
+						],
+						[
+							"cauldron mud",
+							"v1.0.0",
+							"Adds crafting mud by throwing dirt in a cauldron of water",
+							"Getting large amounts of mud is a very menial task",
+						],
+						[
 							"double shulker shells",
-							"v1.3.6",
+							"v1.3.8",
 							"Shulkers always drop 2 shells",
 							"It was a request to make shulker boxes easier to acquire",
 						],
 						[
 							"dragon drops",
-							"v1.3.6",
+							"v1.3.8",
 							"Ender dragon drops an Elytra and Dragon Egg each time it dies",
 							"A very multiplayer friendly way for dragon eggs and elytra to be accessible",
 						],
 						[
-							"more mob heads",
-							"v2.12.4",
-							"All mobs have a chance of dropping their head upon death. Chances depend on the mob. Unique heads exist for different zombie villagers; colors of parrots, llamas, and cats; and different wither variants exist. Pre-existing heads/skulls still only drop in the normal ways",
-							"Another set of interesting trophies",
-						],
-						[
-							"silence mobs",
-							"v1.2.1",
-							"Mobs can be silenced by naming them `Silence me`, `silence me`, or `silence_me`",
-							"As long as it doesn't become a problem, avoids annoying mob noises in certain situations",
+							"unlock all recipes",
+							"v2.0.9",
+							"Immediately unlocks all recipes in the recipe book",
+							"I find it more annoying to forget a recipe and look it up than I feel overwhelmed by the number of recipes in the book",
 						],
 					]}
 				/>
 				<VanillaTweaksTable
 					header="Datapacks"
-					subheader="Hermitcraft"
+					subheader="Informative"
 					columnHeaders={columnHeaders}
-					rows={[["tag", "v2.1.7", "A game of tag!", "It seemed fun"]]}
+					rows={[
+						[
+							"afk display",
+							"v1.1.8",
+							"Grays out player names if they haven't moved in a while",
+							"Rather annoying to message someone who isn't actually at their computer",
+						],
+						[
+							"durability ping",
+							"v1.1.8",
+							"Gives a noise notification when a tool is low on durability. Turned off by default: configure with `/trigger duraPing`",
+							"Gives the option for players that want the notifications",
+						],
+						[
+							"Nether Portal Coords",
+							"v1.1.8",
+							"Use /trigger nc_inNether or nc_inOverworld to see get calculation of coords to link nether portals",
+							"It should make linking portals easier",
+						],
+						[
+							"real time clock",
+							"v1.1.8",
+							"How long the world has been running in real time can be seen via a function",
+							"It's a helpful debug tool to see if the world has been down recently",
+						],
+						[
+							"track raw statistics",
+							"v1.7.4",
+							"Tracks more extra statistics about player activity",
+							"Ditto ^",
+						],
+						[
+							"track statistics",
+							"v1.1.10",
+							"Tracks extra statistics about player activity",
+							"I thought it might be fun to look at sometime",
+						],
+					]}
 				/>
 				<VanillaTweaksTable
 					header="Crafting"
