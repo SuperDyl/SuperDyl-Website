@@ -1,11 +1,19 @@
 import { Websites, ModUsages } from "./constants";
 import { ExternalLink } from "./components/ExternalLinkList";
 
+const UNAVAILABLE_TEXT = "UNAVAILABLE";
+
+const MC_1_21_0 = "1.21.0";
 const MC_1_20_4 = "1.20.4";
 const MC_1_20_1 = "1.20.1";
 const MC_1_19_4 = "1.19.4";
 
-export const ALL_MC_VERSIONS = [MC_1_20_4, MC_1_20_1, MC_1_19_4] as string[];
+export const ALL_MC_VERSIONS = [
+	MC_1_21_0,
+	MC_1_20_4,
+	MC_1_20_1,
+	MC_1_19_4,
+] as string[];
 
 export type MC_VERSION = (typeof ALL_MC_VERSIONS)[number];
 type MOD_VERSION = string;
@@ -25,6 +33,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "1.5.0"],
 			[MC_1_20_1, "1.6.0"],
 			[MC_1_20_4, "1.7.0"],
+			[MC_1_21_0, "1.8.0"],
 		]),
 		downloadLinks: [
 			{
@@ -40,7 +49,7 @@ const allMods: ModInfo[] = [
 				url: "https://www.curseforge.com/minecraft/mc-mods/alternate-current/files",
 			},
 		],
-		purpose: "Optimizes update order of redstone wire and components",
+		purpose: "Optimizes redstone update order",
 		usage: ModUsages.server,
 	},
 	{
@@ -49,6 +58,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "2.0.3"],
 			[MC_1_20_1, "2.0.5"],
 			[MC_1_20_4, "2.0.6"],
+			[MC_1_21_0, "3.1.1"],
 		]),
 		downloadLinks: [
 			{
@@ -64,7 +74,7 @@ const allMods: ModInfo[] = [
 				url: "https://www.curseforge.com/minecraft/mc-mods/audaki-cart-engine/files",
 			},
 		],
-		purpose: "Makes mine carts 4 times faster on straight sections",
+		purpose: "Makes mine carts 4x faster",
 		usage: ModUsages.serverOnly,
 	},
 	{
@@ -73,6 +83,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "0.2.0+alpha.10.51"],
 			[MC_1_20_1, "0.2.0+alpha.10.91"],
 			[MC_1_20_4, "0.2.0+alpha.11.58"],
+			[MC_1_21_0, "0.2.0+alpha.11.101"],
 		]),
 		downloadLinks: [
 			{
@@ -88,7 +99,7 @@ const allMods: ModInfo[] = [
 				url: "https://www.curseforge.com/minecraft/mc-mods/c2me-fabric/files",
 			},
 		],
-		purpose: "Optimizes chunk loading by using multiple CPU cores",
+		purpose: "Uses multiple CPU cores to speed up game",
 		usage: ModUsages.server,
 	},
 	{
@@ -97,6 +108,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "1.3.74"],
 			[MC_1_20_1, "1.3.92"],
 			[MC_1_20_4, "1.3.138"],
+			[MC_1_21_0, "1.4.16"],
 		]),
 		downloadLinks: [
 			{
@@ -117,6 +129,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "0.81.1"],
 			[MC_1_20_1, "0.83.1"],
 			[MC_1_20_4, "0.96.11"],
+			[MC_1_21_0, "0.100.3"],
 		]),
 		downloadLinks: [
 			{
@@ -136,11 +149,37 @@ const allMods: ModInfo[] = [
 		usage: ModUsages.all,
 	},
 	{
+		modName: "Fabric Language Kotlin",
+		versions: new Map([
+			[MC_1_19_4, "1.11.0+kotlin.2.0.0"],
+			[MC_1_20_1, "1.11.0+kotlin.2.0.0"],
+			[MC_1_20_4, "1.11.0+kotlin.2.0.0"],
+			[MC_1_21_0, "1.11.0+kotlin.2.0.0"],
+		]),
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/mod/fabric-language-kotlin",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/FabricMC/fabric-language-kotlin/",
+			},
+			{
+				siteName: Websites.CurseForge,
+				url: "https://legacy.curseforge.com/minecraft/mc-mods/fabric-language-kotlin",
+			},
+		],
+		purpose: "Dependency for Ledger",
+		usage: ModUsages.serverOnly,
+	},
+	{
 		modName: "FerriteCore",
 		versions: new Map([
 			[MC_1_19_4, "5.2.0"],
 			[MC_1_20_1, "6.0.0"],
 			[MC_1_20_4, "6.0.3"],
+			[MC_1_21_0, "7.0.0"],
 		]),
 		downloadLinks: [
 			{
@@ -165,6 +204,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "1.4.10"],
 			[MC_1_20_1, "1.4.11"],
 			[MC_1_20_4, "1.4.14"],
+			[MC_1_21_0, "1.4.15"],
 		]),
 		downloadLinks: [
 			{
@@ -180,7 +220,7 @@ const allMods: ModInfo[] = [
 				url: "https://www.curseforge.com/minecraft/mc-mods/inv-view/files",
 			},
 		],
-		purpose: "Gives admins the ability to view and edit inventories",
+		purpose: "Admin tool to view player inventories",
 		usage: ModUsages.serverOnly,
 	},
 	{
@@ -210,7 +250,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Krypton",
-		versions: new Map([[MC_1_20_4, "0.2.6"]]),
+		versions: new Map([
+			[MC_1_20_4, "0.2.6"],
+			[MC_1_21_0, "0.2.8"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -230,6 +273,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "1.2.7"],
 			[MC_1_20_1, "1.2.8"],
 			[MC_1_20_4, "1.2.10"],
+			[MC_1_21_0, "1.3.4"],
 		]),
 		downloadLinks: [
 			{
@@ -245,7 +289,7 @@ const allMods: ModInfo[] = [
 				url: "https://www.curseforge.com/minecraft/mc-mods/ledger/files",
 			},
 		],
-		purpose: "Gives admins a log of player actions",
+		purpose: "Logs player actions",
 		usage: ModUsages.serverOnly,
 	},
 	{
@@ -254,6 +298,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "0.11.1"],
 			[MC_1_20_1, "0.11.2"],
 			[MC_1_20_4, "0.12.1"],
+			[MC_1_21_0, "0.12.7"],
 		]),
 		downloadLinks: [
 			{
@@ -270,7 +315,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "Memory Leak Fix",
-		versions: new Map([[MC_1_20_4, "1.1.5"]]),
+		versions: new Map([
+			[MC_1_20_4, "1.1.5"],
+			[MC_1_21_0, UNAVAILABLE_TEXT],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -305,7 +353,10 @@ const allMods: ModInfo[] = [
 	},
 	{
 		modName: "More Culling",
-		versions: new Map([[MC_1_20_4, "0.22.1"]]),
+		versions: new Map([
+			[MC_1_20_4, "0.22.1"],
+			[MC_1_21_0, "0.26.0"],
+		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -325,6 +376,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "1.3.5"],
 			[MC_1_20_1, "1.3.7"],
 			[MC_1_20_4, "1.4.0"],
+			[MC_1_21_0, "1.5.3"],
 		]),
 		downloadLinks: [
 			{
@@ -345,6 +397,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "1.1.0"],
 			[MC_1_20_1, "1.1.0"],
 			[MC_1_20_4, "1.2.0"],
+			[MC_1_21_0, "1.2.0"],
 		]),
 		downloadLinks: [
 			{
@@ -365,6 +418,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "0.4.10"],
 			[MC_1_20_1, "0.5.8"],
 			[MC_1_20_4, "0.5.8"],
+			[MC_1_21_0, "0.5.9"],
 		]),
 		downloadLinks: [
 			{
@@ -426,6 +480,7 @@ const allMods: ModInfo[] = [
 			[MC_1_19_4, "0.2.0+beta.7.736.37"],
 			[MC_1_20_1, "0.2.0+beta.7.96"],
 			[MC_1_20_4, "0.2.0+beta.7.138"],
+			[MC_1_21_0, "0.2.0+beta.7.162"],
 		]),
 		downloadLinks: [
 			{
