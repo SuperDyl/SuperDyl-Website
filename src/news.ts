@@ -29,6 +29,8 @@ and trial chambers, I have aggressively removed chunks.
 If I have mistakenly deleted chunks you care about, please
 let me know and I can fix it.
 
+For this update, I have added the Vanilla Tweaks wandering trader
+mini blocks datapack and the cauldron mud datapack.
 I am still considering new mods and datapacks to add to the server.
 Please give me any suggestions you have.
 
