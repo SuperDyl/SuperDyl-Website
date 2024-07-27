@@ -6,6 +6,37 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "July 27",
+		title: "Tricky Trials Update (1.21.0)",
+		markdown: `
+The server has been updated to 1.21, the Tricky Trials update.
+This update took longer since large datapack changes for 1.20.5
+were making datapacks take a long time to update.
+It ended up taking even longer after Vanilla Tweaks
+announced that they were discontinuing the tag datapack.
+So, I waited to update the server until I had a replacement
+tag datapack.
+
+Features in the update include:
+- The armadillo, wolf variants, and wolf armor (from 1.20.5)
+- The trail chambers, an exciting new common dungeon
+- The breeze and the bogged
+- An exciting new weapon: the mace
+- The crafter, a redstone component which crafts items
+
+To make it easier to find the new wolf variants, armadillos,
+and trial chambers, I have aggressively removed chunks.
+If I have mistakenly deleted chunks you care about, please
+let me know and I can fix it.
+
+I am still considering new mods and datapacks to add to the server.
+Please give me any suggestions you have.
+
+Finally, please remember to update your mods to the latest version.
+You can use the list at the bottom of the page to help update your mods.
+		`,
+	},
+	{
 		date: "April 2",
 		title: "Return to 1.20.4",
 		markdown: `
