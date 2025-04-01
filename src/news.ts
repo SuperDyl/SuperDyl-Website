@@ -6,6 +6,16 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "April 1",
+		title: "CraftMine available now",
+		markdown: `
+I'm very excited to be at the forefront of Minecraft's new direction.
+The CraftMine update is immediately available at mc.superdyl.net.
+
+I'd love help to fill the hall with memories of all kinds of "mines".
+		`,
+	},
+	{
 		date: "July 27",
 		title: "Tricky Trials Update (1.21.0)",
 		markdown: `
