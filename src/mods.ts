@@ -3,12 +3,14 @@ import { ExternalLink } from "./components/ExternalLinkList";
 
 const UNAVAILABLE_TEXT = "UNAVAILABLE";
 
+const MC_1_21_5 = "1.21.5";
 const MC_1_21_0 = "1.21.0";
 const MC_1_20_4 = "1.20.4";
 const MC_1_20_1 = "1.20.1";
 const MC_1_19_4 = "1.19.4";
 
 export const ALL_MC_VERSIONS = [
+	MC_1_21_5,
 	MC_1_21_0,
 	MC_1_20_4,
 	MC_1_20_1,
@@ -84,6 +86,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "0.2.0+alpha.10.91"],
 			[MC_1_20_4, "0.2.0+alpha.11.58"],
 			[MC_1_21_0, "0.2.0+alpha.11.101"],
+			[MC_1_21_5, "0.3.2+rc.1.0"],
 		]),
 		downloadLinks: [
 			{
@@ -130,6 +133,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "0.83.1"],
 			[MC_1_20_4, "0.96.11"],
 			[MC_1_21_0, "0.100.3"],
+			[MC_1_21_5, "0.121.0"],
 		]),
 		downloadLinks: [
 			{
@@ -155,6 +159,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "1.11.0+kotlin.2.0.0"],
 			[MC_1_20_4, "1.11.0+kotlin.2.0.0"],
 			[MC_1_21_0, "1.11.0+kotlin.2.0.0"],
+			[MC_1_21_5, "1.13.2+kotlin.2.1.20"],
 		]),
 		downloadLinks: [
 			{
@@ -180,6 +185,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "6.0.0"],
 			[MC_1_20_4, "6.0.3"],
 			[MC_1_21_0, "7.0.0"],
+			[MC_1_21_5, "8.0.0"],
 		]),
 		downloadLinks: [
 			{
@@ -205,6 +211,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "1.4.11"],
 			[MC_1_20_4, "1.4.14"],
 			[MC_1_21_0, "1.4.15"],
+			[MC_1_21_5, "1.4.16"],
 		]),
 		downloadLinks: [
 			{
@@ -253,6 +260,7 @@ const allMods: ModInfo[] = [
 		versions: new Map([
 			[MC_1_20_4, "0.2.6"],
 			[MC_1_21_0, "0.2.8"],
+			[MC_1_21_5, "0.2.9"],
 		]),
 		downloadLinks: [
 			{
@@ -274,6 +282,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "1.2.8"],
 			[MC_1_20_4, "1.2.10"],
 			[MC_1_21_0, "1.3.4"],
+			[MC_1_21_5, "1.3.10"],
 		]),
 		downloadLinks: [
 			{
@@ -299,6 +308,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "0.11.2"],
 			[MC_1_20_4, "0.12.1"],
 			[MC_1_21_0, "0.12.7"],
+			[MC_1_21_5, "0.16.2"],
 		]),
 		downloadLinks: [
 			{
@@ -377,6 +387,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_1, "1.3.7"],
 			[MC_1_20_4, "1.4.0"],
 			[MC_1_21_0, "1.5.3"],
+			[MC_1_21_5, "1.5.10"],
 		]),
 		downloadLinks: [
 			{

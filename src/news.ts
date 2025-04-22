@@ -6,6 +6,93 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "April 21",
+		title: "Bundle of Updates",
+		markdown: `
+I finally have enough time to update the server.
+The server now runs with 1.21.5
+and includes multiple new drops:
+
+* Bundles of Bravery
+* The Garden Awakens
+* Spring to Life
+
+These updates add a lot of new features.
+At the bottom of this, I have included some notable changes for each drop.
+
+To make it possible to find all the new content,
+I have reset a large number of chunks.
+If something is broken,
+please give me coordinates for the location so I can fix it.
+This may mean some lag as players are generating lots of these chunks anew.
+
+To help with exploring these changes,
+if you need coordinates for some of these biomes and structures,
+please message me and I'll get you some.
+
+To get this update out faster,
+I have temporarily removed some mods and datapacks.
+I would like to fix most of them in the next couple weeks.
+I will post as I fix each one.
+
+I will also be looking at other mods and datapacks.
+If you have suggestions, please message me.
+
+Mods
+
+* Removed Alternate Current (breaks a very popular TNT duping method)
+* Removed Chunky (pre-generating chunks has made updating significantly more difficult)
+* Removed Slumber (it's feature of turning off the server when no one was online was added to vanilla)
+* Temporarily removed Audaki Cart Engine (current version breaks the item sorter)
+* Temporarily removed Very Many Players (out of date)
+* Temporarily removed Memory Leak Fix (out of date)
+
+Datapacks
+
+* Removed Craftable Bundles Rabbit Hide (bundles are no longer experimental)
+* Removed Wandering Cities. It broke and isn't worth fixing. Please let me know if you need coordinates
+* Temporarily removed Invisible Item Frames until I can fix it
+* Added Painting Picker (there are lots of paintings now)
+* Added Husks Drop Sand (until vanilla has proper renewable sand, this is currently the best alternative)
+* Added Sandstone Dyeing (until vanilla has proper renewable red sand, this is currently the best alternative)
+* Tag game has an issue where the tag text is rendered incorrectly
+
+Bundles of Bravery
+
+* Bundles are now officially complete
+* Dolphins, squid, and salmon come in different sizes
+* Sneaking on slime blocks no longer deals fall damage
+* Ridden boats, minecarts, etc. can go through Nether portals
+* Ender pearls load chunks
+* Smithing templates and banner patterns are individually named
+* Redstone torch texture updated
+
+The Garden Awakens
+
+* Pale Garden biome
+* Pale Oak tree and wood set
+* Pale moss, hanging moss, and eyeblossoms
+* The Creaking mob
+* Resin block set
+* Removed damage resistance from relogging
+
+Spring to Life
+
+* Bush, firefly bush, cactus flower, dry grass, wildflowers, and leaf litter added
+* Cows, pigs, and chickens have cold and warm variants
+* Wolves have different sound personalities
+* Beacon beams render farther
+* Leaf particles from leaf blocks
+* Lodestone is significantly cheaper
+* Elytra disengages when on climbable blocks
+* Camels spawn across deserts instead of just one per village
+* Creaking can be name tagged (but must be kept close to its creaking heart block)
+* Villagers sell maps to other villages, swamp huts, and jungle temples
+* Wandering traders have improved trades
+* Zombie piglins no longer drop XP and rare loot when angry at a player but not damaged by that player
+		`,
+	},
+	{
 		date: "April 1",
 		title: "CraftMine available now",
 		markdown: `
