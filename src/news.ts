@@ -52,6 +52,7 @@ Datapacks
 * Removed Craftable Bundles Rabbit Hide (bundles are no longer experimental)
 * Removed Wandering Cities. It broke and isn't worth fixing. Please let me know if you need coordinates
 * Temporarily removed Invisible Item Frames until I can fix it
+* Temporarily removed Deepslate Stonecutting until I can fix it
 * Added Painting Picker (there are lots of paintings now)
 * Added Husks Drop Sand (until vanilla has proper renewable sand, this is currently the best alternative)
 * Added Sandstone Dyeing (until vanilla has proper renewable red sand, this is currently the best alternative)
