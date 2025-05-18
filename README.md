@@ -2,6 +2,14 @@
 
 ## Setup
 
+Setup to run in node 20.
+This may require using nvm:
+
+```bash
+nvm install 20
+nvm use 20
+```
+
 ```bash
 npm i;
 npm run build;
