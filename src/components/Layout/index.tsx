@@ -57,11 +57,28 @@ const lightTheme: Theme = {
 
 const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 		* {
-  		font-family: sans-serif;
+  			font-family: sans-serif;
+			color: ${(props) => props.theme.text}
 		}
 		
 		html {
 			background-color: ${(props) => props.theme.base}
+		}
+
+		button {
+			border: ${(props) => props.theme.primary} 2px solid;
+			padding: 0.5rem;
+			border-radius: 10px;
+			user-select: none;
+
+			&:hover {
+				border-color: ${(props) => props.theme.secondary};
+			}
+
+			&:active {
+				border-color: ${(props) => props.theme.tertiary};
+				color: ${(props) => props.theme.textAlt};
+			}
 		}
 	`;
 
