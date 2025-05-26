@@ -1,4 +1,5 @@
 import React, { FunctionComponent, memo, ReactNode } from "react";
+import "the-new-css-reset/css/reset.css";
 import {
 	createGlobalStyle,
 	ThemeProps,
@@ -70,6 +71,7 @@ const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 			padding: 0.5rem;
 			border-radius: 10px;
 			user-select: none;
+			cursor: pointer;
 
 			&:hover {
 				border-color: ${(props) => props.theme.secondary};
@@ -78,6 +80,10 @@ const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 			&:active {
 				border-color: ${(props) => props.theme.tertiary};
 				color: ${(props) => props.theme.textAlt};
+			}
+
+			&:focus-visible {
+				background-color: ${(props) => props.theme.secondary};
 			}
 		}
 	`;
