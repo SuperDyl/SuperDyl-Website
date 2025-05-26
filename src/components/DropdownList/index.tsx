@@ -60,7 +60,8 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 			<DropdownBody open={open}>
 				{options
 					.map((option, index) => (
-						<DropdownItem>
+						<DropdownItem
+							key={index}>
 							<DropdownItemButton
 								disabled={index === selected}
 								$disabled={index === selected}

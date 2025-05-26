@@ -22,15 +22,14 @@ const CreateModLinks: FunctionComponent<CreateModLinksProps> = ({
 	return (
 		<Text key={`${modName}-download-links-inside`}>
 			{downloadLinks.map((link, index) => (
-				<>
+				<React.Fragment key={`${modName}-${link.siteName}-download`}>
 					<ExternalTabLink
-						key={`${modName}-${link.siteName}-download`}
 						href={link.url}
 					>
 						{link.siteName}
 					</ExternalTabLink>
 					{index !== downloadLinks.length - 1 && " "}
-				</>
+				</React.Fragment>
 			))}
 		</Text>
 	);

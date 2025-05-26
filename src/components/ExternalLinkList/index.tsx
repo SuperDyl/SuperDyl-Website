@@ -21,15 +21,14 @@ const ExternalLinkList: FunctionComponent<ExternalLinkListProps> = ({
 	return (
 		<>
 			{externalLinks.map((link, index) => (
-				<>
+				<React.Fragment key={`${keyPrepend}-${link.siteName}-download`}>
 					<ExternalTabLink
-						key={`${keyPrepend}-${link.siteName}-download`}
 						href={link.url}
 					>
 						{link.siteName}
 					</ExternalTabLink>
 					{index !== externalLinks.length - 1 && separator}
-				</>
+				</React.Fragment>
 			))}
 		</>
 	);
