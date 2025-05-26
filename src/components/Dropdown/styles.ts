@@ -3,7 +3,6 @@ import Drawer from "../Drawer";
 
 export const DropdownItemContainer = styled.li`
     list-style: none;
-    padding: .3rem;
 `;
 
 export const DropdownHeaderButton = styled.button`

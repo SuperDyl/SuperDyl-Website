@@ -59,6 +59,8 @@ export const DropdownBody = ({ children, open, ...other }: DropdownBodyProps) =>
 
 export type DropdownProps = {
     children: [ReactElement<DropdownHeaderProps>, ReactElement<DropdownBodyProps>],
+    className?: string;
+    innerRef?: RefObject<HTMLElement | null>;
     [other: string]: any;
 };
 
@@ -71,7 +73,7 @@ export type DropdownProps = {
  * The calling class is expected to handle opening and closing the component
  * and storing it's entire state.
  */
-export const Dropdown = ({ children, ...other }: DropdownProps) => {
+export const Dropdown = ({ children, innerRef, className, ...other }: DropdownProps) => {
     const headerRef: RefObject<ReactElement | null> = useRef(null);
     const { height: headerHeight, width: headerWidth } = useSize(headerRef as RefObject<HTMLElement | null>);
 
@@ -85,11 +87,13 @@ export const Dropdown = ({ children, ...other }: DropdownProps) => {
         [dropdownHeader]);
 
     return (
-        <DropdownSpacerContainer>
+        <DropdownSpacerContainer className={className}>
             <Spacer
                 $height={(headerHeight === null) ? undefined : `${headerHeight}px`}
                 $width={(headerWidth === null) ? undefined : `${headerWidth}px`} />
-            <DropdownContainer {...other}>
+            <DropdownContainer
+                ref={innerRef as RefObject<HTMLDivElement>}
+                {...other}>
                 {clonedDropdownHeader}
                 {dropdownBody}
             </DropdownContainer>
