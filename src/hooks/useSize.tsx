@@ -61,11 +61,11 @@ const useSize = (
 
                     // height and width are swapped if writing-mode is set to vertical
                     if ([Directions.BOTH, Directions.HEIGHT].includes(directions)) {
-                        setHeight(entries[0].contentBoxSize[0].blockSize);
+                        setHeight(componentRef.current?.offsetHeight ?? null);
                     }
 
                     if ([Directions.BOTH, Directions.WIDTH].includes(directions)) {
-                        setWidth(entries[0].contentBoxSize[0].inlineSize);
+                        setWidth(componentRef.current?.offsetWidth ?? null);
                     }
                 });
 
