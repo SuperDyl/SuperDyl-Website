@@ -39,6 +39,5 @@ export const CenteringBox = styled.div`
 	position: absolute;
 	display: flex;
 	justify-content: center;
-	translate: 0 -100%;
 	z-index: 1;
 `;

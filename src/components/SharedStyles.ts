@@ -9,6 +9,7 @@ export const WeakText = styled.em`
 `;
 
 export const SharedLinkStyling = css`
+	display: inline-block;
 	text-decoration: underline;
 	cursor: pointer;
 
@@ -44,4 +45,11 @@ export const InlineEmphasis = styled.span`
 	& *:not(div) {
 		color: ${(props) => props.theme.tertiary};
 	}
+`;
+
+export const SharedHeader = css`
+	color: ${(props) => props.theme.primary};
+	font-weight: bold;
+	margin-bottom: 0.4em;
+	margin-top: 0;
 `;

@@ -17,5 +17,5 @@ interface StickyHeader2Props {
 export const StickyHeader2 = styled.h2<StickyHeader2Props>`
 	${StickyHeaderShared}
 	background-color: ${(props) => props.theme.base};
-	top: calc(15px + ${({ stickyOffset = "1.5em" }) => stickyOffset});
+	top: calc(20px + ${({ stickyOffset = "1.5em" }) => stickyOffset});
 `;

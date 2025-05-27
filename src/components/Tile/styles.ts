@@ -14,6 +14,11 @@ export const OuterContainer = styled.div`
 `;
 
 const TopContainerStylings = css`
+	text-decoration: unset;
+	& > * {
+		text-decoration: unset;
+	}
+
 	background: ${(props) => props.theme.baseAlt};
 	height: 66%;
 	width: 100%;
@@ -62,6 +67,11 @@ export const StyledTopTile = styled(Clickable)`
 `;
 
 export const StyledBottomTile = styled(Clickable)`
+	text-decoration: unset;
+	& > * {
+		text-decoration: unset;
+	}
+	
 	background: ${(props) => props.theme.baseAlt};
 	height: 34%;
 	width: 100%;
