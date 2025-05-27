@@ -1,7 +1,6 @@
 import React, { FunctionComponent, memo, useMemo } from "react";
 import TitledSection from "../components/TitledSection";
 import TitledSubSection from "../components/TitledSubSection";
-import { Text } from "../components/SharedStyles";
 import ExternalTabLink from "../components/ExternalTabLink";
 import EmailLink from "../components/EmailLink";
 
@@ -23,15 +22,15 @@ const UnderReview: FunctionComponent<UnderReviewProps> = ({
 
 	return (
 		<TitledSection header="Changes Under Review">
-			<Text>
+			<p>
 				To give feedback specific to this section, please use the form{" "}
 				{underReview} or email me at {<EmailLink />} and mention the title of
 				the change
 				{"you're"} giving feedback on. I will consider all feedback on these
 				potential changes before making a final decision.
-			</Text>
+			</p>
 			<TitledSubSection header="Vanilla Tweaks Custom Nether Portals">
-				<Text>
+				<p>
 					Decided: Default configuration forces nether portals to use at least
 					10 obsidian, giving no unfair advantage to using this datapack. After
 					the Ender Dragon fight, {"I'll"} consider allowing smaller nether
@@ -39,7 +38,7 @@ const UnderReview: FunctionComponent<UnderReviewProps> = ({
 					portals before the ender dragon fight ({"I'm"} thinking of not
 					allowing custom shapes until after the ender dragon, but allowing
 					crying obsidian before).
-				</Text>
+				</p>
 			</TitledSubSection>
 		</TitledSection>
 	);

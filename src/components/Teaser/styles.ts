@@ -1,7 +1,7 @@
+import { Link } from "gatsby";
 import ExternalTabLink from "../ExternalTabLink";
 import NewsItem from "../NewsItem";
 import AltRightArrow from "../icons/AltRightArrow";
-import { LocalLink } from "./../SharedStyles";
 import styled, { css } from "styled-components";
 
 export const TeaserContainer = styled.div`
@@ -22,7 +22,7 @@ const LinkStyling = css`
 	text-decoration: none;
 `;
 
-export const StyledLocalLink = styled(LocalLink)`
+export const StyledLocalLink = styled(Link)`
 	${LinkStyling}
 `;
 

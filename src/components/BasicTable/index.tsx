@@ -1,5 +1,4 @@
 import React, { FunctionComponent, memo } from "react";
-import { Table, TableRow, TableData, TableHeader } from "../SharedStyles";
 import styled from "styled-components";
 
 interface TableProps {
@@ -18,29 +17,29 @@ const SimpleTable: FunctionComponent<TableProps> = ({
 	const columnCount = columnHeaders.length;
 
 	return (
-		<Table className={className}>
+		<table className={className}>
 			<thead>
 				{header && (
-					<TableRow>
-						<TableHeader colSpan={columnCount}>{header}</TableHeader>
-					</TableRow>
+					<tr>
+						<th colSpan={columnCount}>{header}</th>
+					</tr>
 				)}
-				<TableRow>
+				<tr>
 					{columnHeaders.map((colHeader) => (
-						<TableHeader key={colHeader}>{colHeader}</TableHeader>
+						<th key={colHeader}>{colHeader}</th>
 					))}
-				</TableRow>
+				</tr>
 			</thead>
 			<tbody>
 				{rows.map((row, i) => (
-					<TableRow key={`row-${i}`}>
+					<tr key={`row-${i}`}>
 						{row.map((item, index) => (
-							<TableData key={`item-${index}-row-${row}`}>{item}</TableData>
+							<td key={`item-${index}-row-${row}`}>{item}</td>
 						))}
-					</TableRow>
+					</tr>
 				))}
 			</tbody>
-		</Table>
+		</table>
 	);
 };
 

@@ -20,6 +20,8 @@ export const Banner = styled.div`
 `;
 
 export const BannerText = styled(Link)`
+	text-decoration: unset;
+
 	cursor: pointer;
 	font-size: min(8vh, 15vw);
 	font-weight: bold;

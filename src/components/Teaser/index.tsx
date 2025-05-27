@@ -1,5 +1,4 @@
 import React, { memo, FunctionComponent, ReactNode } from "react";
-import { HorizontalLine } from "../SharedStyles";
 import {
 	LinkContainer,
 	StyledArrow,
@@ -26,7 +25,7 @@ const Teaser: FunctionComponent<TeaserProps> = ({
 	return (
 		<TeaserContainer className={className}>
 			{children}
-			<HorizontalLine />
+			<hr />
 			<LinkContainer>
 				{isExternal ? (
 					<StyledExternalLink href={url}>{linkText}</StyledExternalLink>

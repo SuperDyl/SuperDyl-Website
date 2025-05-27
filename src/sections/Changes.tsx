@@ -1,10 +1,5 @@
 import React, { FunctionComponent, memo, useMemo } from "react";
-import {
-	ListItem,
-	UnorderedList,
-	WeakText,
-	Text,
-} from "../components/SharedStyles";
+import { WeakText } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
 import { ExternalTabLink } from "../components/ExternalTabLink";
 
@@ -20,7 +15,7 @@ const DatapackListItem: FunctionComponent<DatapackListItemProps> = ({
 	datapack,
 }) => {
 	return (
-		<ListItem className={className}>
+		<li className={className}>
 			{children}
 
 			<WeakText>
@@ -28,7 +23,7 @@ const DatapackListItem: FunctionComponent<DatapackListItemProps> = ({
 				{datapack}
 				{")"}
 			</WeakText>
-		</ListItem>
+		</li>
 	);
 };
 
@@ -64,14 +59,14 @@ const Changes: FunctionComponent<ChangesProps> = ({
 
 	return (
 		<TitledSection header="Changes">
-			<Text>
+			<p>
 				The server is meant to have a mostly vanilla feel, but some datapacks
 				have been used to add small features. You can suggest changes you would
 				like by messaging me personally or by filling out any of these forms:{" "}
 				{datapacks}, {mods}, {whitelist}, {other}. This is the current list of
 				server changes
-			</Text>
-			<UnorderedList>
+			</p>
+			<ul>
 				<DatapackListItem datapack="Vanilla Tweaks: dragon drops">
 					The Ender Dragon drops an Ender Dragon Egg and Elytra every time it
 					dies
@@ -185,7 +180,7 @@ const Changes: FunctionComponent<ChangesProps> = ({
 				<DatapackListItem datapack="such as alternate current">
 					Some mods
 				</DatapackListItem>
-			</UnorderedList>
+			</ul>
 		</TitledSection>
 	);
 };

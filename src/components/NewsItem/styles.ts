@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Header1 } from "../SharedStyles";
 import { mobileWidth } from "../../constants";
 
 export const NewsItemContainer = styled.div`
@@ -19,7 +18,7 @@ export const HeaderContainer = styled.div`
 	}
 `;
 
-export const DisappearingHeader1 = styled(Header1)`
+export const DisappearingHeader1 = styled.h1`
 	display: none;
 	@media (min-width: ${mobileWidth}px) {
 		display: unset;

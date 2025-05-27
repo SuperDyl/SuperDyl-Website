@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import { MC_PAGES, externalDiscordHref } from "../../../constants";
 import { HeadFC } from "gatsby";
-import { Header2, Text } from "../../../components/SharedStyles";
 import MiniLayout, {
 	BottomRightContainer,
 	TopLeftContainer,
@@ -15,27 +14,27 @@ const Discord = () => {
 	return (
 		<MiniLayout activeLink={MC_PAGES.DISCORD}>
 			<TopLeftContainer>
-				<Text>
+				<p>
 					I have provided a discord channel to make playing together easier.
 					Feel free to share the link and use the provided text and voice
 					channels. Please use the space respectfully and have a good time.
-				</Text>
-				<Header2>
+				</p>
+				<h2>
 					Join the{" "}
 					<InlineEmphasis>
 						<ExternalTabLink href={externalDiscordHref}>
 							Discord channel
 						</ExternalTabLink>
 					</InlineEmphasis>
-				</Header2>
-				<Header2>
+				</h2>
+				<h2>
 					Share{" "}
 					<InlineEmphasis>
 						<ClipboardLink text={externalDiscordHref}>
 							discord.superdyl.net
 						</ClipboardLink>
 					</InlineEmphasis>
-				</Header2>
+				</h2>
 			</TopLeftContainer>
 			<BottomRightContainer>
 				<DiscordIcon />

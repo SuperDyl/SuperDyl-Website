@@ -1,6 +1,5 @@
 import React, { FunctionComponent, memo } from "react";
 import TitledSection from "../components/TitledSection";
-import { Text } from "../components/SharedStyles";
 import ExternalTabLink from "../components/ExternalTabLink";
 import FilteredModTable from "../components/FilteredModTable";
 import { getServerMods } from "../mods";
@@ -20,11 +19,11 @@ const ServerMods: FunctionComponent<ServerModsProps> = ({
 			header="Server Mods"
 		>
 			<ExternalTabLink href={modsHref}>Suggest mod changes</ExternalTabLink>
-			<Text>
+			<p>
 				All mods either optimize the game, add server utilities, or fix vanilla
 				bugs. The server is supposed to feel vanilla, so mods {"shouldn't"}{" "}
 				require players to download anything on their side.
-			</Text>
+			</p>
 			<FilteredModTable mods={getServerMods()} />
 		</TitledSection>
 	);

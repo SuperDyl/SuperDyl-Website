@@ -1,7 +1,6 @@
 import * as React from "react";
 import { HeadFC, navigate } from "gatsby";
 import Layout from "../components/Layout";
-import { Text } from "../components/SharedStyles";
 import { useEffect } from "react";
 
 const IndexPage = () => {
@@ -11,7 +10,7 @@ const IndexPage = () => {
 
 	return (
 		<Layout>
-			<Text>{"Redirecting..."}</Text>
+			<p>{"Redirecting..."}</p>
 		</Layout>
 	);
 };

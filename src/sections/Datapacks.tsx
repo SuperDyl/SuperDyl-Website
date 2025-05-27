@@ -1,5 +1,4 @@
 import React, { FunctionComponent, memo } from "react";
-import { Text } from "../components/SharedStyles";
 import TitledSection from "../components/TitledSection";
 import TitledSubSection from "../components/TitledSubSection";
 import VanillaTweaksTable from "../components/VanillaTweaksTable";
@@ -258,20 +257,20 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 	return (
 		<TitledSection header="Datapacks">
 			<TitledSubSection header="Vanilla Tweaks">
-				<Text>
+				<p>
 					Download links:{" "}
 					<ExternalTabLink href={vtDatapacksHref}>Datapacks</ExternalTabLink> |{" "}
 					<ExternalTabLink href={vtCraftingHref}>Crafting</ExternalTabLink>
-				</Text>
-				<Text>
+				</p>
+				<p>
 					<ExternalTabLink href={suggestChangesHref}>
 						Suggest datapack changes
 					</ExternalTabLink>
-				</Text>
-				<Text>
+				</p>
+				<p>
 					Information for each can also be found in the Vanilla Tweaks section
 					of the advancements window.
-				</Text>
+				</p>
 				<VanillaTweaksTable
 					header="Datapacks"
 					subheader="Decorative/Cosmetic"

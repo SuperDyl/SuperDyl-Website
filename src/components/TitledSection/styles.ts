@@ -1,4 +1,3 @@
-import { Header1 } from "./../SharedStyles";
 import styled, { css } from "styled-components";
 
 export const TitledSectionContainer = styled.div`
@@ -16,7 +15,7 @@ export const StickyHeaderShared = css`
 	padding-top: 10px;
 `;
 
-export const StickyHeader1 = styled(Header1)`
+export const StickyHeader1 = styled.h1`
 	${StickyHeaderShared}
 	background-color: ${(props) => props.theme.baseAlt};
 	z-index: 1;

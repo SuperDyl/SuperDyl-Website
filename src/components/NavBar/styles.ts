@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LocalLink } from "../SharedStyles";
+import { Link } from "gatsby";
 
 export const NavBarContainer = styled.nav`
 	background-color: ${(props) => props.theme.secondary};
@@ -12,7 +12,7 @@ interface NavItemProps {
 	$active: boolean;
 }
 
-export const NavItem = styled(LocalLink)<NavItemProps>`
+export const NavItem = styled(Link)<NavItemProps>`
 	text-decoration: ${({ $active }) => ($active ? "underline" : "none")};
 	padding: 0.2em;
 	color: ${({ $active, theme }) => ($active ? theme.tertiary : theme.text)};

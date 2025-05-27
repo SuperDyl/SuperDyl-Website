@@ -14,6 +14,7 @@ import {
 	PageContent,
 	MainContainer,
 } from "./styles";
+import { SharedLinkStyling } from "../SharedStyles";
 
 const darkGreen = "#11862c";
 const lightGreen = "#1aa63e";
@@ -66,6 +67,47 @@ const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 			background-color: ${(props) => props.theme.base}
 		}
 
+		p {
+			margin: 0;
+			padding-bottom: 0.4em;
+		}
+
+		h1 {
+			color: ${(props) => props.theme.primary};
+			font-size: 1.7em;
+			font-weight: bold;
+			margin-bottom: 0.4em;
+		}
+
+		h2 {
+			color: ${(props) => props.theme.primary};
+			font-size: 1.2em;
+			font-weight: bold;
+			margin-bottom: 0.4em;
+		}
+
+		a {
+			${SharedLinkStyling}
+		}
+
+		ul, ol {
+			margin-left: 2em;
+			margin-bottom: 0.75em;
+		}
+
+		ul {
+			list-style: disc;
+		}
+
+		ol {
+			list-style: lower-alpha;
+		}
+
+		li {
+			margin-bottom: 0.3em;
+			padding-left: 0.25em;
+		}
+
 		button {
 			border: ${(props) => props.theme.primary} 2px solid;
 			padding: 0.5rem;
@@ -85,6 +127,36 @@ const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
 			&:focus-visible {
 				background-color: ${(props) => props.theme.secondary};
 			}
+		}
+
+		table {
+			min-width: 100%;
+			overflow: scroll;
+			border: solid 0.2em ${(props) => props.theme.primary};
+			display: table;
+		}
+
+		tr {
+			padding: 0.2em;
+			border-bottom: solid 0.1em ${(props) => props.theme.primary};
+		}
+
+		th {
+			border: solid 0.1em ${(props) => props.theme.primary};
+			padding: 0.25em;
+			font-weight: bold;
+		}
+
+		td {
+			border: solid 0.1em ${(props) => props.theme.primary};
+			padding: 0.25em;
+		}
+
+		hr {
+			background: ${(props) => props.theme.primary};
+			height: 0.2rem;
+			border-radius: 1rem;
+			margin: 0 1rem;
 		}
 	`;
 

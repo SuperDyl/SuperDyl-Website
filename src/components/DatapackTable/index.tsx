@@ -1,6 +1,5 @@
 import React, { memo, FunctionComponent } from "react";
 import BasicTable, { TableContainer } from "../BasicTable";
-import { Text } from "../SharedStyles";
 import ExternalLinkList, { ExternalLink } from "../ExternalLinkList";
 
 interface DatapackInfo {
@@ -31,26 +30,26 @@ const DatapackTable: FunctionComponent<DatapackTableProps> = ({
 					"Reasoning",
 				]}
 				rows={datapacks.map((pack) => [
-					<Text key={`${pack.datapackName}-name`}>
+					<p key={`${pack.datapackName}-name`}>
 						{pack.datapackName}
 						{pack.version && " v" + pack.version}
-					</Text>,
-					<Text key={`${pack.datapackName}-downloads`}>
+					</p>,
+					<p key={`${pack.datapackName}-downloads`}>
 						<ExternalLinkList
 							keyPrepend={`${pack.datapackName}-download`}
 							externalLinks={pack.downloadLinks}
 						/>
-					</Text>,
-					<Text key={`${pack.datapackName}-author`}>
+					</p>,
+					<p key={`${pack.datapackName}-author`}>
 						{pack.author}
 						{": "}
 						<ExternalLinkList
 							keyPrepend={`${pack.datapackName}-author-link`}
 							externalLinks={pack.authorLinks}
 						/>
-					</Text>,
-					<Text key={`${pack.datapackName}-changes`}>{pack.changes}</Text>,
-					<Text key={`${pack.datapackName}-reasoning`}>{pack.reasoning}</Text>,
+					</p>,
+					<p key={`${pack.datapackName}-changes`}>{pack.changes}</p>,
+					<p key={`${pack.datapackName}-reasoning`}>{pack.reasoning}</p>,
 				])}
 			/>
 		</TableContainer>

@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import { Forms, MC_PAGES, serverIp } from "../../../constants";
-import { Header2, Text } from "../../../components/SharedStyles";
 import { InlineEmphasis } from "../../../components/SharedStyles";
 import { HeadFC } from "gatsby";
 import ClipboardLink from "../../../components/ClipboardLink";
@@ -16,7 +15,7 @@ const Play = () => {
 	return (
 		<MiniLayout activeLink={MC_PAGES.PLAY}>
 			<TopLeftContainer>
-				<Text>
+				<p>
 					<ClipboardLink text={serverIp}>{serverIp}</ClipboardLink> is a
 					survival Minecraft server with only small changes made through
 					datapacks. The server is whitelisted—if you would like to join the
@@ -26,23 +25,23 @@ const Play = () => {
 					</ExternalTabLink>
 					. Please let me know if you are a relative or friend of someone else
 					on the server.
-				</Text>
-				<Text>
+				</p>
+				<p>
 					After you are added to the whitelist, you can add the server ip
 					address and join.
-				</Text>
+				</p>
 			</TopLeftContainer>
 			<BottomRightContainer>
-				<Header2>
+				<h2>
 					Server ip:{" "}
 					<InlineEmphasis>
 						<ClipboardLink text={serverIp}>{serverIp}</ClipboardLink>
 					</InlineEmphasis>
-				</Header2>
-				<Header2>
+				</h2>
+				<h2>
 					Minecraft version:{" "}
 					<InlineEmphasis>{ALL_MC_VERSIONS[0]}</InlineEmphasis>
-				</Header2>
+				</h2>
 			</BottomRightContainer>
 		</MiniLayout>
 	);

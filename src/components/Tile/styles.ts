@@ -1,10 +1,8 @@
 import { Link } from "gatsby";
 import styled, { css } from "styled-components";
-import { DefaultTextStyling } from "../SharedStyles";
 import Clickable from "../Clickable";
 
 export const OuterContainer = styled.div`
-	${DefaultTextStyling}
 	padding: 0;
 	border-radius: 1em;
 	display: flex;
