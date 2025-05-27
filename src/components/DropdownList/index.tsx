@@ -48,8 +48,6 @@ const DropDownList: FunctionComponent<DropDownListProps> = ({
 					&& dropdownRef.current !== null
 					&& !dropdownRef.current.contains(event.relatedTarget)) {
 					setOpen(false);
-
-					console.log(event);
 				}
 			}}
 		>
