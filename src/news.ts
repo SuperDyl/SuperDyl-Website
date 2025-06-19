@@ -6,6 +6,36 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "June 18",
+		title: "Chase the Skies",
+		markdown: `
+In perhaps the fastest update this server has ever received,
+the server is updated to 1.21.6—Chase the Skies update!
+On the same day as the update!
+
+As part of this update, I have trimmed some nether chunks.
+This should make it easier to find dried ghasts.
+
+Happy hunting!
+
+Notable updates:
+
+* Happy Ghasts
+* Locator bar to show where other players are
+* Leads are stronger, can leash mobs to each other, and can be picked up from fences
+* Craftable saddles
+* New clouds
+* Fireworks used while flying always boost, even if clicking on a block
+* Shears can be used on saddles and leads
+* New music disc
+* Projectiles are more accurate
+* Fog is more atmospheric
+* Music settings can be changed, including the frequency
+* Splash potions are more effective
+* Nether portals act as full blocks again
+		`,
+	},
+	{
 		date: "April 21",
 		title: "Bundle of Updates",
 		markdown: `

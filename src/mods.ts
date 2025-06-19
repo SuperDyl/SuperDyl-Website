@@ -3,6 +3,7 @@ import { ExternalLink } from "./components/ExternalLinkList";
 
 const UNAVAILABLE_TEXT = "UNAVAILABLE";
 
+const MC_1_21_6 = "1.21.6";
 const MC_1_21_5 = "1.21.5";
 const MC_1_21_0 = "1.21.0";
 const MC_1_20_4 = "1.20.4";
@@ -10,6 +11,7 @@ const MC_1_20_1 = "1.20.1";
 const MC_1_19_4 = "1.19.4";
 
 export const ALL_MC_VERSIONS = [
+	MC_1_21_6,
 	MC_1_21_5,
 	MC_1_21_0,
 	MC_1_20_4,
@@ -87,6 +89,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "0.2.0+alpha.11.58"],
 			[MC_1_21_0, "0.2.0+alpha.11.101"],
 			[MC_1_21_5, "0.3.2+rc.1.0"],
+			[MC_1_21_6, "0.3.4+alpha.0.42"],
 		]),
 		downloadLinks: [
 			{
@@ -134,6 +137,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "0.96.11"],
 			[MC_1_21_0, "0.100.3"],
 			[MC_1_21_5, "0.121.0"],
+			[MC_1_21_6, "0.127.1"],
 		]),
 		downloadLinks: [
 			{
@@ -160,6 +164,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "1.11.0+kotlin.2.0.0"],
 			[MC_1_21_0, "1.11.0+kotlin.2.0.0"],
 			[MC_1_21_5, "1.13.2+kotlin.2.1.20"],
+			[MC_1_21_6, "1.13.3+kotlin.2.1.21"],
 		]),
 		downloadLinks: [
 			{
@@ -186,6 +191,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "6.0.3"],
 			[MC_1_21_0, "7.0.0"],
 			[MC_1_21_5, "8.0.0"],
+			[MC_1_21_6, "8.0.0"],
 		]),
 		downloadLinks: [
 			{
@@ -212,6 +218,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "1.4.14"],
 			[MC_1_21_0, "1.4.15"],
 			[MC_1_21_5, "1.4.16"],
+			[MC_1_21_6, "1.4.16"],
 		]),
 		downloadLinks: [
 			{
@@ -261,6 +268,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "0.2.6"],
 			[MC_1_21_0, "0.2.8"],
 			[MC_1_21_5, "0.2.9"],
+			[MC_1_21_6, "0.2.9"],
 		]),
 		downloadLinks: [
 			{
@@ -283,6 +291,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "1.2.10"],
 			[MC_1_21_0, "1.3.4"],
 			[MC_1_21_5, "1.3.10"],
+			[MC_1_21_6, "1.3.10:1.21.6"],
 		]),
 		downloadLinks: [
 			{
@@ -309,6 +318,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "0.12.1"],
 			[MC_1_21_0, "0.12.7"],
 			[MC_1_21_5, "0.16.2"],
+			[MC_1_21_6, "0.17.0"],
 		]),
 		downloadLinks: [
 			{
@@ -388,6 +398,7 @@ const allMods: ModInfo[] = [
 			[MC_1_20_4, "1.4.0"],
 			[MC_1_21_0, "1.5.3"],
 			[MC_1_21_5, "1.5.10"],
+			[MC_1_21_6, "1.5.13"],
 		]),
 		downloadLinks: [
 			{

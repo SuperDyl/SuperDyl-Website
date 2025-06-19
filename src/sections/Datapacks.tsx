@@ -32,7 +32,7 @@ const otherDatapacks = [
 		reasoning: "Adds a good use to compasses",
 	},
 	{
-		datapackName: "Deepcutting",
+		datapackName: "Deepslate Stonecutting",
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -97,7 +97,7 @@ const otherDatapacks = [
 	},
 	{
 		datapackName: "Take a Seat",
-		version: "2.4",
+		version: "3.0",
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -162,25 +162,6 @@ const otherDatapacks = [
 		changes:
 			"Item frames can be made invisible by shift clicking them with shears. Includes a set of hidden advancements. Items in invisible frames can only be rotated if the player is sneaking. Some of these settings don’t apply if the frames are made invisible using a `Statues` book. Undo by breaking the item frame",
 		reasoning: "Very vanilla feeling way to allow invisible item frames",
-	},
-	{
-		datapackName: "Wandering Cities",
-		downloadLinks: [
-			{
-				siteName: Websites.PlanetMC,
-				url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
-			},
-		],
-		author: "Aceplante",
-		authorLinks: [
-			{
-				siteName: Websites.PlanetMC,
-				url: "https://www.planetminecraft.com/data-pack/wandering-cities-trader-sells-city-maps/",
-			},
-		],
-		changes:
-			"Wandering traders have a chance to sell maps to the nearest Ancient City. 30% of wandering traders will sell an 'Ancient City Map Crate'",
-		reasoning: "Adds an easier way to find Ancient Cities",
 	},
 	{
 		datapackName: "Keep Head Data",
@@ -278,37 +259,37 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"armor statues",
-							"v2.8.16",
+							"v2.8.18",
 							"Use `/trigger as_help` or title a written book `Statues` to get a book for editing armor stands",
 							"It's nice to be able to give armor stands something in their off hand. Also allows creating invisible item frames",
 						],
 						[
 							"custom nether portals",
-							"v2.3.14",
+							"v2.3.15",
 							"Portals can be made using crying obsidian and unique shapes. They only require 4+ obsidian",
 							"Adds more options for decorating with a portal",
 						],
 						[
 							"more mob heads",
-							"v2.16.1",
+							"v2.16.2",
 							"All mobs have a chance of dropping their head upon death. Chances depend on the mob. Unique heads exist for different zombie villagers; colors of parrots, llamas, and cats; and different wither variants exist. Pre-existing heads/skulls still only drop in the normal ways",
 							"Another set of interesting trophies",
 						],
 						[
 							"player head drops",
-							"v1.1.11",
+							"v1.1.12",
 							"Players drop their head when killed by another player",
 							"As long as it doesn't become a problem, player heads are cool trophies",
 						],
 						[
 							"silence mobs",
-							"v1.2.5",
+							"v1.2.6",
 							"Mobs can be silenced by naming them `Silence me`, `silence me`, or `silence_me`",
 							"As long as it doesn't become a problem, avoids annoying mob noises in certain situations",
 						],
 						[
 							"Wandering Trades",
-							"v1.7.10",
+							"v1.7.11",
 							"Wandering traders sell mini versions of blocks as player heads",
 							"Adds variety to building and reduces wandering trader murder",
 						],
@@ -321,37 +302,37 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"cauldron concrete",
-							"v3.0.4",
+							"v3.0.5",
 							"Adds crafting concrete by throwing concrete powder in a cauldron of water",
 							"Getting large amounts of concrete is a very menial task",
 						],
 						[
 							"cauldron mud",
-							"v1.0.4",
+							"v1.0.5",
 							"Adds crafting mud by throwing dirt in a cauldron of water",
 							"Getting large amounts of mud is a very menial task",
 						],
 						[
 							"double shulker shells",
-							"v1.3.11",
+							"v1.3.12",
 							"Shulkers always drop 2 shells",
 							"It was a request to make shulker boxes easier to acquire",
 						],
 						[
 							"dragon drops",
-							"v1.3.11",
+							"v1.3.12",
 							"Ender dragon drops an Elytra and Dragon Egg each time it dies",
 							"A very multiplayer friendly way for dragon eggs and elytra to be accessible",
 						],
 						[
 							"painting picker",
-							"v1.0.1",
+							"v1.0.2",
 							"Specific paintings can be chosen using a stonecutter",
 							"There are a lot of paintings and this makes getting specific ones significantly easier",
 						],
 						[
 							"unlock all recipes",
-							"v2.0.12",
+							"v2.0.13",
 							"Immediately unlocks all recipes in the recipe book",
 							"I find it more annoying to forget a recipe and look it up than I feel overwhelmed by the number of recipes in the book",
 						],
@@ -364,13 +345,13 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"anti enderman grief",
-							"v1.1.11",
+							"v1.1.12",
 							"Endermen no longer pickup and move blocks",
 							"We get an unusual amount of blocks moved by endermen",
 						],
 						[
 							"husks drop sand",
-							"v1.0.4",
+							"v1.0.5",
 							"Husks have sand added to their drops",
 							"There is no good renewable way to get sand",
 						],
@@ -383,37 +364,37 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"afk display",
-							"v1.1.11",
+							"v1.1.12",
 							"Grays out player names if they haven't moved in a while",
 							"Rather annoying to message someone who isn't actually at their computer",
 						],
 						[
 							"durability ping",
-							"v1.1.11",
+							"v1.1.13",
 							"Gives a noise notification when a tool is low on durability. Turned off by default: configure with `/trigger duraPing`",
 							"Gives the option for players that want the notifications",
 						],
 						[
 							"Nether Portal Coords",
-							"v1.1.11",
+							"v1.1.12",
 							"Use /trigger nc_inNether or nc_inOverworld to see get calculation of coords to link nether portals",
 							"It should make linking portals easier",
 						],
 						[
 							"real time clock",
-							"v1.1.11",
+							"v1.1.12",
 							"How long the world has been running in real time can be seen via a function",
 							"It's a helpful debug tool to see if the world has been down recently",
 						],
 						[
 							"track raw statistics",
-							"v1.7.7",
+							"v1.7.8",
 							"Tracks more extra statistics about player activity",
 							"Ditto ^",
 						],
 						[
 							"track statistics",
-							"v1.1.13",
+							"v1.1.14",
 							"Tracks extra statistics about player activity",
 							"I thought it might be fun to look at sometime",
 						],
