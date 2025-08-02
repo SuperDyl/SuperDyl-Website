@@ -6,6 +6,23 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "August 2",
+		title: "Minor Additions",
+		markdown: `
+The server is updated to 1.21.8.
+This is a relatively small update
+with just a new painting and music disc
+(both of which are references to A Minecraft Movie).
+
+I've also added a new data pack to allow players to keep baby mobs as babies.
+This was made possible with help from ImpWizard,
+which marks the first time a player has contributed code to the server.
+
+I'm also looking into other mods and data packs to add soon,
+so please let me know if there are any additions you would like to see!
+		`,
+	},
+	{
 		date: "June 18",
 		title: "Chase the Skies",
 		markdown: `

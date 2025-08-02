@@ -33,6 +33,7 @@ const otherDatapacks = [
 	},
 	{
 		datapackName: "Deepslate Stonecutting",
+		version: "v1.1.3",
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
@@ -218,6 +219,33 @@ const otherDatapacks = [
 		reasoning:
 			"I enjoy tag, it's keep players from killing each other as often",
 	},
+	{
+		datapackName: "Arrested Development",
+		downloadLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/datapack/arrested-development",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/OpenBagTwo/Arrested-Development",
+			},
+		],
+		author: "OpenBagTwo",
+		authorLinks: [
+			{
+				siteName: Websites.Modrinth,
+				url: "https://modrinth.com/user/OpenBagTwo",
+			},
+			{
+				siteName: Websites.GitHub,
+				url: "https://github.com/OpenBagTwo",
+			},
+		],
+		changes: "Allows players to keep mobs as babies forever!",
+		reasoning:
+			"There are now more cute baby mobs like ghastlings",
+	},
 ];
 
 const vtCraftingVersion = "v1.21.5";
@@ -259,37 +287,37 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"armor statues",
-							"v2.8.18",
+							"v2.8.19",
 							"Use `/trigger as_help` or title a written book `Statues` to get a book for editing armor stands",
 							"It's nice to be able to give armor stands something in their off hand. Also allows creating invisible item frames",
 						],
 						[
 							"custom nether portals",
-							"v2.3.15",
+							"v2.3.16",
 							"Portals can be made using crying obsidian and unique shapes. They only require 4+ obsidian",
 							"Adds more options for decorating with a portal",
 						],
 						[
 							"more mob heads",
-							"v2.16.2",
+							"v2.17.1",
 							"All mobs have a chance of dropping their head upon death. Chances depend on the mob. Unique heads exist for different zombie villagers; colors of parrots, llamas, and cats; and different wither variants exist. Pre-existing heads/skulls still only drop in the normal ways",
 							"Another set of interesting trophies",
 						],
 						[
 							"player head drops",
-							"v1.1.12",
+							"v1.1.13",
 							"Players drop their head when killed by another player",
 							"As long as it doesn't become a problem, player heads are cool trophies",
 						],
 						[
 							"silence mobs",
-							"v1.2.6",
+							"v1.2.7",
 							"Mobs can be silenced by naming them `Silence me`, `silence me`, or `silence_me`",
 							"As long as it doesn't become a problem, avoids annoying mob noises in certain situations",
 						],
 						[
 							"Wandering Trades",
-							"v1.7.11",
+							"v1.7.12",
 							"Wandering traders sell mini versions of blocks as player heads",
 							"Adds variety to building and reduces wandering trader murder",
 						],
@@ -302,37 +330,37 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"cauldron concrete",
-							"v3.0.5",
+							"v3.0.6",
 							"Adds crafting concrete by throwing concrete powder in a cauldron of water",
 							"Getting large amounts of concrete is a very menial task",
 						],
 						[
 							"cauldron mud",
-							"v1.0.5",
+							"v1.0.6",
 							"Adds crafting mud by throwing dirt in a cauldron of water",
 							"Getting large amounts of mud is a very menial task",
 						],
 						[
 							"double shulker shells",
-							"v1.3.12",
+							"v1.3.13",
 							"Shulkers always drop 2 shells",
 							"It was a request to make shulker boxes easier to acquire",
 						],
 						[
 							"dragon drops",
-							"v1.3.12",
+							"v1.3.13",
 							"Ender dragon drops an Elytra and Dragon Egg each time it dies",
 							"A very multiplayer friendly way for dragon eggs and elytra to be accessible",
 						],
 						[
 							"painting picker",
-							"v1.0.2",
+							"v1.1.0",
 							"Specific paintings can be chosen using a stonecutter",
 							"There are a lot of paintings and this makes getting specific ones significantly easier",
 						],
 						[
 							"unlock all recipes",
-							"v2.0.13",
+							"v2.0.14",
 							"Immediately unlocks all recipes in the recipe book",
 							"I find it more annoying to forget a recipe and look it up than I feel overwhelmed by the number of recipes in the book",
 						],
@@ -345,13 +373,13 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"anti enderman grief",
-							"v1.1.12",
+							"v1.1.13",
 							"Endermen no longer pickup and move blocks",
 							"We get an unusual amount of blocks moved by endermen",
 						],
 						[
 							"husks drop sand",
-							"v1.0.5",
+							"v1.0.6",
 							"Husks have sand added to their drops",
 							"There is no good renewable way to get sand",
 						],
@@ -364,37 +392,37 @@ const Datapacks: FunctionComponent<DatapacksProps> = ({
 					rows={[
 						[
 							"afk display",
-							"v1.1.12",
+							"v1.1.13",
 							"Grays out player names if they haven't moved in a while",
 							"Rather annoying to message someone who isn't actually at their computer",
 						],
 						[
 							"durability ping",
-							"v1.1.13",
+							"v1.1.14",
 							"Gives a noise notification when a tool is low on durability. Turned off by default: configure with `/trigger duraPing`",
 							"Gives the option for players that want the notifications",
 						],
 						[
 							"Nether Portal Coords",
-							"v1.1.12",
+							"v1.1.13",
 							"Use /trigger nc_inNether or nc_inOverworld to see get calculation of coords to link nether portals",
 							"It should make linking portals easier",
 						],
 						[
 							"real time clock",
-							"v1.1.12",
+							"v1.1.13",
 							"How long the world has been running in real time can be seen via a function",
 							"It's a helpful debug tool to see if the world has been down recently",
 						],
 						[
 							"track raw statistics",
-							"v1.7.8",
+							"v1.7.9",
 							"Tracks more extra statistics about player activity",
 							"Ditto ^",
 						],
 						[
 							"track statistics",
-							"v1.1.14",
+							"v1.1.15",
 							"Tracks extra statistics about player activity",
 							"I thought it might be fun to look at sometime",
 						],
