@@ -6,6 +6,24 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "October 25",
+		title: "Copper Joy",
+		markdown: `
+The server is now updated to 1.21.10!
+New copper armor, tools, decorations, and golems are part of the game.
+As well, ~~vertical slabs~~ shelves
+and flashes in the End have been added.
+
+The spawn chunks have also been removed.
+If this causes problems, I can force-load
+an area like I have done for the community storage system.
+
+I have also added a new datapack to add a crafting recipe
+for copper golem statues, if you want the cute statues without
+the chests.
+		`,
+	},
+	{
 		date: "August 2",
 		title: "Minor Additions",
 		markdown: `

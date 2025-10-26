@@ -3,6 +3,7 @@ import { ExternalLink } from "./components/ExternalLinkList";
 
 const UNAVAILABLE_TEXT = "UNAVAILABLE";
 
+const MC_1_21_10 = "1.21.10";
 const MC_1_21_8 = "1.21.8";
 const MC_1_21_6 = "1.21.6";
 const MC_1_21_5 = "1.21.5";
@@ -12,6 +13,7 @@ const MC_1_20_1 = "1.20.1";
 const MC_1_19_4 = "1.19.4";
 
 export const ALL_MC_VERSIONS = [
+	MC_1_21_10,
 	MC_1_21_8,
 	MC_1_21_6,
 	MC_1_21_5,
@@ -93,6 +95,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "0.3.2+rc.1.0"],
 			[MC_1_21_6, "0.3.4+alpha.0.42"],
 			[MC_1_21_8, "0.3.4.0.0"],
+			[MC_1_21_10, "0.3.5.0.0"],
 		]),
 		downloadLinks: [
 			{
@@ -142,6 +145,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "0.121.0"],
 			[MC_1_21_6, "0.127.1"],
 			[MC_1_21_8, "0.130.0"],
+			[MC_1_21_10, "0.136.0"],
 		]),
 		downloadLinks: [
 			{
@@ -170,19 +174,20 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "1.13.2+kotlin.2.1.20"],
 			[MC_1_21_6, "1.13.3+kotlin.2.1.21"],
 			[MC_1_21_8, "1.13.4+kotlin.2.2.0"],
+			[MC_1_21_10, "1.13.7+kotlin.2.2.21"],
 		]),
 		downloadLinks: [
 			{
 				siteName: Websites.Modrinth,
-				url: "https://modrinth.com/mod/fabric-language-kotlin",
+				url: "https://modrinth.com/mod/fabric-language-kotlin/versions",
 			},
 			{
 				siteName: Websites.GitHub,
-				url: "https://github.com/FabricMC/fabric-language-kotlin/",
+				url: "https://github.com/FabricMC/fabric-language-kotlin/releases",
 			},
 			{
 				siteName: Websites.CurseForge,
-				url: "https://legacy.curseforge.com/minecraft/mc-mods/fabric-language-kotlin",
+				url: "https://legacy.curseforge.com/minecraft/mc-mods/fabric-language-kotlin/files",
 			},
 		],
 		purpose: "Dependency for Ledger",
@@ -198,6 +203,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "8.0.0"],
 			[MC_1_21_6, "8.0.0"],
 			[MC_1_21_8, "8.0.0"],
+			[MC_1_21_10, "8.0.0"],
 		]),
 		downloadLinks: [
 			{
@@ -226,6 +232,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "1.4.16"],
 			[MC_1_21_6, "1.4.16"],
 			[MC_1_21_8, "1.4.17"],
+			[MC_1_21_10, "1.4.18"],
 		]),
 		downloadLinks: [
 			{
@@ -277,6 +284,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "0.2.9"],
 			[MC_1_21_6, "0.2.9"],
 			[MC_1_21_8, "0.2.9"],
+			[MC_1_21_10, "0.2.10"],
 		]),
 		downloadLinks: [
 			{
@@ -301,6 +309,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "1.3.10"],
 			[MC_1_21_6, "1.3.10:1.21.6"],
 			[MC_1_21_8, "1.3.12"],
+			[MC_1_21_10, "1.3.16"],
 		]),
 		downloadLinks: [
 			{
@@ -329,6 +338,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "0.16.2"],
 			[MC_1_21_6, "0.17.0"],
 			[MC_1_21_8, "0.18.0"],
+			[MC_1_21_10, "0.20.0"],
 		]),
 		downloadLinks: [
 			{
@@ -410,6 +420,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_5, "1.5.10"],
 			[MC_1_21_6, "1.5.13"],
 			[MC_1_21_8, "1.5.13"],
+			[MC_1_21_10, "1.5.14"],
 		]),
 		downloadLinks: [
 			{
