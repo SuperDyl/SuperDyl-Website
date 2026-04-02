@@ -6,6 +6,18 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "April 1",
+		title: "HerdCraft",
+		markdown: `
+The server is now updated to HerdCraft!
+Free yourself of inventory management
+by taking charge of the new living blocks.
+Adventure with sulfur cubes and other new* game mechanics!
+
+*Disclaimer: New doesn't mean it's here to stay, so try it now!
+		`,
+	},
+	{
 		date: "October 25",
 		title: "Copper Joy",
 		markdown: `
