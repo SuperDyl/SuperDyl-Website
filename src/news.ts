@@ -6,6 +6,33 @@ export interface News {
 
 export const news: News[] = [
 	{
+		date: "April 12",
+		title: "Tiny Mayhem",
+		markdown: `
+After commanding blocks in the April Fools update,
+the server is more than back to normal:
+it's now both cuter and more dangerous!
+
+The 1.21.11 and 26.1.2 updates add several features:
+
+* The nautilus, zombie nautilus, camel husk, and parched
+* Zombie horses now spawn
+* Nautilus armor and netherite horse armor
+* Spears and the lunge enchantment
+* Horses can swim while ridden
+* New models and textures for baby mobs
+* New rabbit model
+* Golden dandelions to prevent babies from growing up
+* The trumpet sound for note blocks on top of copper blocks
+* Cat sound variants
+* Craftable name tags
+* Stonecutters now have recipes for stone and deepslate
+
+I've also added the Wood Stripper data pack from Vanilla Tweaks
+which adds stone cutter recipes for log and bark blocks.
+		`,
+	},
+	{
 		date: "April 1",
 		title: "HerdCraft",
 		markdown: `

@@ -3,6 +3,7 @@ import { ExternalLink } from "./components/ExternalLinkList";
 
 const UNAVAILABLE_TEXT = "UNAVAILABLE";
 
+const MC_26_1_2 = "26.1.2";
 const MC_1_21_10 = "1.21.10";
 const MC_1_21_8 = "1.21.8";
 const MC_1_21_6 = "1.21.6";
@@ -13,6 +14,7 @@ const MC_1_20_1 = "1.20.1";
 const MC_1_19_4 = "1.19.4";
 
 export const ALL_MC_VERSIONS = [
+	MC_26_1_2,
 	MC_1_21_10,
 	MC_1_21_8,
 	MC_1_21_6,
@@ -96,6 +98,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "0.3.4+alpha.0.42"],
 			[MC_1_21_8, "0.3.4.0.0"],
 			[MC_1_21_10, "0.3.5.0.0"],
+			[MC_26_1_2, "0.3.7+alpha.0.64"],
 		]),
 		downloadLinks: [
 			{
@@ -146,6 +149,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "0.127.1"],
 			[MC_1_21_8, "0.130.0"],
 			[MC_1_21_10, "0.136.0"],
+			[MC_26_1_2, "0.145.4"],
 		]),
 		downloadLinks: [
 			{
@@ -175,6 +179,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "1.13.3+kotlin.2.1.21"],
 			[MC_1_21_8, "1.13.4+kotlin.2.2.0"],
 			[MC_1_21_10, "1.13.7+kotlin.2.2.21"],
+			[MC_26_1_2, "1.13.10+kotlin.2.3.20"],
 		]),
 		downloadLinks: [
 			{
@@ -204,6 +209,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "8.0.0"],
 			[MC_1_21_8, "8.0.0"],
 			[MC_1_21_10, "8.0.0"],
+			[MC_26_1_2, "9.0.0"],
 		]),
 		downloadLinks: [
 			{
@@ -233,6 +239,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "1.4.16"],
 			[MC_1_21_8, "1.4.17"],
 			[MC_1_21_10, "1.4.18"],
+			[MC_26_1_2, "1.4.20"],
 		]),
 		downloadLinks: [
 			{
@@ -310,6 +317,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "1.3.10:1.21.6"],
 			[MC_1_21_8, "1.3.12"],
 			[MC_1_21_10, "1.3.16"],
+			[MC_26_1_2, "1.3.20"],
 		]),
 		downloadLinks: [
 			{
@@ -339,6 +347,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "0.17.0"],
 			[MC_1_21_8, "0.18.0"],
 			[MC_1_21_10, "0.20.0"],
+			[MC_26_1_2, "0.24.1"],
 		]),
 		downloadLinks: [
 			{
@@ -421,6 +430,7 @@ const allMods: ModInfo[] = [
 			[MC_1_21_6, "1.5.13"],
 			[MC_1_21_8, "1.5.13"],
 			[MC_1_21_10, "1.5.14"],
+			[MC_26_1_2, "1.5.16"],
 		]),
 		downloadLinks: [
 			{
